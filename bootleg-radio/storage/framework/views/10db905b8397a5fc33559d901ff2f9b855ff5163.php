@@ -78,9 +78,9 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    
+                    Try the changes
                 </div>
-
+                Bootleg-Radio
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
                     <a href="https://laracasts.com">Laracasts</a>
