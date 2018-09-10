@@ -78,7 +78,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Lovely
+                    Love
                 </div>
 
                 <div class="links">
