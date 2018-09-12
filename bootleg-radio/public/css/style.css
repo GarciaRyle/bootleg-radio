@@ -164,7 +164,7 @@ li a:hover:not(.active) {
 
 .parallax {
   /* The image used */
-  background-image: url("images/Public/Picture/photo.jpg");
+  background-image: url("../images/Public/Picture/photo.jpg");
   width: 100%;
   /* Set a specific height */
   min-height: 250px;
@@ -176,7 +176,7 @@ li a:hover:not(.active) {
 
 .parallax2 {
   /* The image used */
-  background-image: url("images/Public/Picture/photo.jpg");
+  background-image: url("../images/Public/Picture/photo.jpg");
   width: 100%;
   /* Set a specific height */
   min-height: 30px;
