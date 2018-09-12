@@ -1,0 +1,26 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 20px;
+    overflow: hidden;
+     color: #f2eae3;
+    font-family: 'Abril Fatface', cursive;;
+    font-size: 18px;
+   
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 45px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #d98c82;
+}
