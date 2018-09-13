@@ -41,13 +41,13 @@
             </div>
             </div>
 
-            f=<div class="box5">
+            <div class="box5">
             <nav class="stroke">
                <center><ul>
                <li><a href="#home">HOME</a></li>
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
-               <li><a hre"#chat">CHAT</a></li>
+               <li><a href="#chat">CHAT</a></li>
               <li><a href="#buzz">BUZZ</a></li>
               <li><a href="#more">MORE</a></li>
             </ul></center></nav>
