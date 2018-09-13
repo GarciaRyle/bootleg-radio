@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
     <title> Mondrianizm</title>
     </head>
-<body bgcolor="#333539">
+<body bgcolor="#141312">
     <div class="wrapper"> 
        
         <div class="box1">
@@ -43,7 +43,9 @@
 
             <div class="box5">
             <nav class="stroke">
+                
                <center><ul>
+              
                <li><a href="#home">HOME</a></li>
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
@@ -53,7 +55,7 @@
             </ul></center></nav>
             </div></div>
     <div class="parallax" id="home"> </div>
-    <div style="height:450px;background-color:#333539;font-size:36px" id="portfolio">
+    <div style="height:450px;background-color:#141312;font-size:36px" id="portfolio">
         <div class="gridcol"> 
                 <div> 
             <img src="images/Public/Picture/aboutusphoto.png" style="padding-left: 90px; padding-top: 10px;"></div>
@@ -64,7 +66,7 @@
             </div>
             </div>
      <div class="parallax" id="home">  </div>
-    <div style="height:470px;background-color:#333539;font-size:36px" id="portfolio">        
+    <div style="height:470px;background-color:#141312;font-size:36px" id="portfolio">        
         <div class="gridcols"> 
         
              <!---UNA--->
@@ -108,7 +110,7 @@
  </div>
    
      <div class="parallax" id="home">  </div>
-     <div style="height:440px;background-color:#333539;font-size:36px" id="portfolio">    
+     <div style="height:440px;background-color:#141312;font-size:36px" id="portfolio">    
          <div class="gridcols"> 
         
              <!---UNA--->
@@ -148,7 +150,7 @@
     </div>
     
          <div class="parallax2" id="home">  </div>
-    <div style="height:250px;background-color:#333539;font-size:36px" id="portfolio"> 
+    <div style="height:250px;background-color:#141312;font-size:36px" id="portfolio"> 
         <br>  <center> <div class="words" style="font-family: 'Fjalla One', sans-serif; font-size: 36px; color: #b78373  "> NewsLetter!</div>   
         <div class="words" style="font-family: 'Archivo Narrow', sans-serif; font-size: 16px; color: #b78373  "> Get the latest news and updates on Bootleg Radio. Subscribe now!</div>  
         <input type="text" id="fname" name="fname"> <br>
@@ -156,7 +158,7 @@
         </center> 
         </div>
      <div class="parallax2" id="home">  </div>
-    <div style="height:250px;background-color:##333539;font-size:36px" id="portfolio">
+    <div style="height:250px;background-color:##141312;font-size:36px" id="portfolio">
     <div class="gridcolss"> 
         <div> <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #d49d96; font-size: 25px; padding-top: 35px; padding-left: 65px;"> Who's Your Daddy?</div>
         <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #fce4e1; font-size: 25px; padding-left: 65px;"> Bootleg Radio</div>
