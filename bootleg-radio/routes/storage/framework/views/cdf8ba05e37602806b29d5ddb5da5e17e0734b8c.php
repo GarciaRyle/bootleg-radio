@@ -7,28 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet">
     <title> Mondrianizm</title>
     </head>
-<body bgcolor="#141312">
-     <nav class="stroke">
-    <div class="nav">
-  <div class="nav-header">
-        <ul>  <li><img src="images/Public/Picture/logo.png" style="width: 170px; height: 50px; padding-left: 40px; bottom: 10%;"> </li>
-               <li><a href="#home">HOME</a></li>
-               <li><a href="#bands">BANDS</a></li>
-               <li><a href="#webjocks">WEB JOCKS</a></li>
-               <li><a href="#chat">CHAT</a></li>
-              <li><a href="#buzz">BUZZ</a></li>
-              <li><a href="#more">MORE</a></li>
-             <li><a href="#more">☰</a></li>
-               </ul> 
-        </div>
-    </div>
-    </nav>
+<body bgcolor="#333539">
+    <div class="wrapper"> 
        
-    
-        
- <div class="wrapper"> 
-       
-        <div class="box5">
+        <div class="box1">
             <div id="slider">
                 <figure>
                     <img src="images/photo1.jpg" alt>
@@ -39,11 +21,39 @@
                 </figure>
             </div>
         </div>
-
-         
+        <div class="box2">
+            <center>
+                <br><br>
+                <h2> JOIN US NOW!</h2>
+            <button class="button"><span>LOGIN</span></button>
+             <button class="button"><span>SIGN UP</span></button></center>
+        </div>
+        <div class="box3">
+           <div id="slider">
+                <figure>
+                     <img src="images/photo2.jpg" alt>
+                    <img src="images/3.JPG" alt>
+                    <img src="images/pne.gif" alt="PNE" style="width:335px;height:412px;">
+                    
+                    <img src="images/4.jpg" alt>
+                    <img src="images/silent.gif" alt="PNE" style="width:335px;height:412px;">
+                </figure>
+            </div>
+            </div>
+      
+       
+        <div class="box5">
+          <center> <ul>
+               <li><a href="#home">HOME</a></li>
+               <li><a href="#bands">BANDS</a></li>
+               <li><a href="#webjocks">WEB JOCKS</a></li>
+               <li><a href="#chat">CHAT</a></li>
+              <li><a href="#buzz">BUZZ</a></li>
+              <li><a href="#more">MORE</a></li>
+            </ul></center></div>
     </div>
     <div class="parallax" id="home"> </div>
-    <div style="height:450px;background-color:#141312;font-size:36px" id="portfolio">
+    <div style="height:450px;background-color:#333539;font-size:36px" id="portfolio">
         <div class="gridcol"> 
                 <div> 
             <img src="images/Public/Picture/aboutusphoto.png" style="padding-left: 90px; padding-top: 10px;"></div>
@@ -54,9 +64,9 @@
             </div>
             </div>
      <div class="parallax" id="home">  </div>
-    <div style="height:470px;background-color:#141312;font-size:36px" id="portfolio">        
+    <div style="height:470px;background-color:#333539;font-size:36px" id="portfolio">        
         <div class="gridcols"> 
-      
+        
              <!---UNA--->
            <div> 
             <div id="slider">
@@ -81,9 +91,8 @@
                 </figure>
             </div>
             </div>
-
        
-            <!---DULO --->  
+            <!---DULO--->
              <div> 
             <div id="slider">
                 <figure>
@@ -96,12 +105,11 @@
             </div>
             </div>
         </div>
- </div>         
-
+ </div>
    
      <div class="parallax" id="home">  </div>
-     <div style="height:440px;background-color:#141312;font-size:36px" id="portfolio">    
-         <div class="gridcols">     
+     <div style="height:440px;background-color:#333539;font-size:36px" id="portfolio">    
+         <div class="gridcols"> 
         
              <!---UNA--->
         <div> 
@@ -140,7 +148,7 @@
     </div>
     
          <div class="parallax2" id="home">  </div>
-    <div style="height:250px;background-color:#141312;font-size:36px" id="portfolio"> 
+    <div style="height:250px;background-color:#333539;font-size:36px" id="portfolio"> 
         <br>  <center> <div class="words" style="font-family: 'Fjalla One', sans-serif; font-size: 36px; color: #b78373  "> NewsLetter!</div>   
         <div class="words" style="font-family: 'Archivo Narrow', sans-serif; font-size: 16px; color: #b78373  "> Get the latest news and updates on Bootleg Radio. Subscribe now!</div>  
         <input type="text" id="fname" name="fname"> <br>
@@ -148,7 +156,7 @@
         </center> 
         </div>
      <div class="parallax2" id="home">  </div>
-    <div style="height:250px;background-color:##141312;font-size:36px" id="portfolio">
+    <div style="height:250px;background-color:##333539;font-size:36px" id="portfolio">
     <div class="gridcolss"> 
         <div> <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #d49d96; font-size: 25px; padding-top: 35px; padding-left: 65px;"> Who's Your Daddy?</div>
         <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #fce4e1; font-size: 25px; padding-left: 65px;"> Bootleg Radio</div>
