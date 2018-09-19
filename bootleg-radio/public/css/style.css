@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 50% 50%; }
   grid-auto-rows: minmax(100px, auto);
   align-items: stretch;
   align-items: stretch; }
@@ -11,21 +11,11 @@
 .wrapper > div:nth-child(odd) {
   background: #141312; }
 
-<<<<<<< HEAD
-=======
-.box1 {
-  grid-column: 1/4;
-  grid-row: 1/4; }
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
 
 
 .box5 {
-<<<<<<< HEAD
   grid-column: 1/4; 
 }
-=======
-  grid-column: 1/4; }
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
 
 .gridcol {
   display: grid;
@@ -162,26 +152,17 @@ input {
   }
   nav li a {
     display: block;
-<<<<<<< HEAD
     padding: 10px;
     left: 380px;
     bottom: 30px;
-=======
-    padding: 20px;
-    left: 500px;
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
     text-decoration: none;
     color: #c3b396;
     font-weight: 0;
     text-transform: uppercase;
-      text-align: center;
+    margin: 0 10px;
     font-family: 'jasper_danielsregular';
-<<<<<<< HEAD
     font-size: 24px;
     
-=======
-    font-size: 20px;
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
   }
   @font-face {
     font-family: 'jasper_danielsregular';
@@ -220,7 +201,7 @@ input {
     height: 1px;
   }
   nav.stroke ul li a:hover:after {
- 
+  width: 100%;
 }
 
 .parallax {
@@ -258,12 +239,6 @@ input {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #d49d96;
   font-size: 18px; }
-.logo {
-    display: inline-block;
-    vertical-align: top;
-    width: 50px;
-    height: 50px;
-   
-      /* if you want it vertically middle of the navbar. */
-}
+
+  
 /*# sourceMappingURL=style.css.map */
