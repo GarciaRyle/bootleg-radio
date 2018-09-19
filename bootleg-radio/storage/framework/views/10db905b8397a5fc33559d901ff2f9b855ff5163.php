@@ -8,23 +8,27 @@
     <title> Mondrianizm</title>
     </head>
 <body bgcolor="#141312">
- 
-    
-            <nav class="stroke">
-          <ul> //
-                      <nav class="logo">     <img src="images/Public/Picture/logo.png"  style=" width: 150px; height: 90px;">  </nav>
+     <nav class="stroke">
+    <div class="nav">
+  <div class="nav-header">
+        <ul>  <li><img src="images/Public/Picture/logo.png" style="width: 170px; height: 50px; padding-left: 40px; bottom: 10%;"> </li>
                <li><a href="#home">HOME</a></li>
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
                <li><a href="#chat">CHAT</a></li>
               <li><a href="#buzz">BUZZ</a></li>
               <li><a href="#more">MORE</a></li>
-             
-            </ul>   </nav>
-        
-    <div class="wrapper"> 
+             <li><a href="#more">☰</a></li>
+               </ul> 
+        </div>
+    </div>
+    </nav>
        
-        <div class="box1">
+    
+        
+ <div class="wrapper"> 
+       
+        <div class="box5">
             <div id="slider">
                 <figure>
                     <img src="images/photo1.jpg" alt>
@@ -35,10 +39,9 @@
                 </figure>
             </div>
         </div>
-       
-       
 
-           </div>
+         
+    </div>
     <div class="parallax" id="home"> </div>
     <div style="height:450px;background-color:#141312;font-size:36px" id="portfolio">
         <div class="gridcol"> 
@@ -53,7 +56,7 @@
      <div class="parallax" id="home">  </div>
     <div style="height:470px;background-color:#141312;font-size:36px" id="portfolio">        
         <div class="gridcols"> 
-        
+      
              <!---UNA--->
            <div> 
             <div id="slider">
@@ -78,8 +81,9 @@
                 </figure>
             </div>
             </div>
+
        
-            <!---DULO--->
+            <!---DULO --->  
              <div> 
             <div id="slider">
                 <figure>
@@ -92,11 +96,12 @@
             </div>
             </div>
         </div>
- </div>
+ </div>         
+
    
      <div class="parallax" id="home">  </div>
      <div style="height:440px;background-color:#141312;font-size:36px" id="portfolio">    
-         <div class="gridcols"> 
+         <div class="gridcols">     
         
              <!---UNA--->
         <div> 
