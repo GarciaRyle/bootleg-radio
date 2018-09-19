@@ -8,6 +8,20 @@
     <title> Mondrianizm</title>
     </head>
 <body bgcolor="#141312">
+ 
+    
+            <nav class="stroke">
+          <ul> //
+                      <nav class="logo">     <img src="images/Public/Picture/logo.png"  style=" width: 150px; height: 90px;">  </nav>
+               <li><a href="#home">HOME</a></li>
+               <li><a href="#bands">BANDS</a></li>
+               <li><a href="#webjocks">WEB JOCKS</a></li>
+               <li><a href="#chat">CHAT</a></li>
+              <li><a href="#buzz">BUZZ</a></li>
+              <li><a href="#more">MORE</a></li>
+             
+            </ul>   </nav>
+        
     <div class="wrapper"> 
        
         <div class="box1">
@@ -21,39 +35,10 @@
                 </figure>
             </div>
         </div>
-        <div class="box2">
-            <center>
-                <br><br>
-                <h2> JOIN US NOW!</h2>
-            <button class="button"><span>LOGIN</span></button>
-             <button class="button"><span>SIGN UP</span></button></center>
-        </div>
-        <div class="box3">
-           <div id="slider">
-                <figure>
-                     <img src="images/photo2.jpg" alt>
-                    <img src="images/3.JPG" alt>
-                    <img src="images/pne.gif" alt="PNE" style="width:335px;height:412px;">
-                    
-                    <img src="images/4.jpg" alt>
-                    <img src="images/silent.gif" alt="PNE" style="width:335px;height:412px;">
-                </figure>
-            </div>
-            </div>
+       
+       
 
-            <div class="box5">
-            <nav class="stroke">
-                
-               <center><ul>
-              
-               <li><a href="#home">HOME</a></li>
-               <li><a href="#bands">BANDS</a></li>
-               <li><a href="#webjocks">WEB JOCKS</a></li>
-               <li><a href="#chat">CHAT</a></li>
-              <li><a href="#buzz">BUZZ</a></li>
-              <li><a href="#more">MORE</a></li>
-            </ul></center></nav>
-            </div></div>
+           </div>
     <div class="parallax" id="home"> </div>
     <div style="height:450px;background-color:#141312;font-size:36px" id="portfolio">
         <div class="gridcol"> 

@@ -8,16 +8,25 @@
     <title> Mondrianizm</title>
     </head>
 <body bgcolor="#141312">
+<<<<<<< HEAD
      <nav class="stroke">
     <div class="nav">
   <div class="nav-header">
         <ul>  <li><img src="images/Public/Picture/logo.png" style="width: 170px; height: 50px; padding-left: 40px; bottom: 10%;"> </li>
+=======
+ 
+    
+            <nav class="stroke">
+          <ul> //
+                      <nav class="logo">     <img src="images/Public/Picture/logo.png"  style=" width: 150px; height: 90px;">  </nav>
+>>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
                <li><a href="#home">HOME</a></li>
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
                <li><a href="#chat">CHAT</a></li>
               <li><a href="#buzz">BUZZ</a></li>
               <li><a href="#more">MORE</a></li>
+<<<<<<< HEAD
              <li><a href="#more">☰</a></li>
                </ul> 
         </div>
@@ -27,6 +36,12 @@
     
         
  <div class="wrapper"> 
+=======
+             
+            </ul>   </nav>
+        
+    <div class="wrapper"> 
+>>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
        
         <div class="box5">
             <div id="slider">
@@ -39,9 +54,16 @@
                 </figure>
             </div>
         </div>
+<<<<<<< HEAD
 
          
     </div>
+=======
+       
+       
+
+           </div>
+>>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
     <div class="parallax" id="home"> </div>
     <div style="height:450px;background-color:#141312;font-size:36px" id="portfolio">
         <div class="gridcol"> 
