@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 50% 50%; }
   grid-auto-rows: minmax(100px, auto);
   align-items: stretch;
   align-items: stretch; }
@@ -16,6 +16,10 @@
 .box5 {
   grid-column: 1/4; 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f5ba3f68f4008120ad0a7a2aca7c805470cf5bee
 .gridcol {
   display: grid;
   background: #141312;
@@ -155,7 +159,7 @@ input {
     color: #c3b396;
     font-weight: 0;
     text-transform: uppercase;
-      text-align: center;
+    margin: 0 10px;
     font-family: 'jasper_danielsregular';
     font-size: 24px;
     
@@ -197,7 +201,7 @@ input {
     height: 1px;
   }
   nav.stroke ul li a:hover:after {
- 
+  width: 100%;
 }
 
 .parallax {
@@ -235,12 +239,6 @@ input {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #d49d96;
   font-size: 18px; }
-.logo {
-    display: inline-block;
-    vertical-align: top;
-    width: 50px;
-    height: 50px;
-   
-      /* if you want it vertically middle of the navbar. */
-}
+
+  
 /*# sourceMappingURL=style.css.map */

@@ -36,16 +36,14 @@
     
         
  <div class="wrapper"> 
-       
-        <div class="box5">
 =======
              
             </ul>   </nav>
         
     <div class="wrapper"> 
-       
-        <div class="box1">
 >>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
+       
+        <div class="box5">
             <div id="slider">
                 <figure>
                     <img src="images/photo1.jpg" alt>
@@ -80,11 +78,7 @@
      <div class="parallax" id="home">  </div>
     <div style="height:470px;background-color:#141312;font-size:36px" id="portfolio">        
         <div class="gridcols"> 
-<<<<<<< HEAD
       
-=======
-        
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
              <!---UNA--->
            <div> 
             <div id="slider">
@@ -109,14 +103,9 @@
                 </figure>
             </div>
             </div>
-<<<<<<< HEAD
 
        
             <!---DULO --->  
-=======
-       
-            <!---DULO--->
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
              <div> 
             <div id="slider">
                 <figure>
@@ -129,20 +118,12 @@
             </div>
             </div>
         </div>
-<<<<<<< HEAD
  </div>         
 
    
      <div class="parallax" id="home">  </div>
      <div style="height:440px;background-color:#141312;font-size:36px" id="portfolio">    
          <div class="gridcols">     
-=======
- </div>
-   
-     <div class="parallax" id="home">  </div>
-     <div style="height:440px;background-color:#141312;font-size:36px" id="portfolio">    
-         <div class="gridcols"> 
->>>>>>> 57810938fd9cfd88ee3d208b75286656b8a6edb5
         
              <!---UNA--->
         <div> 
