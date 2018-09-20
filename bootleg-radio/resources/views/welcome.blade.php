@@ -8,17 +8,29 @@
     <title> Mondrianizm</title>
     </head>
 <body bgcolor="#141312">
+@if (Route::has('login'))
      <nav class="stroke">
     <div class="nav">
   <div class="nav-header">
+
+        
         <ul>  <li><img src="images/Public/Picture/logo.png" style="width: 170px; height: 50px; padding-left: 40px; bottom: 10%;"> </li>
+        @auth
                <li><a href="#home">HOME</a></li>
+               @else
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
                <li><a href="#chat">CHAT</a></li>
               <li><a href="#buzz">BUZZ</a></li>
               <li><a href="#more">MORE</a></li>
              <li><a href="#more">☰</a></li>
+          
+             <li><a href="{{ route('login') }}">Login</a></li>
+             <li><a href="{{ route('register') }}">Register</li>
+             @endauth
+
+               @endif
+          
                </ul> 
         </div>
     </div>

@@ -8,17 +8,29 @@
     <title> Mondrianizm</title>
     </head>
 <body bgcolor="#141312">
+<?php if(Route::has('login')): ?>
      <nav class="stroke">
     <div class="nav">
   <div class="nav-header">
+
+        
         <ul>  <li><img src="images/Public/Picture/logo.png" style="width: 170px; height: 50px; padding-left: 40px; bottom: 10%;"> </li>
+        <?php if(auth()->guard()->check()): ?>
                <li><a href="#home">HOME</a></li>
+               <?php else: ?>
                <li><a href="#bands">BANDS</a></li>
                <li><a href="#webjocks">WEB JOCKS</a></li>
                <li><a href="#chat">CHAT</a></li>
               <li><a href="#buzz">BUZZ</a></li>
               <li><a href="#more">MORE</a></li>
              <li><a href="#more">☰</a></li>
+          
+             <li><a href="<?php echo e(route('login')); ?>">Login</a></li>
+             <li><a href="<?php echo e(route('register')); ?>">Register</li>
+             <?php endif; ?>
+
+               <?php endif; ?>
+          
                </ul> 
         </div>
     </div>
