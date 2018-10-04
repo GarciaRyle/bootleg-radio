@@ -43,19 +43,19 @@
         <div id="slider">
             <div class="slide slide1">
                 <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">DECEMBER
+                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;  text-shadow: 2px 2px 8px #5e1c0e;">DECEMBER
                         AVENUE</span>
                 </div>
             </div>
             <div class="slide slide2">
                 <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">IV OF
+                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;  text-shadow: 2px 2px 8px #5e1c0e;">IV OF
                         SPADES</span>
                 </div>
             </div>
             <div class="slide slide3">
                 <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">I BELONG
+                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px; text-shadow: 2px 2px 8px #5e1c0e;">I BELONG
                         TO THE ZOO</span>
                 </div>
             </div>
