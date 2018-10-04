@@ -112,10 +112,44 @@
                     <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
           
             <div class="flex-wrap">  <br> <br>
-            <input class="signup" type="email" placeholder=" Username"/><br><br>
-            <input class="signup" type="password" placeholder =" Password" />
-            <br><br><button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a "> LOGIN</button> 
-     
+            <form method="POST" action="{{ route('login') }}">
+                        @csrf
+          
+          
+
+            <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup " name="email" value="{{ old('email') }}" required autofocus>
+           
+            @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+            
+                                <br>
+        
+                           
+                                <input id="password" type="password"  placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+
+ <br><br>
+                           <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+
+
+         
+            <br><br><button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">     {{ __('Login') }}</button>
+          
+            
  
               </div>
    
