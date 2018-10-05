@@ -117,33 +117,12 @@
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
-        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
+        <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
+            
 
-
-            <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
-<br><br>
-            <button style="background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a"
-                type="logoout" class="btn btn-primary"">
-                {{ __('Profile') }} 
-             </button>
-
-             <button style="
-                background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda' ,
-                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary"">
-             {{ __('Create A Band') }} </button>
-          
-<button style="background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda' ,
-                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                {{ __('Logout') }} </button>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-
-
+             <label for="username" class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
 
 
 
@@ -311,3 +290,29 @@
 </body>
 
 </html>
+
+
+
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    You are logged in!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
