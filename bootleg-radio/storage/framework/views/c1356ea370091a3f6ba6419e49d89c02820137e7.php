@@ -54,44 +54,45 @@
         <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
+            <form method="POST" action="<?php echo e(route('login')); ?>">
+                <?php echo csrf_field(); ?>
 
 
 
-                <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup "
-                    name="email" value="{{ old('email') }}" required autofocus>
+                <input id="email" type="email" placeholder="Username" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?> signup "
+                    name="email" value="<?php echo e(old('email')); ?>" required autofocus>
 
-                @if ($errors->has('email'))
+                <?php if($errors->has('email')): ?>
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
+                    <strong><?php echo e($errors->first('email')); ?></strong>
                 </span>
-                @endif
+                <?php endif; ?>
 
                 <br><br>
 
 
-                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup"
+                <input id="password" type="password" placeholder="Password" class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?> signup"
                     name="password" required>
 
-                @if ($errors->has('password'))
+                <?php if($errors->has('password')): ?>
                 <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
+                    <strong><?php echo e($errors->first('password')); ?></strong>
                 </span>
-                @endif
+                <?php endif; ?>
 
                 <br><br>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                        {{ old('remember') ? 'checked' : '' }}>
+                        <?php echo e(old('remember') ? 'checked' : ''); ?>>
 
                     <label class="form-check-label" for="remember" style="font-family: 'Coda', cursive; font-size: 14px; color: #c2b396">
-                        {{ __('Remember Me') }}
+                        <?php echo e(__('Remember Me')); ?>
+
                     </label>
                 </div>
 
                 <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
-                    {{ __('Login') }}</button>
+                    <?php echo e(__('Login')); ?></button>
                 
                 
             </form>

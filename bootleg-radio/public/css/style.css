@@ -1,11 +1,120 @@
+
+
+/* Full-width input fields */
+input[type=text] {
+    width: 65%;
+    height: 40px;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #f1f1f1;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #c2b396;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 90%; /* Full width */
+    height: 90%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #c2b396;
+    margin: 2% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 70%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+
 /* login form */
 .signup { 
  border-radius: 9px;
  font-family: 'Source Sans Pro', sans-serif;
  font-size: 18px;
- width: 180px;
+ width: 150px;
  height: 35px;
- border-color: #c2b396;\
+ border-color: #c2b396;
  padding: 10px;
 }
 
@@ -218,7 +327,7 @@ body {
   top:0px;
   right:0px;
   width:200px;
-  height:100vh;
+  height:610px;
   background:#141311;
   text-align:center;
   transform-origin:right;
@@ -316,7 +425,7 @@ body {
   nav li a {
     display: block;
     padding: 7px;
-    left: 340px;
+    left: 315px;
     bottom: 19px;
     text-decoration: none;
     color: #c3b396;
@@ -357,28 +466,15 @@ body {
 .gridcol > div:nth-child(odd) {
   background: #141311; }
 
-gridcols {
-  display: grid;
-  grid-template-columns: 27% 27% 28%; }
-
-.gridcols > div {
-  background: #141312;
-  padding: 25px;
-  width: 350px;
-  padding-left: 35%; }
-
-.gridcols > div:nth-child(odd) {
-  background: #141312; }
 
 .gridcols {
   display: grid;
-  grid-template-columns: 27% 27% 28%; }
+  grid-template-columns: 50% 50%; }
 
 .gridcols > div {
   background: #333539;
-  padding: 2px;
-  width: 350px;
-  padding-left: 35%; }
+  width: 426px;
+  }
 
 .gridcols > div:nth-child(odd) {
   background: #333539; }
@@ -419,73 +515,45 @@ box-shadow: 0 0 0 #06c;
  }
 
 /*try */
-#slider,
-.wrap,
-.slide-content {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
-  height: 90vh;
-  overflow-x: hidden;
-}
+/*slider*/ 
 
-.wrap {
+@keyframes slidy {
+  0% {
+    left: 0%; }
+  20% {
+    left: 0%; }
+  25% {
+    left: -100%; }
+  45% {
+    left: -100%; }
+  50% {
+    left: -200%; }
+  70% {
+    left: -200%; }
+  75% {
+    left: -300%; }
+  95% {
+    left: -300%; }
+  100% {
+    left: -400%; } }
+div#slider {
+  overflow: hidden; }
+
+div#slider figure img {
+  width: 20%;
+  float: left; }
+
+div#slider figure {
   position: relative;
-}
-
-.slide {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide1 {
-  background-image: url("../images/Image/back3.jpg");
-}
-.slide2 {
-  background-image: url("../images/Image/back1.jpg");
-}
-.slide3 {
-  background-image: url("../images/Image/back4.jpg");
-}
-
-.slide-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.slide-content span {
-  font-size: 5rem;
-  color: #fff;
-}
-
-.arrow {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-#arrow-left {
-  border-width: 30px 40px 30px 0;
-  border-color: transparent #fff transparent transparent;
+  width: 500%;
+  margin: 0;
   left: 0;
-  margin-left: 30px;
-}
+  text-align: left;
+  font-size: 0;
+  animation: 30s slidy infinite; }
 
-#arrow-right {
-  border-width: 30px 0 30px 40px;
-  border-color: transparent transparent transparent #fff;
-  right: 0;
-  margin-right: 30px;
-}
+
+
 /*parallax*/
 .parallax {
   /* The image used */
