@@ -38,81 +38,15 @@
     </nav>
 
     <!--top-->
-    <div class="wrap">
-        <div id="arrow-left" class="arrow"></div>
-        <div id="slider">
-            <div class="slide slide1">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;  text-shadow: 2px 2px 20px #5e1c0e;">DECEMBER
-                        AVENUE</span>
-                </div>
+    <div id="slider">
+                <figure>
+                    <img src="images/Image/decmberave.jpg" >
+                     <img src="images/Image/belongzoo.jpg" >
+                    <img src="images/Image/inmyprison.jpg" >
+                    <img src="images/Image/decmberave.jpg" >
+                    <img src="images/Image/inmyprison.jpg" >
+                </figure>
             </div>
-            <div class="slide slide2">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;  text-shadow: 2px 2px 20px #5e1c0e;">IV OF
-                        SPADES</span>
-                </div>
-            </div>
-            <div class="slide slide3">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px; text-shadow: 2px 2px 15px #5e1c0e;">I BELONG
-                        TO THE ZOO</span>
-                </div>
-            </div>
-        </div>
-        <div id="arrow-right" class="arrow"></div>
-    </div>
-    <!--script of hero section-->
-    <script>let sliderImages = document.querySelectorAll(".slide"),
-          arrowLeft = document.querySelector("#arrow-left"),
-          arrowRight = document.querySelector("#arrow-right"),
-          current = 0;
-
-        // Clear all images
-        function reset() {
-          for (let i = 0; i < sliderImages.length; i++) {
-            sliderImages[i].style.display = "none";
-          }
-        }
-
-        // Init slider
-        function startSlide() {
-          reset();
-          sliderImages[0].style.display = "block";
-        }
-
-        // Show prev
-        function slideLeft() {
-          reset();
-          sliderImages[current - 1].style.display = "block";
-          current--;
-        }
-
-        // Show next
-        function slideRight() {
-          reset();
-          sliderImages[current + 1].style.display = "block";
-          current++;
-        }
-
-        // Left arrow click
-        arrowLeft.addEventListener("click", function() {
-          if (current === 0) {
-            current = sliderImages.length;
-          }
-          slideLeft();
-        });
-
-        // Right arrow click
-        arrowRight.addEventListener("click", function() {
-          if (current === sliderImages.length - 1) {
-            current = -1;
-          }
-          slideRight();
-        });
-
-        startSlide();
-        </script>
 
     <!--sidebar code -->
     <div id="sidebar">
@@ -134,7 +68,7 @@
                 </span>
                 @endif
 
-                <br>
+                <br><br>
 
 
                 <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup"
@@ -151,22 +85,58 @@
                     <input class="form-check-input" type="checkbox" name="remember" id="remember"
                         {{ old('remember') ? 'checked' : '' }}>
 
-                    <label class="form-check-label" for="remember">
+                    <label class="form-check-label" for="remember" style="font-family: 'Coda', cursive; font-size: 14px; color: #c2b396">
                         {{ __('Remember Me') }}
                     </label>
                 </div>
 
-
-
-                <br><br><button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
+                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
                     {{ __('Login') }}</button>
+                
+                
+            </form>
 
-
-
+                   <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
         </div>
-
     </div>
+    
+    
+<div id="id01" class="modal">
 
+  <form class="modal-content" action="/action_page.php">
+    <center>
+        <div class="gridcols">
+            <div> <img src="images/Image/bootleg.jpg" alt="bepart"></div> <div class="container">
+     <h1 style="color: #a33821; font-family: 'Coda', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
+    
+      <input type="text" placeholder="Name" name="name" required><br>
+      <input type="text" placeholder="Enter Email" name="email" required><br>
+      <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"required><br>
+      
+      <label style="font-family: 'Coda', cursive; font-size: 15px; color: #d5d5d5">
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px color: #a2321a; "> Remember me
+      </label>
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
+      </div>
+    </div>
+   </div>
+  </center></form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
     <div id="toggle-btn" onclick="toggleSidebar(this)">
         <span></span>
@@ -273,14 +243,15 @@
         </center>
     </div>
 
-    <div style="height: 200px;background-color:#d5d5d5;font-size:36px">
-        <br>
+    <div style="height: 270px;background-color:#d5d5d5;font-size:36px">
+        <br><br>
         <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
             LISTENING. NOW JOIN US.</h2>
         <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 20px; text-align: center"> We would like to
             you to hear the more Filipino music.</h2>
         <center> <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
                 SIGN UP NOW!</button> </center>
+    
     </div>
 
 
@@ -317,8 +288,8 @@
             </div>
         </div>
     </div>
-
-    <div class="footer" style=" position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-family: 'Coda', cursive;  ">
+<br>
+    <br><div class="footer" style=" position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-family: 'Coda', cursive;  ">
         Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
 
 
