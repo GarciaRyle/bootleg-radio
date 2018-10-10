@@ -18,7 +18,7 @@
 
 <body style="background-color: #141312">
     <nav class="stroke">
-        <div class="nav">
+        <div class="nav"> 
             <div class="nav-header">
                 <ul>
                     <li><img src="images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
@@ -38,82 +38,15 @@
     </nav>
 
     <!--top-->
-    <div class="wrap">
-        <div id="arrow-left" class="arrow"></div>
-        <div id="slider">
-            <div class="slide slide1">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">DECEMBER
-                        AVENUE</span>
-                </div>
+    <div id="slider">
+                <figure>
+                    <img src="images/Image/decmberave.jpg" >
+                     <img src="images/Image/belongzoo.jpg" >
+                    <img src="images/Image/inmyprison.jpg" >
+                    <img src="images/Image/decmberave.jpg" >
+                    <img src="images/Image/inmyprison.jpg" >
+                </figure>
             </div>
-            <div class="slide slide2">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">IV OF
-                        SPADES</span>
-                </div>
-            </div>
-            <div class="slide slide3">
-                <div class="slide-content">
-                    <span style="color: #c2b396; font-family: 'Source Code Pro', monospace; font-size: 70px;">I BELONG
-                        TO THE ZOO</span>
-                </div>
-            </div>
-        </div>
-        <div id="arrow-right" class="arrow"></div>
-    </div>
-    <!--script of hero section-->
-    <script>let sliderImages = document.querySelectorAll(".slide"),
-          arrowLeft = document.querySelector("#arrow-left"),
-          arrowRight = document.querySelector("#arrow-right"),
-          current = 0;
-
-        // Clear all images
-        function reset() {
-          for (let i = 0; i < sliderImages.length; i++) {
-            sliderImages[i].style.display = "none";
-          }
-        }
-
-        // Init slider
-        function startSlide() {
-          reset();
-          sliderImages[0].style.display = "block";
-        }
-
-        // Show prev
-        function slideLeft() {
-          reset();
-          sliderImages[current - 1].style.display = "block";
-          current--;
-        }
-
-        // Show next
-        function slideRight() {
-          reset();
-          sliderImages[current + 1].style.display = "block";
-          current++;
-        }
-
-        // Left arrow click
-        arrowLeft.addEventListener("click", function() {
-          if (current === 0) {
-            current = sliderImages.length;
-          }
-          slideLeft();
-        });
-
-        // Right arrow click
-        arrowRight.addEventListener("click", function() {
-          if (current === sliderImages.length - 1) {
-            current = -1;
-          }
-          slideRight();
-        });
-
-        startSlide();
-        </script>
-
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
@@ -124,17 +57,19 @@
 
             <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
 <br><br>
-            <button style="background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a"
-                type="logoout" class="btn btn-primary"">
+            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
                 {{ __('Profile') }} 
              </button>
 
-             <button style="
-                background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda' ,
-                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary"">
-             {{ __('Create A Band') }} </button>
+            <button style="
+                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a type=" logoout" class="btn btn-primary" ">
+                 <a style="
+                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="{{ action("HomeController@bandreg") }}">    {{ __('Create A Band') }}</a>
+    </button>
           
-<button style="background-color: #c2b396; border-radius: 10px; width: 200px; height: 40px; font-family: 'Coda' ,
+<button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
                 cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -257,8 +192,8 @@
         </center>
     </div>
 
-    <div style="height: 200px;background-color:#d5d5d5;font-size:36px">
-        <br>
+    <div style="height: 260px;background-color:#d5d5d5;font-size:36px">
+        <br><br>
         <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
             LISTENING. NOW JOIN US.</h2>
         <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 20px; text-align: center"> We would like to
@@ -270,7 +205,7 @@
 
     <!--footer-->
 
-    <div style="height: 250px;background-color:#141312;font-size:36px">
+    <div style="height: 270px;background-color:#141312;font-size:36px">
         <div class="wrapper">
             <div>
                 <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">

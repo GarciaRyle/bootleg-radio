@@ -18,7 +18,7 @@
 
 <body style="background-color: #141312">
     <nav class="stroke">
-        <div class="nav">
+        <div class="nav"> 
             <div class="nav-header">
                 <ul>
                     <li><img src="images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
@@ -47,97 +47,45 @@
                     <img src="images/Image/inmyprison.jpg" >
                 </figure>
             </div>
-
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
-        <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
+        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
-            <form method="POST" action="<?php echo e(route('login')); ?>">
+
+
+            <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> <?php echo e(Auth::user()->name); ?></label>
+<br><br>
+            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
+                <?php echo e(__('Profile')); ?> 
+             </button>
+
+            <button style="
+                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a type=" logoout" class="btn btn-primary" ">
+                 <a style="
+                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="<?php echo e(action("HomeController@bandreg")); ?>">    <?php echo e(__('Create A Band')); ?></a>
+    </button>
+          
+<button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary" href="<?php echo e(route('logout')); ?>"
+                onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                <?php echo e(__('Logout')); ?> </button>
+            <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
                 <?php echo csrf_field(); ?>
-
-
-
-                <input id="email" type="email" placeholder="Username" class="form-control<?php echo e($errors->has('email') ? ' is-invalid' : ''); ?> signup "
-                    name="email" value="<?php echo e(old('email')); ?>" required autofocus style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
-
-                <?php if($errors->has('email')): ?>
-                <span class="invalid-feedback" role="alert">
-                    <strong><?php echo e($errors->first('email')); ?></strong>
-                </span>
-                <?php endif; ?>
-
-                <br><br>
-
-
-                <input id="password" type="password" placeholder="Password" class="form-control<?php echo e($errors->has('password') ? ' is-invalid' : ''); ?> signup"
-                    name="password" required style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
-
-                <?php if($errors->has('password')): ?>
-                <span class="invalid-feedback" role="alert">
-                    <strong><?php echo e($errors->first('password')); ?></strong>
-                </span>
-                <?php endif; ?>
-
-                <br><br>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                        <?php echo e(old('remember') ? 'checked' : ''); ?>>
-
-                    <label class="form-check-label" for="remember" style="font-family: 'Coda', cursive; font-size: 14px; color: #c2b396">
-                        <?php echo e(__('Remember Me')); ?>
-
-                    </label>
-                </div>
-
-                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
-                    <?php echo e(__('Login')); ?></button>
-                
-                
             </form>
 
-                   <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
+
+
+
+
         </div>
+
     </div>
-    
-    
-<div id="id01" class="modal">
 
-  <form class="modal-content" action="/action_page.php">
-    <center>
-        <div class="gridcols">
-            <div> <img src="images/Image/bootleg.jpg" alt="bepart"></div> <div class="container">
-     <h1 style="color: #a33821; font-family: 'Coda', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
-    
-      <input type="text" placeholder="Name" name="name" required><br>
-      <input type="email" placeholder="Enter Email" name="email" required style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
-      <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"required><br>
-      
-      <label style="font-family: 'Coda', cursive; font-size: 15px; color: #d5d5d5">
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px color: #a2321a; "> Remember me
-      </label>
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
-      </div>
-    </div>
-   </div>
-  </center></form>
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
 
     <div id="toggle-btn" onclick="toggleSidebar(this)">
         <span></span>
@@ -244,7 +192,7 @@ window.onclick = function(event) {
         </center>
     </div>
 
-    <div style="height: 270px;background-color:#d5d5d5;font-size:36px">
+    <div style="height: 260px;background-color:#d5d5d5;font-size:36px">
         <br><br>
         <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
             LISTENING. NOW JOIN US.</h2>
@@ -252,13 +200,12 @@ window.onclick = function(event) {
             you to hear the more Filipino music.</h2>
         <center> <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
                 SIGN UP NOW!</button> </center>
-    
     </div>
 
 
     <!--footer-->
 
-    <div style="height: 250px;background-color:#141312;font-size:36px">
+    <div style="height: 270px;background-color:#141312;font-size:36px">
         <div class="wrapper">
             <div>
                 <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
@@ -289,8 +236,8 @@ window.onclick = function(event) {
             </div>
         </div>
     </div>
-<br>
-    <br><div class="footer" style=" position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-family: 'Coda', cursive;  ">
+
+    <div class="footer" style=" position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-family: 'Coda', cursive;  ">
         Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
 
 

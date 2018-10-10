@@ -60,7 +60,7 @@
 
 
                 <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup "
-                    name="email" value="{{ old('email') }}" required autofocus>
+                    name="email" value="{{ old('email') }}" required autofocus style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
 
                 @if ($errors->has('email'))
                 <span class="invalid-feedback" role="alert">
@@ -72,7 +72,7 @@
 
 
                 <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup"
-                    name="password" required>
+                    name="password" required style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
 
                 @if ($errors->has('password'))
                 <span class="invalid-feedback" role="alert">
@@ -110,7 +110,7 @@
      <h1 style="color: #a33821; font-family: 'Coda', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
     
       <input type="text" placeholder="Name" name="name" required><br>
-      <input type="text" placeholder="Enter Email" name="email" required><br>
+      <input type="email" placeholder="Enter Email" name="email" required style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
       <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
       <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"required><br>
       
