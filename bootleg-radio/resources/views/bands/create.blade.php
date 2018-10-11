@@ -98,7 +98,7 @@
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
-        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
+        <img src="../images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
 
