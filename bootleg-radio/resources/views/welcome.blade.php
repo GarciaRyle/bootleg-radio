@@ -6,13 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Coda" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
-    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
@@ -39,14 +35,14 @@
 
     <!--top-->
     <div id="slider">
-                <figure>
-                    <img src="images/Image/decmberave.jpg" >
-                     <img src="images/Image/belongzoo.jpg" >
-                    <img src="images/Image/inmyprison.jpg" >
-                    <img src="images/Image/decmberave.jpg" >
-                    <img src="images/Image/inmyprison.jpg" >
-                </figure>
-            </div>
+        <figure>
+            <img src="images/Image/decmberave.jpg">
+            <img src="images/Image/belongzoo.jpg">
+            <img src="images/Image/inmyprison.jpg">
+            <img src="images/Image/decmberave.jpg">
+            <img src="images/Image/inmyprison.jpg">
+        </figure>
+    </div>
 
     <!--sidebar code -->
     <div id="sidebar">
@@ -59,8 +55,7 @@
 
 
 
-                <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup "
-                    name="email" value="{{ old('email') }}" required autofocus>
+                <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup " name="email" value="{{ old('email') }}" required autofocus style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a;">
 
                 @if ($errors->has('email'))
                 <span class="invalid-feedback" role="alert">
@@ -71,8 +66,7 @@
                 <br><br>
 
 
-                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup"
-                    name="password" required>
+                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup" name="password" required style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a; ">
 
                 @if ($errors->has('password'))
                 <span class="invalid-feedback" role="alert">
@@ -82,52 +76,53 @@
 
                 <br><br>
                 <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                        {{ old('remember') ? 'checked' : '' }}>
+                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
-                    <label class="form-check-label" for="remember" style="font-family: 'Coda', cursive; font-size: 14px; color: #c2b396">
+                    <label class="form-check-label" for="remember" style="font-family: 'Lato', sans-serif; font-size: 14px; color: #c2b396">
                         {{ __('Remember Me') }}
                     </label>
                 </div>
 
-                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
+                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">
                     {{ __('Login') }}</button>
-                
-                
+
+
             </form>
 
-                   <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
+            <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
         </div>
     </div>
-    
-    
-<div id="id01" class="modal">
 
-  <form class="modal-content" action="/action_page.php">
-    <center>
-        <div class="gridcols">
-            <div> <img src="images/Image/bootleg.jpg" alt="bepart"></div> <div class="container">
-     <h1 style="color: #a33821; font-family: 'Coda', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
-    
-      <input type="text" placeholder="Name" name="name" required><br>
-      <input type="text" placeholder="Enter Email" name="email" required><br>
-      <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"required><br>
-      
-      <label style="font-family: 'Coda', cursive; font-size: 15px; color: #d5d5d5">
-        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px color: #a2321a; "> Remember me
-      </label>
-      <div class="clearfix">
-        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
-      </div>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content" action="/action_page.php">
+            <center>
+                <div class="gridcols">
+                    <div> <img src="images/Image/bootleg.jpg" alt="bepart"></div>
+                    <div class="container">
+                        <h1 style="color: #a33821; font-family: 'Cinzel Decorative', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
+
+                        <input type="text" placeholder="Name" name="name" required><br>
+                        <input type="email" placeholder="Enter Email" name="email" required style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
+                        <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
+
+                        <label style="font-family: 'Coda', cursive; font-size: 15px; color: #d5d5d5">
+                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px color: #a2321a; "> Remember me
+                        </label>
+                        <div class="clearfix">
+                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                            <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </form>
     </div>
-   </div>
-  </center></form>
-</div>
 
-<script>
-// Get the modal
+    <script>
+        // Get the modal
 var modal = document.getElementById('id01');
 
 // When the user clicks anywhere outside of the modal, close it
@@ -160,10 +155,10 @@ window.onclick = function(event) {
                 <img class="logotop" src="images/Image/grandma.jpg" />
             </div>
             <div>
-                <h1 style="padding-top: 50px; font-family: 'Coda', cursive; color: #c2b396; font-size: 20px;"> FEATURED
+                <h1 style="padding-top: 50px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 20px;"> FEATURED
                     ARTIST</h1>
-                <h2 style="font-family: 'Coda', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</h2>
-                <h2 style="padding-top: 20px; font-family: 'Coda', cursive; color: #c2b396; font-size: 17px;"> Unique's
+                <h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</h2>
+                <h2 style="padding-top: 20px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 17px;"> Unique's
                     solo debut album Grandma is the only thing <br> Filipino music fans and musicians can talk about
                     since <br> it dropped earlier this week of 13th of August, which <br> everyone giving their own
                     take on each song off the <br>12-track record</h2>
@@ -176,28 +171,28 @@ window.onclick = function(event) {
     <div class="parallax"> </div>
     <div style="height: 235px;background-color:#141312;font-size:36px">
         <br>
-        <h2 style="font-family: 'Coda', cursive; color: #c2b396; font-size: 40px; text-align: center;"> FILIPINO BANDS</h2>
+        <h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 40px; text-align: center;"> FILIPINO BANDS</h2>
         <center>
             <figure class="snip1543">
                 <img src="images/Image/kamikazee.jpg" alt="sample108" />
                 <figcaption> <br> <br>
-                    <h3>KAMIKAZEE</h3>
-                    <p>Kamikazee is a Filipino rock band formed in 2000.</p>
+                    <h3 style="font-family: 'Cinzel Decorative', cursive;">KAMIKAZEE</h3>
+                    <p style="font-family: 'Lato', sans-serif;">Kamikazee is a Filipino rock band formed in 2000.</p>
                 </figcaption>
                 <a href="#"></a>
             </figure>
             <figure class="snip1543">
                 <img src="images/Image/jointheclub.jpg" alt="sample108" />
-                <figcaption> <br>
-                    <h3>JOIN THE CLUB</h3>
-                    <p>Join The Club is a Filipino post-punk band founded in 2001.</p>
+                <figcaption>
+                    <h3 style="font-family: 'Cinzel Decorative', cursive;">JOIN THE CLUB</h3>
+                    <p style="font-family: 'Lato', sans-serif;">Join The Club is a Filipino post-punk band founded in 2001.</p>
                 </figcaption>
                 <a href="#"></a>
             </figure>
             <figure class="snip1543"><img src="images/Image/itchyworm.jpg" alt="sample101" />
                 <figcaption> <br>
-                    <h3>ITCHYWORMS</h3>
-                    <p>The Itchyworms are a Filipino rock band whose music is primarily guitar-driven rock with
+                    <h3 style="font-family: 'Cinzel Decorative', cursive;">ITCHYWORMS</h3>
+                    <p style="font-family: 'Lato', sans-serif;">The Itchyworms are a Filipino rock band whose music is primarily guitar-driven rock with
                         pronounced 1960s and 1980s pop. </p>
                 </figcaption>
                 <br>
@@ -213,45 +208,45 @@ window.onclick = function(event) {
             <div style="padding-top: 115px;">
                 <figure class="snip1543">
                     <img src="images/Image/silent.jpg" alt="sample108" />
-                    <figcaption> <br>
-                        <h3>SILENT SANCTUARY</h3>
-                        <p>Silent Sanctuary is a 5-piece Filipino rock band that was formed in Metro Manila,
+                    <figcaption> 
+                        <h3 style="font-family: 'Cinzel Decorative', cursive;">SILENT SANCTUARY</h3>
+                        <p style="font-family: 'Lato', sans-serif;">Silent Sanctuary is a 5-piece Filipino rock band that was formed in Metro Manila,
                             Philippines in 2001.</p>
                     </figcaption>
                     <a href="#"></a>
                 </figure>
                 <figure class="snip1543">
                     <img src="images/Image/december.jpg" alt="sample108" />
-                    <figcaption> <br> <br>
-                        <h3>DECEMBER AVENUE</h3>
-                        <p>December Avenue is an Alt Rock band based in Manila, PH.</p>
+                    <figcaption> <br>
+                        <h3 style="font-family: 'Cinzel Decorative', cursive;">DECEMBER AVENUE</h3>
+                        <p style="font-family: 'Lato', sans-serif;">December Avenue is an Alt Rock band based in Manila, PH.</p>
                     </figcaption>
                     <a href="#"></a>
                 </figure>
                 <figure class="snip1543"><img src="images/Image/eheads.jpg" alt="sample101" />
                     <figcaption> <br> <br>
-                        <h3>ERASERHEADS</h3>
-                        <p>Eraserheads is a Filipino rock band formed in 1989.</p>
+                        <h3 style="font-family: 'Cinzel Decorative', cursive;">ERASERHEADS</h3>
+                        <p style="font-family: 'Lato', sans-serif;">Eraserheads is a Filipino rock band formed in 1989.</p>
                     </figcaption>
                     <br>
                     <a href="#"></a>
                 </figure>
             </div>
             <a class="button">
-                <span class="content" style="font-family: 'Ropa Sans', sans-serif; font-size: 18px;">SEE MORE</span>
+                <span class="content" style="font-family: 'Cinzel Decorative', cursive; font-size: 18px;">SEE MORE</span>
             </a>
         </center>
     </div>
 
     <div style="height: 270px;background-color:#d5d5d5;font-size:36px">
         <br><br>
-        <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
+        <h2 style="font-family: 'Cinzel Decorative', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
             LISTENING. NOW JOIN US.</h2>
-        <h2 style="font-family: 'Coda', cursive; color: #a2321a; font-size: 20px; text-align: center"> We would like to
-            you to hear the more Filipino music.</h2>
-        <center> <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color: #a2321a ">
+        <h2 style="font-family: 'Lato', sans-serif;  color: #a2321a; font-size: 20px; text-align: center"> We would like to
+            you to hear more Filipino music.</h2>
+        <center> <button style="background-color: #c2b396; border-radius: 10px; width: 160px; height: 50px; font-family: 'Cinzel Decorative', cursive; font-size: 14px; color: #a2321a ">
                 SIGN UP NOW!</button> </center>
-    
+
     </div>
 
 
@@ -265,7 +260,7 @@ window.onclick = function(event) {
                 <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #c2b396; font-size: 25px; padding-left: 65px;">
                     Bootleg Radio</div>
 
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
                     11th Flr. Common Goal Tower Bldg.
                     <br>Madrigal Business Park
                     <br>Alabang, Muntinlupa City, Philippines
@@ -273,7 +268,7 @@ window.onclick = function(event) {
             </div>
 
             <div>
-                <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
                     To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
                 <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
                     Phone: +63 (2) 772-3152 / 5859670
@@ -281,15 +276,16 @@ window.onclick = function(event) {
                     <br>E-mail address: sales@bootleg-radio.com</div>
             </div>
             <div>
-                <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
                     For event sponsorships: </div>
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
                     Please send proposals to sales@bootleg-radio.com</div>
             </div>
         </div>
     </div>
-<br>
-    <br><div class="footer" style=" position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-family: 'Coda', cursive;  ">
+    <br>
+    <br>
+    <div class="footer" style="font-family: 'Lato', sans-serif; position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px;">
         Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
 
 
