@@ -27,7 +27,6 @@
                     <li><a href="#buzz">BUZZ</a></li>
                     <li><a href="#more">MORE</a></li>
                     <li><a href="#buzz">LOGIN</a></li>
-                    <li><a href="#more">REGISTER</a></li>
 
                 </ul>
 

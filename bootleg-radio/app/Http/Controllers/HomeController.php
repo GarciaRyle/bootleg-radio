@@ -32,6 +32,10 @@ class HomeController extends Controller
         return view('bandregister');
     }
     
+    public function bandprof()
+    {
+        return view('bandprofile');
+    }
     
     
 }

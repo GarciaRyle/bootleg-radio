@@ -32,38 +32,7 @@
 
 </nav>
 
-<div style="height: 50px; backgrounda-color: #141311;"></div>
-<div class="bandregister">
-    <div></div>
-    <div>
-        <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
-            <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp<span>A</span>&nbsp<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
 
-            <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
-
-            <br>
-            <div class="form-group">
-                <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                <input type="text" name="bandname" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
-            </div>
-            <div class="form-group">
-                <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
-            </div><br>
-            <div class="form-group">
-                <center> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Photo: </label>
-                    &nbsp;<input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
-            </div>
-            <br>
-            <div class="form-wizard-buttons">
-                <button type="button" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
-            </div>
-
-        </div>
-    </div>
-</div>
-<div>
 
     <!--sidebar code -->
     <div id="sidebar">

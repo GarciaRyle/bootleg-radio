@@ -22,3 +22,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('bandregister', array('as' => 'bandregister', 'uses' => 'HomeController@bandreg'));
 
+Route::get('bandprofile', array('as' => 'bandprofile', 'uses' => 'HomeController@bandprof'));

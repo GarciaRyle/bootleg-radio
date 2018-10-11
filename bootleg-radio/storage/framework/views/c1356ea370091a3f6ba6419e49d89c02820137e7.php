@@ -89,8 +89,9 @@
 
 
             </form>
-
-            <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
+<br>
+ <p style="background-color: transparent; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet?</p>
+           <li> <a href="<?php echo e(route('register')); ?>" style="border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Sign up now!</a></li>
         </div>
     </div>
 
@@ -209,7 +210,7 @@ window.onclick = function(event) {
             <div style="padding-top: 115px;">
                 <figure class="snip1543">
                     <img src="images/Image/silent.jpg" alt="sample108" />
-                    <figcaption> 
+                    <figcaption>
                         <h3 style="font-family: 'Cinzel Decorative', cursive;">SILENT SANCTUARY</h3>
                         <p style="font-family: 'Lato', sans-serif;">Silent Sanctuary is a 5-piece Filipino rock band that was formed in Metro Manila,
                             Philippines in 2001.</p>

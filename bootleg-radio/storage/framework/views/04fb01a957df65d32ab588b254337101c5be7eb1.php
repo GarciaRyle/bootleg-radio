@@ -93,7 +93,7 @@
           document.getElementById('sidebar').classList.toggle('active');
         } </script>
 
-     <div class="parallax" id="home"> </div>
+    <div class="parallax" id="home"> </div>
     <div style="height: 435px;background-color:#141312;font-size:36px">
         <!--Featured Artist -->
         <br>
@@ -156,7 +156,7 @@
             <div style="padding-top: 115px;">
                 <figure class="snip1543">
                     <img src="images/Image/silent.jpg" alt="sample108" />
-                    <figcaption> 
+                    <figcaption>
                         <h3 style="font-family: 'Cinzel Decorative', cursive;">SILENT SANCTUARY</h3>
                         <p style="font-family: 'Lato', sans-serif;">Silent Sanctuary is a 5-piece Filipino rock band that was formed in Metro Manila,
                             Philippines in 2001.</p>
