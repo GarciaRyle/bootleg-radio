@@ -22,7 +22,7 @@
     <th>Band Name</th>
     <th>Genre</th>
     <th>Band Detail</th>
-    
+
    </tr>
    @foreach($bands as $row)
    <tr>

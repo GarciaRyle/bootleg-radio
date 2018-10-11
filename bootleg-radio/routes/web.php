@@ -22,6 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('bandregister', array('as' => 'bandregister', 'uses' => 'HomeController@bandreg'));
 
-Route::resource('bands', 'BandRegController');
+Route::resource('bands', 'BandRegController')->middleware('auth');
 
-Route::get('bands.profile', array('as' => 'bands.profile', 'uses' => 'BandRegController@index'));
+Route::get('bands.profile', array('as' => 'bands.profile', 'uses' => 'BandRegController@index'))->middleware('auth');
