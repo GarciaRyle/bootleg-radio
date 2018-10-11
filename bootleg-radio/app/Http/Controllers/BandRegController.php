@@ -74,7 +74,8 @@ class BandRegController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bands = Band::find($id);
+        return view('bands.edit', compact('bands', 'id'));
     }
 
     /**
@@ -86,8 +87,20 @@ class BandRegController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'bandName'    =>  'required',
+            'genre'    =>  'required',
+            'bandDescription'     =>  'required',
+           
+        ]);
+        $bands = Band::find($id);
+        $bands->bandName = $request->get('bandName');
+        $bands->genre = $request->get('genre');
+        $bands->bandDescription = $request->get('bandDescription');
+        $bands->save();
+        return redirect()->route('bands.index')->with('success', 'Data Updated');
     }
+   
 
     /**
      * Remove the specified resource from storage.
@@ -97,6 +110,8 @@ class BandRegController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bands = Band::find($id);
+        $bands->delete();
+        return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
 }
