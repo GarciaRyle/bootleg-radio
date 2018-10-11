@@ -18,7 +18,7 @@ class BandRegController extends Controller
         $bands = Band::all()->toArray();
         return view('bands.profile', compact('bands'));
     }
-    
+
 
     /**
      * Show the form for creating a new resource.

@@ -22,8 +22,12 @@
     <th>Band Name</th>
     <th>Genre</th>
     <th>Band Detail</th>
+<<<<<<< HEAD
     <th>Picture</th>
     
+=======
+
+>>>>>>> 7c33f2dcc07fd39be281673d75039bbb932b1d90
    </tr>
    @foreach($bands as $row)
    <tr>
