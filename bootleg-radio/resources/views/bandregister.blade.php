@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang=eng>
-
 <head>
     <title>Bootleg</title>
     <meta charset="UTF-8">
