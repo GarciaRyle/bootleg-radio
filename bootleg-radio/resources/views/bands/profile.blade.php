@@ -22,6 +22,7 @@
     <th>Band Name</th>
     <th>Genre</th>
     <th>Band Detail</th>
+    <th>Picture</th>
     
    </tr>
    @foreach($bands as $row)
@@ -29,6 +30,8 @@
     <td>{{$row['bandName']}}</td>
     <td>{{$row['genre']}}</td>
     <td>{{$row['bandDescription']}}</td>
+    <td>{{$row['fileUpload']}}</td>
+
 
     <td><a href="{{action('BandRegController@edit', $row['id'])}}" class="btn btn-warning">Edit</a></td>
     <td>

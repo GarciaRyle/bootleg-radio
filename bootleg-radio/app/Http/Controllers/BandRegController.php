@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Band;
+use Image;
 
 class BandRegController extends Controller
 {
@@ -40,13 +41,16 @@ class BandRegController extends Controller
         $this->validate($request, [
             'bandName'    =>  'required',
             'genre'    =>  'required',
-            'bandDescription'     =>  'required'
+            'bandDescription'     =>  'required',
+            'fileUpload' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $bands = new Band([
             'bandName'    =>  $request->get('bandName'),
             'genre'     =>  $request->get('genre'),
-            'bandDescription'     =>  $request->get('bandDescription')
+            'bandDescription'     =>  $request->get('bandDescription'),
+            'fileUpload'     =>  $request->get('fileUpload')
         ]);
+        
         $bands->save();
         return redirect()->route('bands.profile')->with('success', 'Data Added');
     }
