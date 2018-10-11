@@ -88,8 +88,9 @@
 
 
             </form>
-
-            <br> <button onclick="document.getElementById('id01').style.display='block'" style="background-color: transparent; border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet? Sign up now!</button>
+<br>
+ <p style="background-color: transparent; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet?</p>
+           <li> <a href="{{ route('register') }}" style="border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Sign up now!</a></li>
         </div>
     </div>
 
