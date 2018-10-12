@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Band;
+use Illuminate\Support\Facades\Auth;
 
 class BandRegController extends Controller
 {
@@ -14,7 +15,7 @@ class BandRegController extends Controller
      */
     public function index()
     {
-        $bands = Band::all()->toArray();
+        $bands = Band::where('UserId', '=', Auth::user()->id)->get();
         return view('bands.profile', compact('bands'));
     }
 
@@ -37,6 +38,7 @@ class BandRegController extends Controller
      */
     public function store(Request $request)
     {
+
         $this->validate($request, [
             'bandName'    =>  'required',
             'genre'    =>  'required',
@@ -44,6 +46,7 @@ class BandRegController extends Controller
         ]);
         $bands = new Band([
             'bandName'    =>  $request->get('bandName'),
+            'userId'  => auth()->id(),
             'genre'     =>  $request->get('genre'),
             'bandDescription'     =>  $request->get('bandDescription')
         ]);

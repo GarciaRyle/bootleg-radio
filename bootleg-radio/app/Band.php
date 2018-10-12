@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Band extends Model
 {
-    protected $fillable = ['bandName', 'genre', 'bandDescription', 'fileUpload'];
+    protected $fillable = ['bandName', 'userId', 'genre', 'bandDescription', 'fileUpload'];
 }

@@ -12,9 +12,10 @@ class CreateBandsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { 
         Schema::create('bands', function (Blueprint $table) {
           $table->increments('id');
+          $table->integer('userId');
           $table->string('bandName', 50);
           $table->string('genre');
           $table->text('bandDescription', 140)->nullable();
