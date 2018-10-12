@@ -1064,6 +1064,31 @@ div#slider figure {
     background: #d5d5d6;
 }
 
+.bandprofile1 {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 40% 5%;
+    grid-auto-rows: 50px 80% 50px;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandprofile1 > div {
+    background: transparent;
+}
+
+.bandprofile1 > .box3:nth-child(odd) {
+    background: transparent;
+}
+
+.box1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box2 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
 
 .bandprofile {
     display: grid;
@@ -1171,4 +1196,17 @@ hr {
     border: 0;
     border-top: solid #c2b396;
     padding: 0;
+}
+.button1 {
+    display: block;
+    width: 90px;
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 15px;
+    font-weight: bold;
+    color: #141311;
+    font-family: 'Lato', sans-serif; 
+    background-color: #c2b396; 
+    font-size: 16px;
 }

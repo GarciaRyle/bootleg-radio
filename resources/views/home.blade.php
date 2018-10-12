@@ -54,13 +54,13 @@
             <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
             <br><br>
             <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
-                {{ __('Profile') }}
+                {{ ('Profile') }}
             </button>
 
             <button style="
                 background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
                 cursive; font-size: 14px; color: #a2321a type=" logoout" class="btn btn-primary" ">
-                 <a style=" background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' , cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="{{ action("HomeController@bandreg") }}"> {{ __('Create A Band') }}</a>
+                 <a style=" background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' , cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="{{ action("BandRegController@create") }}"> {{ ('Create A Band') }}</a>
             </button>
 
             <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
@@ -91,8 +91,7 @@
           ref.classList.toggle('active');
           document.getElementById('sidebar').classList.toggle('active');
         } </script>
-
-     <div class="parallax" id="home"> </div>
+    <div class="parallax" id="home"> </div>
     <div style="height: 435px;background-color:#141312;font-size:36px">
         <!--Featured Artist -->
         <br>
@@ -147,8 +146,7 @@
             </figure>
         </center>
         <script>
-
-        </script>
+            </script>
     </div>
     <div style="height: 480px;background-color:#141312;font-size:36px">
         <center>
@@ -213,7 +211,6 @@
                     <br>Alabang, Muntinlupa City, Philippines
                     <br>Email us: info@bootleg-radio.com</div>
             </div>
-
             <div>
                 <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
                     To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
