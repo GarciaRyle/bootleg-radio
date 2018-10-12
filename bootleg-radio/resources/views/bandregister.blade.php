@@ -44,10 +44,38 @@
             <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
             <br>
+
+             @if(count($errors) > 0)
+  <div class="alert alert-danger">
+   <ul>
+   @foreach($errors->all() as $error)
+    <li>{{$error}}</li>
+   @endforeach
+   </ul>
+  </div>
+  @endif
+  @if(\Session::has('success'))
+  <div class="alert alert-success">
+   <p>{{ \Session::get('success') }}</p>
+  </div>
+  @endif
+            <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
+             {{csrf_field()}}
             <div class="form-group">
                 <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                <input type="text" name="bandname" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
             </div>
+            <div class="col-md-4">
+                <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label> <br><br>
+                <select class="selectpicker" name="genre" placeholder="Genre"
+                                                        data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif;">
+                                                        <option value="Indie">Indie</option>
+                                                    <option value="Pop">Pop</option>
+                                                    <option value="Rock">Rock</option>
+                                                </select>
+                                            
+                                            
+            </div><br>
             <div class="form-group">
                 <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
                 <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">

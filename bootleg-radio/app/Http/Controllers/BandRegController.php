@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Band;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+use Image;
+>>>>>>> 249e5b28ca38e8a97a359ac18172d5494bf6d681
 
 class BandRegController extends Controller
 {
@@ -42,14 +46,17 @@ class BandRegController extends Controller
         $this->validate($request, [
             'bandName'    =>  'required',
             'genre'    =>  'required',
-            'bandDescription'     =>  'required'
+            'bandDescription'     =>  'required',
+            'fileUpload' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $bands = new Band([
             'bandName'    =>  $request->get('bandName'),
             'userId'  => auth()->id(),
             'genre'     =>  $request->get('genre'),
-            'bandDescription'     =>  $request->get('bandDescription')
+            'bandDescription'     =>  $request->get('bandDescription'),
+            'fileUpload'     =>  $request->get('fileUpload')
         ]);
+        
         $bands->save();
         return redirect()->route('bands.profile')->with('success', 'Data Added');
     }
@@ -73,7 +80,8 @@ class BandRegController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bands = Band::find($id);
+        return view('bands.edit', compact('bands', 'id'));
     }
 
     /**
@@ -85,8 +93,20 @@ class BandRegController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'bandName'    =>  'required',
+            'genre'    =>  'required',
+            'bandDescription'     =>  'required',
+           
+        ]);
+        $bands = Band::find($id);
+        $bands->bandName = $request->get('bandName');
+        $bands->genre = $request->get('genre');
+        $bands->bandDescription = $request->get('bandDescription');
+        $bands->save();
+        return redirect()->route('bands.index')->with('success', 'Data Updated');
     }
+   
 
     /**
      * Remove the specified resource from storage.
@@ -96,6 +116,8 @@ class BandRegController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $bands = Band::find($id);
+        $bands->delete();
+        return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
 }
