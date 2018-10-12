@@ -109,7 +109,7 @@
                             <div class="text">Album 2</div>
                         </div>
                     </div>
-                    <h2 style="font-size: 19px; text-align: center;">ARTIST ALBUM</h2>
+                    <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
                 </div>
                 <div>
                     <div class="containerreg">
@@ -119,7 +119,7 @@
                         </div>
                     </div>
 
-                    <h2 style="font-size: 19px; text-align: center;">ARTIST ALBUM</h2>
+                    <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
                 </div>
 
             </div>
@@ -156,6 +156,10 @@
                             <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
                         </div>
                     </div>
+                    <div class="gridcol">
+                    <div><button style="color: #141311; font-family: 'Lato', sans-serif;  border-radius: 15px; background-color: #c2b396; font-size: 16px;"> EDIT </button></div>
+                        <div><button style="color: #c2b396; font-family: 'Lato', sans-serif;  border-radius: 15px; background-color: #a2321a; font-size: 16px;"> DELETE </button></div>
+                        </div>
                 </div>
 
 
