@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/bandprofile', array('as' => 'bands.profile', 'uses' => 'HomeController@bandprof'))->middleware('auth');
 
 Route::get('bandregister', array('as' => 'bandregister', 'uses' => 'HomeController@bandreg'));
 

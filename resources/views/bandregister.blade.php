@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=eng>
+
 <head>
     <title>Bootleg</title>
     <meta charset="UTF-8">
@@ -44,50 +45,46 @@
 
             <br>
 
-             @if(count($errors) > 0)
-  <div class="alert alert-danger">
-   <ul>
-   @foreach($errors->all() as $error)
-    <li>{{$error}}</li>
-   @endforeach
-   </ul>
-  </div>
-  @endif
-  @if(\Session::has('success'))
-  <div class="alert alert-success">
-   <p>{{ \Session::get('success') }}</p>
-  </div>
-  @endif
+            @if(count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach($errors->all() as $error)
+                    <li>{{$error}}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif
+            @if(\Session::has('success'))
+            <div class="alert alert-success">
+                <p>{{ \Session::get('success') }}</p>
+            </div>
+            @endif
             <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
-             {{csrf_field()}}
-            <div class="form-group">
-                <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
-            </div>
-            <div class="col-md-4">
-                <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label> <br><br>
-                <select class="selectpicker" name="genre" placeholder="Genre"
-                                                        data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif;">
-                                                        <option value="Indie">Indie</option>
-                                                    <option value="Pop">Pop</option>
-                                                    <option value="Rock">Rock</option>
-                                                </select>
-                                            
-                                            
-            </div><br>
-            <div class="form-group">
-                <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
-            </div><br>
-            <div class="form-group">
-                <center> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Photo: </label>
-                    &nbsp;<input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
-            </div>
-            <br>
-            <div class="form-wizard-buttons">
-                <button type="button" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
-            </div>
+                {{csrf_field()}}
+                <div class="form-group">
+                    <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
+                    <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                </div>
+                <div class="col-md-4">
+                    <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label>
+                    <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; font-size: 18px;">
+                        <option value="Indie">Indie</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                    </select>
 
+
+                </div><br>
+                <div class="form-group">
+                    <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
+                    <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                </div><br>
+
+
+                <div class="form-wizard-buttons">
+                    <button type="button" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px; border-radius: 20px;">FINISH</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>

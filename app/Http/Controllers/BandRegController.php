@@ -44,14 +44,14 @@ class BandRegController extends Controller
             'bandName'    =>  'required',
             'genre'    =>  'required',
             'bandDescription'     =>  'required',
-            'fileUpload' => 'required|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        
         ]);
         $bands = new Band([
             'bandName'    =>  $request->get('bandName'),
             'userId'  => auth()->id(),
             'genre'     =>  $request->get('genre'),
             'bandDescription'     =>  $request->get('bandDescription'),
-            'fileUpload'     =>  $request->get('fileUpload')
+     
         ]);
 
         $bands->save();
