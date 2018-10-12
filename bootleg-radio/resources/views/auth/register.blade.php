@@ -35,36 +35,69 @@
 
     </nav>
 
-    <!--registration-->
-    <div class="registerform">
-        <div class="box1"> <img src="images/Image/reg.png"></div>
-        <div></div>
-        <div class="box2"></div>
-        <div class="box3">
-            <div class="containerko">
-                <img src="images/Image/border.jpg" style="border-radius: 60px; box-shadow: 5px 10px #92321a; left: 50px;">
-                <div class="centered">
-                    <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
+
+
+<!-- register -->
+<div class="registerform">
+     <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="box1"> <img src="images/Image/reg.png"></div>
+                        <div></div>
+                        <div class="box2"></div>
+                        <div class="box3">
+                        <div class="containerko">
+                        <img src="images/Image/border.jpg" style="border-radius: 60px; box-shadow: 5px 10px #92321a; left: 50px;">
+                        <div class="centered">
+                        <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
                         <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
                             <span>R</span><span>E</span><span>G</span><span>I</span><span>S</span><span>T</span><span>E</span><span>R</span>&nbsp<span>N</span><span>O</span><span>W</span></div>
                     </div>
-               
+                      
+                                <input id="name" type="text" placeholder="Name" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus> <br>
 
-                        <input type="text" placeholder="Name" name="name" required style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
-                        <input type="email" placeholder="Enter Email" name="email" required style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
-                        <input type="password" placeholder="Enter Password" name="psw" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                           
 
-                        
-                        <div class="clearfix">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn" style="width: 50">Cancel</button>
+                 
+                                <input id="email" type="email" placeholder="E-mail" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required> <br>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                           
+
+                    
+                                <input id="password" placeholder="Enter Password" type="password" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required> <br>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                           
+
+                                <input id="password-confirm" placeholder= "Re-enter Password" type="password" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control" name="password_confirmation" required> <br>
+                      
+                                <div class="clearfix">
+                           
                             <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
                 </div>
-            </div>
-        </div>
-    </div>
-
-
+                       
+         </div>     </div>
+         </div>
+          </div>
+          
+          </div>
+     </form>
+</div>
+    </body>
+    </html>
 
 </body>
 

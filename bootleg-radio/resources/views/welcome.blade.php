@@ -95,44 +95,7 @@
     </div>
 
 
-    <div id="id01" class="modal">
-
-        <form class="modal-content" action="/action_page.php">
-            <center>
-                <div class="gridcols">
-                    <div> <img src="images/Image/bootleg.jpg" alt="bepart"></div>
-                    <div class="container">
-                        <h1 style="color: #a33821; font-family: 'Cinzel Decorative', cursive; padding-top: 10px;">SIGN UP NOW!</h1><br>
-
-                        <input type="text" placeholder="Name" name="name" required><br>
-                        <input type="email" placeholder="Enter Email" name="email" required style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;"><br>
-                        <input type="password" placeholder="Enter Password" name="psw" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" style="width: 65%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" required><br>
-
-                        <label style="font-family: 'Coda', cursive; font-size: 15px; color: #d5d5d5">
-                            <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px color: #a2321a; "> Remember me
-                        </label>
-                        <div class="clearfix">
-                            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                            <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
-                        </div>
-                    </div>
-                </div>
-            </center>
-        </form>
-    </div>
-
-    <script>
-        // Get the modal
-var modal = document.getElementById('id01');
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
+  
 
     <div id="toggle-btn" onclick="toggleSidebar(this)">
         <span></span>
