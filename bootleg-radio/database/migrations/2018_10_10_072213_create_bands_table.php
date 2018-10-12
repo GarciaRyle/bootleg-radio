@@ -12,7 +12,11 @@ class CreateBandsTable extends Migration
      * @return void
      */
     public function up()
+<<<<<<< HEAD
     {
+=======
+    { 
+>>>>>>> ec86efd271de12d4f0b7281be0dc317ab54540cf
         Schema::create('bands', function (Blueprint $table) {
           $table->increments('id');
           $table->integer('userId');

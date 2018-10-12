@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang=eng>
+
 <head>
     <title>Bootleg</title>
     <meta charset="UTF-8">
@@ -11,12 +12,12 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 
-<body style="background-image: url(images/Image/registerbg.jpg); background-size: cover;" />
+<body style="background-image: url(../images/Image/registerbg.jpg); background-size: cover;" />
 <nav class="stroke">
     <div class="nav">
         <div class="nav-header">
             <ul>
-                <li><img src="images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
+                <li><img src="../images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
                 </li>
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#bands">BANDS</a></li>
@@ -77,16 +78,18 @@
             </div><br>
             <div class="form-group">
                 <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                <input type="text" name="bandDescription" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
             </div><br>
             <div class="form-group">
                 <center> &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;<label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Photo: </label>
-                    &nbsp;<input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
+                    &nbsp;<input type="file" name="fileUpload" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
             </div>
             <br>
-            <div class="form-wizard-buttons">
-                <button type="button" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
+           
+            <div class="form-group">
+                <button type="submit" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
             </div>
+
 
         </div>
     </div>
@@ -96,7 +99,7 @@
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
-        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
+        <img src="../images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
 
