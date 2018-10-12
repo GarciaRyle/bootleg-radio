@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Band;
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
-=======
 use Image;
->>>>>>> 249e5b28ca38e8a97a359ac18172d5494bf6d681
 
 class BandRegController extends Controller
 {
@@ -56,7 +53,7 @@ class BandRegController extends Controller
             'bandDescription'     =>  $request->get('bandDescription'),
             'fileUpload'     =>  $request->get('fileUpload')
         ]);
-        
+
         $bands->save();
         return redirect()->route('bands.profile')->with('success', 'Data Added');
     }
@@ -97,7 +94,7 @@ class BandRegController extends Controller
             'bandName'    =>  'required',
             'genre'    =>  'required',
             'bandDescription'     =>  'required',
-           
+
         ]);
         $bands = Band::find($id);
         $bands->bandName = $request->get('bandName');
@@ -106,7 +103,6 @@ class BandRegController extends Controller
         $bands->save();
         return redirect()->route('bands.index')->with('success', 'Data Updated');
     }
-   
 
     /**
      * Remove the specified resource from storage.
