@@ -43,59 +43,42 @@
             <img src="images/Image/inmyprison.jpg">
         </figure>
     </div>
-
     <!--sidebar code -->
     <div id="sidebar">
         <br><br><br><br><br>
-        <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
+        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
         <div class="flex-wrap"> <br> <br>
-            <form method="POST" action="{{ route('login') }}">
+
+
+            <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
+            <br><br>
+            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
+                {{ __('Profile') }}
+            </button>
+
+            <button style="
+                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a type=" logoout" class="btn btn-primary" ">
+                 <a style=" background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' , cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="{{ action("HomeController@bandreg") }}"> {{ __('Create A Band') }}</a>
+            </button>
+
+            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
+                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                {{ __('Logout') }} </button>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-
-
-
-                <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup " name="email" value="{{ old('email') }}" required autofocus style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a;">
-
-                @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
-
-                <br><br>
-
-
-                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup" name="password" required style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a; ">
-
-                @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-
-                <br><br>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember" style="font-family: 'Lato', sans-serif; font-size: 14px; color: #c2b396">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
-
-                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">
-                    {{ __('Login') }}</button>
-
-
             </form>
-<br>
- <p style="background-color: transparent; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet?</p>
-           <li> <a href="{{ route('register') }}" style="border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Sign up now!</a></li>
+
+
+
+
+
         </div>
+
     </div>
 
-
-  
 
     <div id="toggle-btn" onclick="toggleSidebar(this)">
         <span></span>
@@ -109,7 +92,7 @@
           document.getElementById('sidebar').classList.toggle('active');
         } </script>
 
-    <div class="parallax" id="home"> </div>
+     <div class="parallax" id="home"> </div>
     <div style="height: 435px;background-color:#141312;font-size:36px">
         <!--Featured Artist -->
         <br>
@@ -172,7 +155,7 @@
             <div style="padding-top: 115px;">
                 <figure class="snip1543">
                     <img src="images/Image/silent.jpg" alt="sample108" />
-                    <figcaption>
+                    <figcaption> 
                         <h3 style="font-family: 'Cinzel Decorative', cursive;">SILENT SANCTUARY</h3>
                         <p style="font-family: 'Lato', sans-serif;">Silent Sanctuary is a 5-piece Filipino rock band that was formed in Metro Manila,
                             Philippines in 2001.</p>
@@ -251,7 +234,6 @@
     <br>
     <div class="footer" style="font-family: 'Lato', sans-serif; position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px;">
         Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
-
 
 
 
