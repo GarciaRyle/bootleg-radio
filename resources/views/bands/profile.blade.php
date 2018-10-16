@@ -164,10 +164,11 @@
                     </div>
                     
                     <div class="gridcol"> 
-                         @foreach($bands as $row)
-                       <div><a class="button1" href="{{url('bands/3/edit')}}"   >Edit</a></div>
-                        
+                         
+                       
+            <div></div>
                         <div>
+                            @foreach($bands as $row)
                             <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="DELETE" />

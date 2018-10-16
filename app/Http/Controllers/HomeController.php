@@ -25,17 +25,4 @@ class HomeController extends Controller
     {
         return view('home');
     }
-    
-    
-    public function bandreg()
-    {
-        return view('bandregister');
-    }
-    
-    public function bandprof()
-    {
-        return view('bandprofile');
-    }
-    
-    
 }

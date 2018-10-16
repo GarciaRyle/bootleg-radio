@@ -41,7 +41,7 @@
 
         <div class="box2">
 
-            <br><br>
+            <br><br><br><br>
             <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
                 <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
                     <span>R</span><span>E</span><span>G</span><span>I</span><span>S</span><span>T</span><span>E</span><span>R</span>&nbsp<span>N</span><span>O</span><span>W</span></div>
@@ -79,21 +79,14 @@
                 <input id="password-confirm" placeholder="Re-enter Password" type="password" style="width: 50%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control" name="password_confirmation" required> <br>
             </center>
             <div class="clearfix">
-               
-                   <button type="submit" class="signupbtn" style="background-color: #4cb433;">Sign Up</button>
+
+               <center> <button type="submit" class="signupbtn" style="background-color: #4cb433; margin-left: 135px;">Sign Up</button> </center>
             </div>
 
         </div>
     </div>
-    </div>
-
-    </div>
 
 
-
-    </div>
-
-    </div>
 
     <!--sidebar code -->
     <div id="sidebar">
