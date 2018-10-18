@@ -235,66 +235,6 @@
   box-sizing:border-box;
 }
 
-#sidebar {
-  position:absolute;
-  top:0px;
-  right:0px;
-  width:200px;
-  height:100vh;
-  background:#141311;
-  text-align:center;
-  transform-origin:right;
-  transform:perspective(1200px) rotateY(90deg);
-  transition:all 400ms ease;
-}
-#sidebar ul li {
-  color:#ccc;
-  font-size:20px;
-  width:100%;
-  height:50px;
-  border-bottom:1px solid #a2321a;
-  line-height:50px;
-}
-#sidebar.active {
-  transform:perspective(1200px) rotateY(0deg);
-}
-
-
-
-#toggle-btn {
-  position:absolute;
-  right:15px;
-  top:9px;
-  transition:right 200ms linear 0ms,transform 300ms ease 100ms;
-}
-#toggle-btn.active {
-  right:230px;
-  transform:rotate(360deg);
-}
-#toggle-btn span {
-  position:relative;
-  top:0px;
-  display:block;
-  background:#c2b396;
-  width:30px;
-  height:5px;
-  margin:5px 0px;
-  cursor:pointer;
-  transition:transform 300ms ease 200ms;
-}
-#toggle-btn.active span:nth-child(1) {
-  top:10px;
-  transform:rotate(45deg);
-}
-#toggle-btn.active span:nth-child(2) {
-  opacity:0;
-}
-#toggle-btn.active span:nth-child(3) {
-  top:-10px;
-  transform:rotate(-45deg);
-}
-
-
 
 /* CSS GRID */
 

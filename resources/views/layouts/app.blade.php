@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootleg-Radio</title>
+    <title>Bootleg</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" integrity="sha384-XdYbMnZ/QjLh6iI4ogqCTaIjrFk87ip+ekIjefZch0Y+PvJ8CDYtEs1ipDmPorQ+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700">
 
     <!-- Styles -->
@@ -19,16 +19,20 @@
 
     <style>
         body {
-            font-family: 'Lato';
+            font-family: 'Cinzel Decorative', cursive;
+            color: 
         }
         .fa-btn {
-            margin-right: 6px;
+            margin-right: 7px;
+        }
+        .linenav { 
+        color: #d5d5d5; 
         }
     </style>
 </head>
 
 <body id="app-layout">
-    <nav class="navbar navbar-default navbar-static-top">
+    <nav    style="background-color:#141312;">
         <div class="container">
             <div class="navbar-header">
 
@@ -41,13 +45,13 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Bootleg Radio
+                <a href="{{ url('/') }}">
+                    <img src="images/Image/logo.png" style="width: 185px; height: 43px; padding-left: 40px; margin-top: 4px; ">
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                
+
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
@@ -56,37 +60,39 @@
                     <li><a href="{{ url('/register') }}">Register</a></li>
                     @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px; color: #c2b396;">
                             <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/profile') }}"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                              <li><a href="{{ action('BandRegController@create') }}"><i class="fa fa-btn fa-user"></i>Create Band</a></li>
-                     
-                                <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a></li>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
-                            
-                        
+                            <li><a href="{{ url('/profile') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fa fa-btn fa-user"></i>Profile</a></li>
+                            <li><a href="{{ action('BandRegController@create') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-plus-square"></i> Create Band</a></li>
+
+                            <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();" style="color: #a2321a; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-sign-out-alt"></i>
+                                    {{ __('Logout') }}
+                                </a></li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                @csrf
+                            </form>
+
+
                         </ul>
                     </li>
                     @endif
                 </ul>
-                
+
                 <!-- Left Side Of Navbar -->
-                <ul class="nav navbar-nav" style="float:right;">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="{{ url('/home') }}">Bands</a></li>
-                    <li><a href="#">Web Jocks</a></li>
-                    <li><a href="#">Chat</a></li>
-                    <li><a href="#">More</a></li>
-                </ul>
+                <div class="linenav">
+                    <ul class="nav navbar-nav" style="float:right; color: #c2b396;">
+                        <li><a href="#" style="color: #c2b396; ">Home</a></li>
+                        <li><a href="{{ url('/home') }}" style="color: #c2b396;">Bands</a></li>
+                        <li><a href="#" style="color: #c2b396;">Web Jocks</a></li>
+                        <li><a href="#" style="color: #c2b396;">Chat</a></li>
+                        <li><a href="#" style="color: #c2b396;">More</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>

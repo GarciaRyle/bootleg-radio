@@ -75,13 +75,6 @@
                 @endif
 
                 <br><br>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                    <label class="form-check-label" for="remember" style="font-family: 'Lato', sans-serif; font-size: 14px; color: #c2b396">
-                        {{ __('Remember Me') }}
-                    </label>
-                </div>
 
                 <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">
                     {{ __('Login') }}</button>
