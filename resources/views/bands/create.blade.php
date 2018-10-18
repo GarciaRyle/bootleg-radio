@@ -193,7 +193,7 @@
                 </div><br>
                 <div class="form-group">
                     <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                    <input type="text" name="bandDescription" placeholder="Information" maxlength="305" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                    <input type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px;">
                 </div>
 
                 <div class="form-group">

@@ -94,15 +94,15 @@ class BandRegController extends Controller
             'bandName'    =>  'required',
             'genre'    =>  'required',
             'bandDescription'     =>  'required',
-
         ]);
         $bands = Band::find($id);
         $bands->bandName = $request->get('bandName');
         $bands->genre = $request->get('genre');
         $bands->bandDescription = $request->get('bandDescription');
         $bands->save();
-        return redirect()->route('bands.index')->with('success', 'Data Updated');
+        return redirect()->to('bands')->with('success', 'Data Updated');
     }
+   
 
     /**
      * Remove the specified resource from storage.

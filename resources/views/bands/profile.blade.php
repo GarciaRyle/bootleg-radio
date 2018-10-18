@@ -1,39 +1,189 @@
-<!DOCTYPE html>
-<html lang=eng>
+@extends('layouts.app')
 
-<head>
-    <title>Bootleg</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+@section('content')
+ <!--Profile-->
+<head><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+<style>
+.album {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    align-items: stretch;
+    align-items: stretch;
+}
 
-<body style="background-color: #2e2b29">
-    <nav class="stroke">
-        <div class="nav">
-            <div class="nav-header">
-                <ul>
-                    <li><img src="images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
-                    </li>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#bands">BANDS</a></li>
-                    <li><a href="#webjocks">WEB JOCKS</a></li>
-                    <li><a href="#chat">CHAT</a></li>
-                    <li><a href="#buzz">BUZZ</a></li>
-                    <li><a href="#more">MORE</a></li>
+.album > div {
+    background: #d5d5d5;
+}
 
-                </ul>
+.bandmem > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
 
-            </div>
-        </div>
 
-    </nav>
-    <!--Profile-->
+.bandmem {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    align-items: stretch;
+    align-items: stretch;
+}
 
+.bandmem > div {
+    background: #d5d5d5;
+}
+
+.bandmem > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
+
+.bandprofile1 {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 40% 5%;
+    grid-auto-rows: 50px 80% 50px;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandprofile1 > div {
+    background: transparent;
+}
+
+.bandprofile1 > .box3:nth-child(odd) {
+    background: transparent;
+}
+
+.box1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box2 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.bandprofile {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 40% 5%;
+    grid-auto-rows: 50px 80% 50px;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandprofile > div {
+    background: #d5d5d5;
+}
+
+.bandprofile > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
+
+.box1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box2 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+
+.img-valign {
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+}
+
+.text2 {
+    font-size: 26px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.text3 {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    margin-top: -43px;
+    margin-left: 153px;
+}
+
+.desc {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 3px;
+    border-style: double;
+    border-color: #a2321a;
+    color: #141312;
+    padding: 1em;
+    text-align: center;
+}
+
+.containerreg {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    
+}
+
+.containerreg:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: solid #c2b396;
+    padding: 0;
+    }
+    .gridcol {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.gridcol > div {
+    background: transparent;
+    padding: 1em;
+}
+
+.gridcol > div:nth-child(odd) {
+    background: transparent;
+}
+</style>
+    </head>
     <div class="bandprofile">
         <div class="box1">
             <div>
@@ -41,9 +191,9 @@
                 @foreach($bands as $row)
                 <span class="text2">&nbsp {{$row['bandName']}}</span>
 
-                <div class="text3">&nbsp {{$row['genre']}}</div><br><br>
+                <div class="text3">&nbsp {{$row['genre']}}</div><br>
                 <hr color: #c2b396>
-                <div class="desc">{{$row['bandDescription']}}</div> <br><br>
+                <div class="desc" >{{$row['bandDescription']}}</div> <br><br>
                
                 @endforeach
                 <center>
@@ -141,7 +291,7 @@
                     </center>
 
                     <div class="form-group">
-                        <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif; font-size: 17px;">Single Name:</label><br><br>
+                        <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Name:</label><br><br>
                         <center>
                             <div contenteditable="true" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 19px; background-color: #ffffff; width: 250px; height: 30px; ">
                                 I BELONG TO THE ZOO
@@ -166,9 +316,13 @@
                     <div class="gridcol"> 
                          
                        
-            <div></div>
+            <div> @foreach($bands as $row)        
+                            
+                                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
+                           
+                             @endforeach</div>
                         <div>
-                            @foreach($bands as $row)
+                            @foreach($bands as $row)        
                             <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="DELETE" />
@@ -177,6 +331,7 @@
                              @endforeach
                             
                         </div>
+                       
                         <script>
 $(document).ready(function(){
  $('.delete_form').on('submit', function(){
@@ -200,50 +355,7 @@ $(document).ready(function(){
 
         </div>
     </div>
-
-    <!--sidebar code -->
-    <div id="sidebar">
-        <br><br><br><br><br>
-        <img src="images/Image/unknownPerson.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
-
-        <div class="flex-wrap"> <br> <br>
-
-
-            <label for="username" style="font-family: 'Coda', cursive; font-size: 14px; color: #ffffff " class="col-md-4 col-form-label text-md-right"> {{ Auth::user()->name }}</label>
-            <br><br>
-            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda', cursive; font-size: 14px; color:#a2321a; font-family: 'Coda', cursive;">
-                {{ __('Profile') }}
-            </button>
-
-            <button style="
-                background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
-                cursive; font-size: 14px; color: #a2321a type=" logoout" class="btn btn-primary" ">
-                 <a style=" background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' , cursive; font-size: 14px; color: #a2321a; text-decoration:none" href="{{ action("BandRegController@create") }}"> {{ __('Create A Band') }}</a>
-            </button>
-
-            <button style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Coda' ,
-                cursive; font-size: 14px; color: #a2321a " type=" logoout" class="btn btn-primary" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                {{ __('Logout') }} </button>
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-
-
-
-
-
-        </div>
-
-    </div>
-
-
-    <div id="toggle-btn" onclick="toggleSidebar(this)">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <!--javascript -->
+<!--javascript -->
     <script>
         function toggleSidebar(ref) {
             ref.classList.toggle('active');
@@ -251,13 +363,4 @@ $(document).ready(function(){
         }
 
     </script>
-
-
-
-
-
-
-
-</body>
-
-</html>
+@endsection

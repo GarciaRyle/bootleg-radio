@@ -16,9 +16,11 @@
          @endforeach
          </ul>
   @endif
-  <form method="post" action="{{action('BandRegController@update', $id)}}">
+  <form method="post" action="{{ '/bands/update/'. $bands->id }}">
    {{csrf_field()}}
-   <input type="hidden" name="_method" value="PATCH" />
+   
+   
+   
    <div class="form-group">
     <input type="text" name="bandName" class="form-control" value="{{$bands->bandName}}" placeholder="Band Name:" />
    </div>
@@ -36,10 +38,12 @@
     <input type="text" name="bandDescription" class="form-control" value="{{$bands->bandDescription}}" placeholder="Band Description:" />
    </div>
    <div class="form-group">
-    <input type="submit" class="btn btn-primary" value="Edit" />
+    <input type="submit" class="btn btn-primary" value="Update">
    </div>
   </form>
  </div>
 </div>
 
 @endsection
+    
+    
