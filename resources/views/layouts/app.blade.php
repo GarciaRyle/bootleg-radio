@@ -46,7 +46,7 @@
 
                 <!-- Branding Image -->
                 <a href="{{ url('/') }}">
-                    <img src="images/Image/logo.png" style="width: 185px; height: 43px; padding-left: 40px; margin-top: 4px; ">
+                    <img src="/images/Image/logo.png" style="width: 185px; height: 43px; padding-left: 40px; margin-top: 4px; ">
                 </a>
             </div>
 

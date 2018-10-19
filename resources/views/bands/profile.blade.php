@@ -185,6 +185,7 @@ hr {
 </style>
     </head>
     <div class="bandprofile">
+        
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
