@@ -9,6 +9,7 @@
         .bandregister {
     display: grid;
     grid-template-columns: 50% 35% 22%;
+          
 }
 
 .bandregister > div {
@@ -159,7 +160,6 @@
 
             <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
-            <br>
 
             @if(count($errors) > 0)
             <div class="alert alert-danger">
@@ -194,7 +194,8 @@
                 <center>
                     <div class="form-group"><br>
                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                        <input type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">
+                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;"></textarea>
+                        
                     </div>
                 </center>
 

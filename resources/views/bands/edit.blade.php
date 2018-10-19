@@ -210,7 +210,8 @@ background: transparent;
                 <div>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px; margin-top: -16px;" /></div>
                 <div>
                     <div class="text2">
-                        <input type="text" name="bandName" class="text2" value="{{$bands->bandName}}" placeholder="Band Name:" style="margin-left:120px; margin-top: 28px; width: 300px ; height: 30px;" />
+                        <textarea rows="4" cols="50" name="bandName" class="text2" value="{{$bands->bandName}}" placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px";></textarea>
+                      
                     </div>
                 </div>
                 <div><select class="text3" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; margin-left:-12px; margin-top: 60px;">
@@ -352,9 +353,9 @@ background: transparent;
 
                     <div class="gridcol">
                         <div></div>
-                        <div class="form-group">
+                         <div class="form-group">
                             <input type="submit" class="btn btn-primary" value="Update">
-                        </div>
+                           </div>   
                     </div>
                 </div>
             </div>

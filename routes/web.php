@@ -27,7 +27,7 @@ Route::get('bands.profile', array('as' => 'bands.profile', 'uses' => 'BandRegCon
 
 Route::get('bands.create', array('as' => 'bands.create', 'uses' => 'BandRegController@create'))->middleware('auth');
 Route::get('bands/edit/{id}', 'BandRegController@edit')->middleware('auth');
-Route::post('/bands/update/{id}', 'BandRegController@update')->middleware('auth');
+Route::post('/bands/update/{id}', 'BandRegController@update');
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
 Auth::routes();
