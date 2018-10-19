@@ -185,7 +185,6 @@ hr {
 </style>
     </head>
     <div class="bandprofile">
-        
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
@@ -318,9 +317,11 @@ hr {
                          
                        
             <div> @foreach($bands as $row)        
-                            
-                                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
-                           
+                            <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
+                                {{csrf_field()}}
+                                <input type="hidden" name="_method" value="DELETE" />
+                                <button type="submit" class="btn btn-warning">Edit</button>
+                            </form>
                              @endforeach</div>
                         <div>
                             @foreach($bands as $row)        

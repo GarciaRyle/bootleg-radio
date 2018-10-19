@@ -8,7 +8,7 @@
     <style>
         .bandregister {
     display: grid;
-    grid-template-columns: 43% 35% 22%;
+    grid-template-columns: 50% 35% 22%;
 }
 
 .bandregister > div {
@@ -146,7 +146,7 @@
 </style>
 </head>
 
-<body style="background-color: #393632" />
+<body style="background-image: url('../images/bandregbk.jpg'); background-repeat: no-repeat;" />
 
 
 <div style="height: 50px; backgrounda-color: #141311;"></div>
@@ -160,7 +160,7 @@
             <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
             <br>
-         
+
             @if(count($errors) > 0)
             <div class="alert alert-danger">
                 <ul>
@@ -177,30 +177,32 @@
             @endif
             <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
                 {{csrf_field()}}
-                <div class="form-group">
-                    <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                    <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
-                </div>
-                <div class="col-md-4">
-                    <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br><br>
-                    <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif;">
-                        <option value="Indie">Indie</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Rock">Rock</option>
-                    </select>
+                <center>
+                    <div class="form-group">
+                        <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
+                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                    </div>
+                </center>
+                <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
+                <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
+                    <option value="Indie">Indie</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Rock">Rock</option>
+                  
+                </select>
 
-
-                </div><br>
-                <div class="form-group">
-                    <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                    <input type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px;">
-                </div>
+                <center>
+                    <div class="form-group"><br>
+                        <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
+                        <input type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">
+                    </div>
+                </center>
 
                 <div class="form-group">
                     <button type="submit" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
                 </div>
             </form>
-               
+
 
         </div>
     </div>
@@ -222,6 +224,7 @@
             ref.classList.toggle('active');
             document.getElementById('sidebar').classList.toggle('active');
         }
+
     </script>
 
 

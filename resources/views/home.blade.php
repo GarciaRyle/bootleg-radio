@@ -582,7 +582,7 @@ div#slider figure {
             <div style="height:30px;background-color: transparent; font-size:36px" id="portfolio">
                 <center>
 
-                    <div style="font-size:28px; text-align: center; font-family: 'Coda', cursive; color: #c3b396 "> INCOMING EVENTS</div>
+                    <div style="font-size:28px; text-align: center; font-family: 'Lato', sans-serif; color: #c3b396 "> INCOMING EVENTS</div>
                     <figure class="snip1543">
                         <img src="images/event3.jpg" alt="sample108" />
                         <figcaption>
@@ -625,9 +625,9 @@ div#slider figure {
     <div style="height: 300px;background-color:#141312;font-size:36px">
         <div class="wrapper">
             <div>
-                <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
                     Who's Your Daddy?</div>
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #c2b396; font-size: 25px; padding-left: 65px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-left: 65px;">
                     Bootleg Radio</div>
 
                 <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
@@ -639,7 +639,7 @@ div#slider figure {
             <div>
                 <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
                     To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
                     Phone: +63 (2) 772-3152 / 5859670
                     <br>Fax: +63 (2) 771-0143
                     <br>E-mail address: sales@bootleg-radio.com</div>
