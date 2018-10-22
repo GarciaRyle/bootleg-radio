@@ -1,1 +1,4 @@
-bootleg-radio-backup
+storage/
+.env
+vendor/
+.gitattributes
