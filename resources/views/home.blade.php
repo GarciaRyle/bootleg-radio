@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+<head>   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet"></head>
 <style>
     /* Events */
 

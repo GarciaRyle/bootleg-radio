@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
- <!--Profile-->
-<head><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<head>
+       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+    </head>
 <style>
 .album {
     display: grid;
@@ -183,14 +185,14 @@ hr {
     background: transparent;
 }
 </style>
-    </head>
+
     <div class="bandprofile">
         
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
                 @foreach($bands as $row)
-                <span class="text2">&nbsp {{$row['bandName']}}</span>
+                <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
 
                 <div class="text3">&nbsp {{$row['genre']}}</div><br>
                 <hr color: #c2b396>

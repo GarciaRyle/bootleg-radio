@@ -66,12 +66,14 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="{{ url('/profile') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fa fa-btn fa-user"></i>Profile</a></li>
-                            <li><a href="{{ action('BandRegController@create') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-plus-square"></i> Create Band</a></li>
+                            <li><a href="{{ url('/profile') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fa fa-btn fa-user"></i>&nbsp;Profile</a></li>
+                            <li><a href="{{ action('BandRegController@create') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-plus-square"></i> &nbsp;  Create Band</a></li>
+                             <li><a href="{{ action('BandRegController@index') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="far fa-eye"></i> &nbsp; View Profile</a></li>
+
 
                             <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();" style="color: #a2321a; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-sign-out-alt"></i>
-                                    {{ __('Logout') }}
+                                    &nbsp; {{ __('Logout') }}
                                 </a></li>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                 @csrf
