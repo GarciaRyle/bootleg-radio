@@ -1,3 +1,4 @@
+
 @extends('layouts.app')
 
 @section('content')
@@ -9,6 +10,7 @@
         .bandregister {
     display: grid;
     grid-template-columns: 50% 35% 22%;
+          
 }
 
 .bandregister > div {
@@ -159,7 +161,6 @@
 
             <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
-            <br>
 
             @if(count($errors) > 0)
             <div class="alert alert-danger">
@@ -179,12 +180,18 @@
                 {{csrf_field()}}
                 <center>
                     <div class="form-group">
-                        <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                    <input type="text" placeholder="Band Name" class="form-control" name="bandName" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;">
+                    @if ($errors->has('bandName'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('bandName') }}</strong>
+                                    </span>
+                                @endif
                     </div>
                 </center>
-                <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
-                <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
+
+
+<center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
+                <select class="selectpicker" name="genre" placeholder="Genre" class="selectpicker" name="genre" value="{{ old('genre') }}" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
                     <option value="Indie">Indie</option>
                     <option value="Pop">Pop</option>
                     <option value="Rock">Rock</option>
@@ -194,7 +201,12 @@
                 <center>
                     <div class="form-group"><br>
                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                        <input type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">
+                        <textarea rows="3" cols="50" type="text"  name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">"{{ old('bandDescription') }}"</textarea>
+                        @if ($errors->has('bandDescription'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('bandDescription') }}</strong>
+                                    </span>
+                                @endif
                     </div>
                 </center>
 

@@ -22,6 +22,7 @@
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#bands">BANDS</a></li>
                 <li><a href="#webjocks">WEB JOCKS</a></li>
+
                 <li><a href="#chat">CHAT</a></li>
                 <li><a href="#buzz">BUZZ</a></li>
                 <li><a href="#more">MORE</a></li>
@@ -63,7 +64,7 @@
                 {{csrf_field()}}
                 <div class="form-group">
                     <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                    <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                    <input type="text" value="{{ old('bandName') }}"  name="bandName" placeholder="Band Name" class="form-control{{ $errors->has('bandName') ? ' is-invalid' : '' }}"  style="font-family: 'Lato', sans-serif;" required>
                 </div>
                 <div class="col-md-4">
                     <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label>
@@ -77,13 +78,20 @@
                 </div><br>
                 <div class="form-group">
                     <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                    <input type="text" name="info" placeholder="Information" class="form-control required" style="font-family: 'Lato', sans-serif;">
+                    <input type="text" value="{{ old('info') }}" name="info" placeholder="Information" class="form-control{{ $errors->has('info') ? ' is-invalid' : '' }}"  style="font-family: 'Lato', sans-serif;" required>
+                    @if ($errors->has('info'))
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $errors->first('info') }}</strong>
+                                    </span>
+                                @endif
                 </div><br>
 
 
                 <div class="form-wizard-buttons">
                     <button type="button" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px; border-radius: 20px;">FINISH</button>
                 </div>
+
+
             </form>
         </div>
     </div>
