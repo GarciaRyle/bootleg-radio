@@ -99,6 +99,10 @@
 .text2 {
     font-size: 26px;
     font-family: 'Cinzel Decorative', cursive;
+    word-wrap: break-word;
+     border: 3px;
+    border-style: double;
+    border-color: transparent;
 }
 
 .text3 {
@@ -106,6 +110,7 @@
     font-family: 'Lato', sans-serif;
     margin-top: -43px;
     margin-left: 153px;
+   
 }
 
 .desc {
@@ -120,6 +125,7 @@
     color: #141312;
     padding: 1em;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .containerreg {

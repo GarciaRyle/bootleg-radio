@@ -56,7 +56,7 @@
 
         .userprofile {
             display: grid;
-            grid-template-columns: 9% 83.4% 10%;
+            grid-template-columns: 8% 84.5% 10%;
             grid-auto-columns: auto;
             align-items: stretch;
             align-items: stretch;
@@ -68,6 +68,12 @@
 
         .userprofile>.box3:nth-child(odd) {
             background: transparent;
+        }
+
+        .box1 {
+            grid-column: 2/3;
+            grid-row: auto;
+            background: #d5d5d5;
         }
 
         .bandmember {
@@ -123,6 +129,7 @@
             margin-left: 270px;
             margin-right: 70px;
             font-family: 'Lato', sans-serif;
+            color: #141312;
             font-size: 16px;
             padding: 10px;
             border: 3px;
@@ -132,6 +139,7 @@
             padding: 1em;
             width: 560px;
             text-align: center;
+            word-wrap: break-word;
         }
 
         .containerreg {
@@ -221,19 +229,19 @@
     </style>
 </head>
 
-<body>
-    <div style="background: transparent; height: 70px;"></div>
+<body style="background: #c2b396">
+    <div style="background: transparent; height: 50px;"></div>
     <div class="userprofile">
         <div>
             <!--wagalisin-->
         </div>
-        <div>
+        <div class="box1" style="background: #d5d5d5;">
             <div class="parent">
                 <img class="image1" src="/images/defaultcbackcolor.jpg" />
                 <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
                 <span style="margin-left: 270px; font-size: 26px; ">&nbsp Band Name</span>
                 <div class="text3">&nbsp Genre</div>
-                <div class="text4">About Us</div>
+                <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
                 <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie molestie felis, at convallis magna tincidunt sed. Quisque vel sem sollicitudin, feugiat lectus at, ornare neque. Suspendisse pharetra laoreet convallis. Aliquam congue leo non arcu laoreet, commodo tincidunt orci congue. Nunc imperdiet quam id nulla vehicula, in lacinia lorem sollicitudin.</div>
             </div><br><br>
             <div class="bandmember">
@@ -278,7 +286,7 @@
                 </div>
                 <div>
                     <div class="lyrics">
-                        <div style="margin-top: 20px; text-align: center; font-size: 20px;">Album Name</div>
+                        <div style="margin-top: 20px; text-align: center; font-size: 20px; color: #a2321a;">Album Name</div>
                         <div class="block2">
                             <div class="inner">Year</div>
                             <div class="inner">Tracks</div>
@@ -311,7 +319,8 @@
             </div>
             <h1 style="font-family: 'Lato', sans-serif; font-size: 18px; margin-left: 60px;"> ALBUMS</h1>
             <div class="albumphoto">
-                <div><!--wagtangalindiv-->
+                <div>
+                    <!--wagtangalindiv-->
                 </div>
                 <div>
                     <div class="containerreg">
@@ -345,7 +354,7 @@
                         </div>
                     </div>
                 </div>
-                   <div>
+                <div>
                     <div class="containerreg">
                         <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
@@ -354,10 +363,10 @@
                     </div>
                 </div>
             </div>
-            <div style="background: transparent; height: 70px;"></div>
+            <div style="background: #c2b396; height: 70px;"></div>
         </div>
-        
+
     </div>
-    
+
 </body>
 @endsection

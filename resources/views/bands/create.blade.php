@@ -196,7 +196,7 @@
                 <center>
                     <div class="form-group"><br>
                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;"></textarea>
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;"></textarea>
                         
                     </div>
                 </center>
