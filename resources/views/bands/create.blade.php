@@ -177,15 +177,17 @@
                 <p>{{ \Session::get('success') }}</p>
             </div>
             @endif
-            <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
+     <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
                 {{csrf_field()}}
                 <center>
                     <div class="form-group">
                         <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
                     </div>
                 </center>
                 <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
+
+
                 <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
                     <option value="Indie">Indie</option>
                     <option value="Pop">Pop</option>
@@ -196,7 +198,7 @@
                 <center>
                     <div class="form-group"><br>
                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;"></textarea>
+                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">{{ old('bandDescription') }}</textarea>
                         
                     </div>
                 </center>
@@ -205,7 +207,6 @@
                     <button type="submit" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
                 </div>
             </form>
-
 
         </div>
     </div>

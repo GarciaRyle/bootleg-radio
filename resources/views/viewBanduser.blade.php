@@ -235,14 +235,18 @@
         <div>
             <!--wagalisin-->
         </div>
+       
         <div class="box1" style="background: #d5d5d5;">
             <div class="parent">
                 <img class="image1" src="/images/defaultcbackcolor.jpg" />
                 <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
-                <span style="margin-left: 270px; font-size: 26px; ">&nbsp Band Name</span>
-                <div class="text3">&nbsp Genre</div>
+                @foreach($bands as $row)
+                <span style="margin-left: 270px; font-size: 26px; ">&nbsp {{$row['bandName']}}</span>
+                <div class="text3">&nbsp {{$row['genre']}}</div>
                 <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
-                <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam molestie molestie felis, at convallis magna tincidunt sed. Quisque vel sem sollicitudin, feugiat lectus at, ornare neque. Suspendisse pharetra laoreet convallis. Aliquam congue leo non arcu laoreet, commodo tincidunt orci congue. Nunc imperdiet quam id nulla vehicula, in lacinia lorem sollicitudin.</div>
+                <div class="desc">{{$row['bandDescription']}}</div>
+                @endforeach
+
             </div><br><br>
             <div class="bandmember">
                 <div>
