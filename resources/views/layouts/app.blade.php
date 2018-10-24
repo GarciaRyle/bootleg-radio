@@ -17,22 +17,36 @@
     {{--
     <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
 
-    <style>
-        body {
-            font-family: 'Cinzel Decorative', cursive;
-            color: 
-        }
-        .fa-btn {
-            margin-right: 7px;
-        }
-        .linenav { 
-        color: #d5d5d5; 
-        }
+<style>
+    body {
+        font-family: 'Cinzel Decorative', cursive;
+        color:
+    }
+
+    .fa-btn {
+        margin-right: 7px;
+    }
+
+    .linenav {
+        color: #d5d5d5;
+    }
+
+@media screen (min-width: 320px) {
+#container {
+width: 100%;
+}
+}
+@media screen (min-width: 480px) {
+#container {
+width: 100%;
+}
+}
+
     </style>
 </head>
 
 <body id="app-layout">
-    <nav    style="background-color:#141312;">
+    <nav style="background-color:#141312;">
         <div class="container">
             <div class="navbar-header">
 
@@ -67,8 +81,8 @@
 
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="{{ url('/profile') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fa fa-btn fa-user"></i>&nbsp;Profile</a></li>
-                            <li><a href="{{ action('BandRegController@create') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-plus-square"></i> &nbsp;  Create Band</a></li>
-                             <li><a href="{{ action('BandRegController@index') }}"style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="far fa-eye"></i> &nbsp; View Profile</a></li>
+                            <li><a href="{{ action('BandRegController@create') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="fas fa-plus-square"></i> &nbsp; Create Band</a></li>
+                            <li><a href="{{ action('BandRegController@index') }}" style="color: #c2b396; font-family: 'Lato', sans-serif; font-size: 16px;"><i class="far fa-eye"></i> &nbsp; View Profile</a></li>
 
 
                             <li><a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
