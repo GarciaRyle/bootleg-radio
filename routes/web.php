@@ -18,18 +18,16 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/bandprofile', array('as' => 'bands.profile', 'uses' => 'HomeController@bandprof'))->middleware('auth');
-
 Route::resource('bands', 'BandRegController')->middleware('auth');
-
 Route::get('bands.profile', array('as' => 'bands.profile', 'uses' => 'BandRegController@index'))->middleware('auth');
-
 Route::get('bands.create', array('as' => 'bands.create', 'uses' => 'BandRegController@create'))->middleware('auth');
 Route::get('bands/edit/{id}', 'BandRegController@edit')->middleware('auth');
 Route::post('/bands/update/{id}', 'BandRegController@update');
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
-Auth::routes();
+Route::get('/viewBanduser', 'HomeController@view')->name('viewBanduser');
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
