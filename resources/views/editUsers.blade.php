@@ -16,7 +16,7 @@
         background-image: url("images/Image/background.jpg");
 
         /* Full height */
-        height: 100%; 
+        height: 95%; 
 
         /* Center and scale the image nicely */
         background-position: center;
@@ -70,20 +70,7 @@
 
 <body>
     <div class="bg">
-        <div class="container">
-            <div class="row"></div>
-            <div class="col-md-10 col-md-offset-1"><br><br>
-                <img src="/uploads/avatars/{{ $user->avatar }}" style="width: 150px; height: 150px; float:left; border-radius: 50% ; margin-right: 25px;">
-                <br>
-                <h2 style="color: #141312"> {{ $user->name }}'s Profile </h2>
-                <form enctype="multipart/form-data" action="/profile" method="POST">
-                    <label style="color: #141312">Update Profile Image</label><br>
-                    <input type="file" name="avatar">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="submit" class="pull-right btn btn-sm btn-danger" style="float:right; ">
-                </form>
-            </div>
-        </div><br>
+      <div style="height: 110px;"></div>
         <div class="userprofile">
             <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
                 <div class="userright">
@@ -91,11 +78,12 @@
                     <div> <br>
                         <h2 style="font-size: 18px; color: #a2321a"> User Information</h2><br>
                         <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
-                        <div class="text4">BAND NAME</div>
+                           <input name="bandName" class="text2" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px" ; />
+
                         <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Email : </h2>
-                        <div class="text4">User@email.com</div>
-                        <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Password : </h2>
-                        <div class="text4"> &nbsp;&nbsp;********</div>
+                        <input name="bandName" class="text2" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px" ; />
+
+
                         <br>
                     </div>
                     <div><br>
@@ -113,7 +101,7 @@
                                         <div></div>
                                     </center>
                                     <center>
-                                        <div><a href="{{ '/editUsers' }}" type="submit" class="btn btn-warning">Edit</a></div>
+                                        <div><button type="submit" class="btn btn-warning">Update</button></div>
                                     </center>
                                         <br>
                                 </div>
