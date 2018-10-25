@@ -17,6 +17,7 @@
             <input type="file" name="avatar">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="pull-right btn btn-sm btn-danger" style="float:right;">
+           
             <a href="{{ '/show/' . $user->id }}" target="_blank">EDIT PROFILE</a>
            
                </form>
