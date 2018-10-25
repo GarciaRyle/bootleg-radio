@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
- <!--Profile-->
-<head><link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<head>
+       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+    </head>
 <style>
 .album {
     display: grid;
@@ -97,6 +99,10 @@
 .text2 {
     font-size: 26px;
     font-family: 'Cinzel Decorative', cursive;
+    word-wrap: break-word;
+     border: 3px;
+    border-style: double;
+    border-color: transparent;
 }
 
 .text3 {
@@ -104,6 +110,7 @@
     font-family: 'Lato', sans-serif;
     margin-top: -43px;
     margin-left: 153px;
+   
 }
 
 .desc {
@@ -118,6 +125,7 @@
     color: #141312;
     padding: 1em;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .containerreg {
@@ -183,13 +191,14 @@ hr {
     background: transparent;
 }
 </style>
-    </head>
+
     <div class="bandprofile">
+        
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
                 @foreach($bands as $row)
-                <span class="text2">&nbsp {{$row['bandName']}}</span>
+                <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
 
                 <div class="text3">&nbsp {{$row['genre']}}</div><br>
                 <hr color: #c2b396>
@@ -317,11 +326,9 @@ hr {
                          
                        
             <div> @foreach($bands as $row)        
-                            <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
-                                {{csrf_field()}}
-                                <input type="hidden" name="_method" value="DELETE" />
-                                <button type="submit" class="btn btn-warning">Edit</button>
-                            </form>
+                            
+                                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
+                           
                              @endforeach</div>
                         <div>
                             @foreach($bands as $row)        

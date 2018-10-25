@@ -6,6 +6,8 @@
 <html lang=eng>
 
 <head>
+       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <style>
         .bandregister {
     display: grid;
@@ -201,12 +203,15 @@
                 <center>
                     <div class="form-group"><br>
                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
+
                         <textarea rows="3" cols="50" type="text"  name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">"{{ old('bandDescription') }}"</textarea>
                         @if ($errors->has('bandDescription'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('bandDescription') }}</strong>
                                     </span>
                                 @endif
+                       
+
                     </div>
                 </center>
 
@@ -222,22 +227,6 @@
 <div>
 
 
-
-
-    <div id="toggle-btn" onclick="toggleSidebar(this)">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-
-    <!--javascript -->
-    <script>
-        function toggleSidebar(ref) {
-            ref.classList.toggle('active');
-            document.getElementById('sidebar').classList.toggle('active');
-        }
-
-    </script>
 
 
 

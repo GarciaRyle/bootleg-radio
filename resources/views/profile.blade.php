@@ -1,6 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+</head>
 <body style="background-image: url('../images/bandprobk.jpg'); background-repeat: no-repeat;" />
 <div class="container">
     <div class="row"></div>
@@ -12,7 +17,9 @@
             <input type="file" name="avatar">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="submit" class="pull-right btn btn-sm btn-danger" style="float:right;">
-        </form>
+            <a href="{{ '/show/' . $user->id }}" target="_blank">EDIT PROFILE</a>
+           
+               </form>
     </div>
 </div>
 @endsection
