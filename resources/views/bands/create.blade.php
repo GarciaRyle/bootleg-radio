@@ -11,6 +11,7 @@
         .bandregister {
     display: grid;
     grid-template-columns: 50% 35% 22%;
+            grid-row: auto;
           
 }
 

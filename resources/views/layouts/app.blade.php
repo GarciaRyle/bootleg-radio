@@ -59,7 +59,7 @@ width: 100%;
                 </button>
 
                 <!-- Branding Image -->
-                <a href="{{ url('/') }}">
+                <a>
                     <img src="/images/Image/logo.png" style="width: 185px; height: 43px; padding-left: 40px; margin-top: 4px; ">
                 </a>
             </div>
