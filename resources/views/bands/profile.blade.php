@@ -89,7 +89,7 @@ background-size: cover;
 }
 
 .bandprofile > div {
-    background: #d5d5d5;
+    background: #f1f1f1;
 }
 
 .bandprofile > .box3:nth-child(odd) {

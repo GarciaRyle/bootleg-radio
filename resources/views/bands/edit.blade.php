@@ -56,7 +56,7 @@ align-items: stretch;
 .bandprofile1 {
     display: grid;
     grid-template-columns: 5% 45% 5% 40% 5%;
-    grid-auto-rows: 50px 80% 50px;
+    grid-auto-rows: auto;
     align-items: stretch;
     align-items: stretch;
 }
@@ -82,7 +82,7 @@ align-items: stretch;
 .bandprofile {
     display: grid;
     grid-template-columns: 5% 45% 5% 40% 5%;
-    grid-auto-rows: 50px 80% 50px;
+    grid-auto-rows: 50px 90% 50px;
     align-items: stretch;
     align-items: stretch;
 }
@@ -97,11 +97,6 @@ align-items: stretch;
 
 .box1 {
     grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-.box2 {
-    grid-column: 4/5;
     grid-row: 2/3;
 }
 

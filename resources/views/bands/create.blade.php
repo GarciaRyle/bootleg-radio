@@ -5,28 +5,53 @@
 <html lang=eng>
 
 <head>
-       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <style>
+        body, html {
+height: 100%;
+}
+
+.bg {
+/* The image used */
+background-image: url("/images/bandregbk.jpg");
+
+/* Full height */
+height: 103%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
         .bandregister {
     display: grid;
     grid-template-columns: 50% 35% 22%;
-            grid-row: auto;
+    grid-auto-columns: 
           
 }
 
-.bandregister > div {
+ .userprofile {
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            grid-auto-columns: auto;
+            align-items: stretch;
+            align-items: stretch;
+        }
 
-    background: #d5d5d5;
-    align-items: center;
-    height: 500px;
-    padding: 1em;
-}
+        .userprofile>div {
+            background: transparent;
+        }
 
-.bandregister > div:nth-child(odd) {
-    background: transparent;
+        .userprofile>.box3:nth-child(odd) {
+            background: transparent;
+        }
 
-}
+        .box1 {
+            grid-column: 2/3;
+            grid-row: auto;
+            background: #d5d5d5;
+        }
         
 .containerr {
     width: 100%;
@@ -36,45 +61,51 @@
 
 }
 
-
+.userright {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            grid-auto-columns: auto;
+            align-items: stretch;
+            align-items: stretch;
+        }
 .animate {
-    font-size: 50px;
+font-size: 50px;
 
 
 }
 
 .animate span {
-    display: inline-block;
+display: inline-block;
 }
 
 
 
 .animate span:nth-of-type(2) {
-    animation-delay: .05s;
+animation-delay: .05s;
 }
 
 .animate span:nth-of-type(3) {
-    animation-delay: .1s;
+animation-delay: .1s;
 }
 
 .animate span:nth-of-type(4) {
-    animation-delay: .15s;
+animation-delay: .15s;
 }
 
 .animate span:nth-of-type(5) {
-    animation-delay: .2s;
+animation-delay: .2s;
 }
 
 .animate span:nth-of-type(6) {
-    animation-delay: .25s;
+animation-delay: .25s;
 }
 
 .animate span:nth-of-type(7) {
-    animation-delay: .3s;
+animation-delay: .3s;
 }
 
 .animate span:nth-of-type(8) {
-    animation-delay: .35s;
+animation-delay: .35s;
 }
 
 .animate span:nth-of-type(9) {
@@ -150,78 +181,71 @@
 </style>
 </head>
 
-<body style="background-image: url('../images/bandregbk.jpg'); background-repeat: no-repeat;" />
+<body>
+
+    <div class="bg">
+        <div style="height: 50px; background: transparent;"></div>
+        <div class="userprofile">
+            <div></div>
+            <div>
+                <div class="userright">
+                    <div></div>
+                    <div style="background: #f1f1f1;">
+                        <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
+                            <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
+                                <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp<span>A</span>&nbsp<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
+
+                            <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
 
-<div style="height: 50px; backgrounda-color: #141311;"></div>
-<div class="bandregister">
-    <div></div>
-    <div>
-        <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
-            <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp<span>A</span>&nbsp<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
+                            @if(count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                            @endif
+                            @if(\Session::has('success'))
+                            <div class="alert alert-success">
+                                <p>{{ \Session::get('success') }}</p>
+                            </div>
+                            @endif
+                            <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
+                                {{csrf_field()}}
+                                <center>
+                                    <div class="form-group">
+                                        <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
+                                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                                    </div>
+                                </center>
+                                <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
 
-            <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
 
+                                <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
+                                    <option value="Indie">Indie</option>
+                                    <option value="Pop">Pop</option>
+                                    <option value="Rock">Rock</option>
 
-            @if(count($errors) > 0)
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach($errors->all() as $error)
-                    <li>{{$error}}</li>
-                    @endforeach
-                </ul>
-            </div>
-            @endif
-            @if(\Session::has('success'))
-            <div class="alert alert-success">
-                <p>{{ \Session::get('success') }}</p>
-            </div>
-            @endif
-     <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
-                {{csrf_field()}}
-                <center>
-                    <div class="form-group">
-                        <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                                </select>
+
+                                <center>
+                                    <div class="form-group"><br>
+                                        <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
+                                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">{{ old('bandDescription') }}</textarea>
+
+                                    </div>
+                                </center>
+
+                                <div class="form-group">
+                                    <button type="submit" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px; border-radius: 20px;">FINISH</button>
+                                </div>
+                            </form>
+
+                        </div>
                     </div>
-                </center>
-                <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
-
-
-                <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
-                    <option value="Indie">Indie</option>
-                    <option value="Pop">Pop</option>
-                    <option value="Rock">Rock</option>
-                  
-                </select>
-
-                <center>
-                    <div class="form-group"><br>
-                        <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
-                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">{{ old('bandDescription') }}</textarea>
-                        
-                    </div>
-                </center>
-
-                <div class="form-group">
-                    <button type="submit" style="height: 50px; width:450px; background-color: #a2321a; font-family: 'Lato', sans-serif; font-siz: 18px;">FINISH</button>
                 </div>
-            </form>
-
+            </div>
         </div>
-    </div>
-</div>
-<div>
-
-
-
-
-
-
-
-
-
-
-</div>
-@endsection
+        @endsection
