@@ -20,6 +20,17 @@ class BandRegController extends Controller
         return view('bands.profile', compact('bands'));
     }
 
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index2()
+    {
+        $bands = Band::where('UserId', '=', Auth::user()->id)->get();
+        return view('viewBanduser', compact('bands'));
+    }
+
 
     /**
      * Show the form for creating a new resource.

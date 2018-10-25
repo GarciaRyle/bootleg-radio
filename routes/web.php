@@ -26,8 +26,7 @@ Route::get('bands/edit/{id}', 'BandRegController@edit')->middleware('auth');
 Route::post('/bands/update/{id}', 'BandRegController@update');
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
-Route::get('/viewBanduser', 'HomeController@view')->name('viewBanduser');
-
+Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegController@index2'))->middleware('auth');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
