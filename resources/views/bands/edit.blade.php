@@ -6,11 +6,27 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <style>
-        .album {
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    align-items: stretch;
-    align-items: stretch;
+body, html {
+height: 100%;
+}
+
+.bg {
+/* The image used */
+background-image: url("/images/Image/background.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.album {
+display: grid;
+grid-template-columns: 40% 30% 30%;
+align-items: stretch;
+align-items: stretch;
 }
 
 .album > div {
@@ -199,46 +215,49 @@ background: transparent;
 }
 </style>
 </head>
-<form method="post" action="{{ '/bands/update/'. $bands->id }}">
-    {{csrf_field()}}
-    <div class="bandprofile">
 
-        <div class="box1">
+<body>
+    <div class="bg">
+        <form method="post" action="{{ '/bands/update/'. $bands->id }}">
+            {{csrf_field()}}
+            <div class="bandprofile">
 
-            <div class="banddes">
+                <div class="box1">
 
-                <div>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px; margin-top: -16px;" /></div>
-                <div>
-                    <div class="text2">
-                        <input name="bandName" class="text2" value="{{$bands->bandName}}" maxlength="20"  placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px";/>
-                      
+                    <div class="banddes">
+
+                        <div>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px; margin-top: -16px;" /></div>
+                        <div>
+                            <div class="text2">
+                                <input name="bandName" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px" ; />
+
+                            </div>
+                        </div>
+                        <div><select class="text3" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; margin-left:-12px; margin-top: 60px;">
+                                <option value="Indie">Indie</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Rock">Rock</option>
+                            </select></div>
+
+
                     </div>
-                </div>
-                <div><select class="text3" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; margin-left:-12px; margin-top: 60px;">
-                        <option value="Indie">Indie</option>
-                        <option value="Pop">Pop</option>
-                        <option value="Rock">Rock</option>
-                    </select></div>
+                    <hr color: #c2b396>
 
 
-            </div>
-            <hr color: #c2b396>
-
-           
-            <br>
-            <div class="desc">
-                <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px; value="{{$bands->bandDescription}}"></textarea>
+                    <br>
+                    <div class="desc">
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
 
             </div>
 
             <center>
-                <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> BAND MEMBERS</p>
+                <p style=" color: #141311; font-size: 20px; font-family: 'Lato' , sans-serif;"> BAND MEMBERS</p>
             </center>
 
             <div class="bandmem">
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/vocalist.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Vocalist</div>
                         </div>
@@ -246,7 +265,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/drum.jpg" alt="Guirtarist" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
                         <div class="overlay">
                             <div class="text">Drummer</div>
                         </div>
@@ -254,7 +273,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/guitarist.jpg" alt="Guirtarist" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
                         <div class="overlay">
                             <div class="text">Electric Guitarist</div>
                         </div>
@@ -262,7 +281,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/bass.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Bass Guitarist</div>
                         </div>
@@ -270,7 +289,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/lead.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Lead Singer</div>
                         </div>
@@ -289,7 +308,7 @@ background: transparent;
             <div class="album">
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/album1.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Album 1</div>
                         </div>
@@ -297,7 +316,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/album2.jpg" alt="Avatar" class="image" style="height: 50%;">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image" style="height: 50%;">
                         <div class="overlay">
                             <div class="text">Album 2</div>
                         </div>
@@ -306,7 +325,7 @@ background: transparent;
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/album3.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Album 3</div>
                         </div>

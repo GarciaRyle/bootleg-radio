@@ -567,7 +567,7 @@ div#slider figure {
                 <div>
                     <h1 style="padding-top: 20px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 20px;"> FEATURED
                         ARTIST</h1>
-                    <h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</h2>
+                    <a href="{{ url('/viewBanduser') }}" h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</a></h2>
                     <h2 style="padding-top: 20px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 17px;"> Unique's
                         solo debut album Grandma is the only thing <br> Filipino music fans and musicians can talk about
                         since <br> it dropped earlier this week of 13th of August, which <br> everyone giving their own

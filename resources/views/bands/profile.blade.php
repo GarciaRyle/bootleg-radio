@@ -7,6 +7,22 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     </head>
 <style>
+body, html {
+height: 100%;
+}
+
+.bg {
+/* The image used */
+background-image: url("images/Image/background.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
 .album {
     display: grid;
     grid-template-columns: 40% 30% 30%;
@@ -103,6 +119,7 @@
      border: 3px;
     border-style: double;
     border-color: transparent;
+    color: #c2b396;
 }
 
 .text3 {
@@ -191,7 +208,7 @@ hr {
     background: transparent;
 }
 </style>
-
+<div class="bg">
     <div class="bandprofile">
         
         <div class="box1">
@@ -212,7 +229,7 @@ hr {
                 <div class="bandmem">
                     <div>
                         <div class="containerreg">
-                            <img src="images/Image/vocalist.jpg" alt="Avatar" class="image">
+                            <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                             <div class="overlay">
                                 <div class="text">Vocalist</div>
                             </div>
@@ -220,7 +237,7 @@ hr {
                     </div>
                     <div>
                         <div class="containerreg">
-                            <img src="images/Image/drum.jpg" alt="Guirtarist" class="image">
+                            <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
                             <div class="overlay">
                                 <div class="text">Drummer</div>
                             </div>
@@ -228,7 +245,7 @@ hr {
                     </div>
                     <div>
                         <div class="containerreg">
-                            <img src="images/Image/guitarist.jpg" alt="Guirtarist" class="image">
+                            <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
                             <div class="overlay">
                                 <div class="text">Electric Guitarist</div>
                             </div>
@@ -236,7 +253,7 @@ hr {
                     </div>
                     <div>
                         <div class="containerreg">
-                            <img src="images/Image/bass.jpg" alt="Avatar" class="image">
+                            <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                             <div class="overlay">
                                 <div class="text">Bass Guitarist</div>
                             </div>
@@ -244,7 +261,7 @@ hr {
                     </div>
                     <div>
                         <div class="containerreg">
-                            <img src="images/Image/lead.jpg" alt="Avatar" class="image">
+                            <img src="/images/Image/unknownPerson.png"alt="Avatar" class="image">
                             <div class="overlay">
                                 <div class="text">Lead Singer</div>
                             </div>
@@ -261,7 +278,7 @@ hr {
             <div class="album">
                 <div>
                     <div class="containerreg">
-                        <img src="images/Image/album1.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Album 1</div>
                         </div>
@@ -269,7 +286,7 @@ hr {
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="images/Image/album2.jpg" alt="Avatar" class="image" style="height: 50%;">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image" style="height: 50%;">
                         <div class="overlay">
                             <div class="text">Album 2</div>
                         </div>
@@ -278,7 +295,7 @@ hr {
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="images/Image/album3.jpg" alt="Avatar" class="image">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                         <div class="overlay">
                             <div class="text">Album 3</div>
                         </div>
@@ -340,7 +357,7 @@ hr {
                              @endforeach
                             
                         </div>
-                       
+                    </div>
                         <script>
 $(document).ready(function(){
  $('.delete_form').on('submit', function(){
