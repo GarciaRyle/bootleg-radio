@@ -37,4 +37,3 @@ Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegCont
 Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
