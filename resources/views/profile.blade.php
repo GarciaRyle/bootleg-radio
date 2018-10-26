@@ -71,5 +71,9 @@
             </div>
         </div>
         <div style="height:30px; background: transparent;"></div>
+<<<<<<< HEAD
 
         @endsection
+=======
+        @endsection
+>>>>>>> 8a8cd6f7439e9b0d3cd54ed885133a842b0f617a

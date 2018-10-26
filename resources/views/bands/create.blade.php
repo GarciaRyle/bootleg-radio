@@ -1,4 +1,3 @@
-
 @extends('layouts.app')
 
 @section('content')
@@ -66,7 +65,6 @@
                                     <option value="Rock">Rock</option>
 
                                 </select>
-
                                 <center>
                                     <div class="form-group"><br>
                                         <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
@@ -87,5 +85,9 @@
             </div>
         </div>
 
+<<<<<<< HEAD
         @endsection
 
+=======
+        @endsection
+>>>>>>> 8a8cd6f7439e9b0d3cd54ed885133a842b0f617a

@@ -139,4 +139,8 @@ class BandRegController extends Controller
         $bands->delete();
         return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
+      public function addBandMem()
+    {
+        return view('bands.AddBandMember');
+    }
 }
