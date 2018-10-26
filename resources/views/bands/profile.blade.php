@@ -1,5 +1,4 @@
 @extends('layouts.app')
-
 @section('content')
 <!DOCTYPE html>
 <html lang=eng>
@@ -19,7 +18,7 @@
         
         <div class="box1">
             <div>
-                <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
+                <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
                 @foreach($bands as $row)
                 <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
 
@@ -79,8 +78,7 @@
             </div>
 
         </div>
-
-        <div class="box2">
+    <div class="box2">
             <div class="album">
                 <div>
                     <div class="containerreg">
@@ -186,7 +184,7 @@ $(document).ready(function(){
             </div>
 
         </div>
-    </div>
+   
 <!--javascript -->
     <script>
         function toggleSidebar(ref) {
