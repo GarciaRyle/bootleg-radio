@@ -16,7 +16,7 @@
 </head>
 <div class="bg">
     <div class="bandprofile">
-        
+
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="images/Image/trialpic.jpg" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
@@ -25,8 +25,8 @@
 
                 <div class="text3">&nbsp {{$row['genre']}}</div><br>
                 <hr color: #c2b396>
-                <div class="desc" >{{$row['bandDescription']}}</div> <br><br>
-               
+                <div class="desc">{{$row['bandDescription']}}</div> <br><br>
+
                 @endforeach
                 <center>
                     <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> BAND MEMBERS</p>
@@ -67,7 +67,7 @@
                     </div>
                     <div>
                         <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png"alt="Avatar" class="image">
+                            <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
                             <div class="overlay">
                                 <div class="text">Lead Singer</div>
                             </div>
@@ -144,50 +144,49 @@
                             <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
                         </div>
                     </div>
-                    
-                    <div class="gridcol"> 
-                         
-                       
-            <div> @foreach($bands as $row)        
-                            
-                                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
-                           
-                             @endforeach</div>
+
+                    <div class="gridcol">
+
+
+                        <div> @foreach($bands as $row)
+
+                            <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
+
+                            @endforeach</div>
                         <div>
-                            @foreach($bands as $row)        
+                            @foreach($bands as $row)
                             <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
-                             @endforeach
-                            
+                            @endforeach
+
                         </div>
                     </div>
-                        <script>
-$(document).ready(function(){
- $('.delete_form').on('submit', function(){
-  if(confirm("Are you sure you want to delete it?"))
-  {
-   return true;
-  }
-  else
-  {
-   return false;
-  }
- });
-});
-</script>
-        </div>
+                    <script>
+                        $(document).ready(function() {
+                            $('.delete_form').on('submit', function() {
+                                if (confirm("Are you sure you want to delete it?")) {
+                                    return true;
+                                } else {
+                                    return false;
+                                }
+                            });
+                        });
+
+                    </script>
                 </div>
-
-
-
             </div>
 
+
+
         </div>
+
     </div>
-<!--javascript -->
+
+
+    <!--javascript -->
     <script>
         function toggleSidebar(ref) {
             ref.classList.toggle('active');
@@ -195,4 +194,4 @@ $(document).ready(function(){
         }
 
     </script>
-@endsection
+    @endsection

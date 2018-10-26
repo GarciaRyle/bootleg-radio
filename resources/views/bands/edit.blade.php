@@ -43,9 +43,19 @@
                     <hr color: #c2b396>
 
 
+
                     <br>
                     <div class="desc">
                         <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
+
+            </div>
+            <hr color: #c2b396>
+
+           
+            <br>
+            <div class="desc">
+                <textarea rows="3" cols="5" type="text" name="bandDescription"  placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
+
 
             </div>
 

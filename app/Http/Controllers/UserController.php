@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use Image;
+use App\User;
 
 class UserController extends Controller
 {
@@ -29,5 +30,22 @@ class UserController extends Controller
 
     	return view('profile', array('user' => Auth::user()) );
 
-    }
+	}
+	public function show($id){ 
+		$user = User::find($id);
+			
+		return  view ('/edituser',compact('user'));
+		}
+		 
+	public function update(Request $request,$id) { 
+		$user = User::find($id); 
+        $user->name = $request->name;
+		$user->email = $request->email;
+		$user->password = $request->password;
+		$user ->save();
+		
+        
+        return view('profile', array('user' => Auth::user()) );
+        
+        }
 }

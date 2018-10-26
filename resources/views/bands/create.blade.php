@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/css/bandscreate.css">
 </head>
 
+
 <body>
 
     <div class="bg">
@@ -78,8 +79,89 @@
                             </form>
 
                         </div>
+
+                        <body style="background-image: url('../images/bandregbk.jpg'); background-repeat: no-repeat;" />
+
+
+                        <div style="height: 50px; backgrounda-color: #141311;"></div>
+                        <div class="bandregister">
+                            <div></div>
+                            <div>
+                                <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
+                                    <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
+                                        <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp<span>A</span>&nbsp<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
+
+                                    <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
+
+
+                                    @if(count($errors) > 0)
+                                    <div class="alert alert-danger">
+                                        <ul>
+                                            @foreach($errors->all() as $error)
+                                            <li>{{$error}}</li>
+                                            @endforeach
+                                        </ul>
+                                    </div>
+                                    @endif
+                                    @if(\Session::has('success'))
+                                    <div class="alert alert-success">
+                                        <p>{{ \Session::get('success') }}</p>
+                                    </div>
+                                    @endif
+                                    <form method="post" action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
+                                        {{csrf_field()}}
+                                        <center>
+                                            <div class="form-group">
+                                                <input type="text" placeholder="Band Name" class="form-control" name="bandName" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;">
+                                                @if ($errors->has('bandName'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('bandName') }}</strong>
+                                                </span>
+                                                @endif
+                                            </div>
+                                        </center>
+
+
+                                        <center><label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Genre:</label></center> <br>
+                                        <select class="selectpicker" name="genre" placeholder="Genre" class="selectpicker" name="genre" value="{{ old('genre') }}" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
+                                            <option value="Indie">Indie</option>
+                                            <option value="Pop">Pop</option>
+                                            <option value="Rock">Rock</option>
+
+                                        </select>
+
+                                        <center>
+                                            <div class="form-group"><br>
+                                                <label style="font-family: 'Lato', sans-serif;   color: #a2321a ">Band Information:</label> <br><br>
+
+                                                <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="Information" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 300px; border-radius: 20px;">"{{ old('bandDescription') }}"</textarea>
+                                                @if ($errors->has('bandDescription'))
+                                                <span class="invalid-feedback" role="alert">
+                                                    <strong>{{ $errors->first('bandDescription') }}</strong>
+                                                </span>
+                                                @endif
+
+                                            </div>
+                                        </center>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        @endsection
+
                     </div>
                 </div>
-            </div>
-        </div>
-        @endsection
+                <div>
+
+
+
+
+
+
+
+
+
+
+                </div>
+                @endsection
