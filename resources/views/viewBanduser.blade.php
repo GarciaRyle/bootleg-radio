@@ -73,7 +73,7 @@
         .box1 {
             grid-column: 2/3;
             grid-row: auto;
-            background: #d5d5d5;
+            background: #f1f1f1;
         }
 
         .bandmember {
@@ -236,7 +236,7 @@
             <!--wagalisin-->
         </div>
        
-        <div class="box1" style="background: #d5d5d5;">
+        <div class="box1" style="background: #f1f1f1;">
             <div class="parent">
                 <img class="image1" src="/images/defaultcbackcolor.jpg" />
                 <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />

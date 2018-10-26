@@ -36,6 +36,15 @@
                                 <option value="Indie">Indie</option>
                                 <option value="Pop">Pop</option>
                                 <option value="Rock">Rock</option>
+                                <option value="Dance">Dance</option>
+                                <option value="Blues">Blues</option>
+                                <option value="Classical">Classical</option>
+                                <option value="Country">Country</option>
+                                <option value="Jazz">Jazz</option>
+                                <option value="R&B">R&B</option>
+                                <option value="Reggae">Reggae</option>
+                                <option value="Rock">Rock</option>
+
                             </select></div>
 
 

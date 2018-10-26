@@ -22,11 +22,11 @@ background-size: cover;
 }
 
 .album > div {
-    background: #d5d5d5;
+    background: #f1f1f1;
 }
 
 .bandmem > .box3:nth-child(odd) {
-    background: #d5d5d6;
+    background: #f1f1f1;
 }
 
 
@@ -38,11 +38,11 @@ background-size: cover;
 }
 
 .bandmem > div {
-    background: #d5d5d5;
+    background: #f1f1f1;
 }
 
 .bandmem > .box3:nth-child(odd) {
-    background: #d5d5d6;
+    background: #f1f1f1;
 }
 
 .bandprofile1 {

@@ -81,6 +81,7 @@
 
         </div>
     <div class="box2">
+        
             <div class="album">
                 <div>
                     <div class="containerreg">
@@ -113,6 +114,7 @@
             </div>
 
             <!--album-->
+        <br><br>
             <div class="gridcol">
                 <div>
                     <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Name:</label><br><br>
@@ -144,7 +146,7 @@
                             <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
                         </div>
                     </div>
-                    
+                    <br>
                     <div class="gridcol"> 
                          
                        
