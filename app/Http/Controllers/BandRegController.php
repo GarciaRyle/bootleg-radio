@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Band;
+use App\Member;
 use Illuminate\Support\Facades\Auth;
 use Image;
 
@@ -26,6 +27,17 @@ class BandRegController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index2()
+    {
+        $bands = Band::where('UserId', '=', Auth::user()->id)->get();
+        return view('viewBanduser', compact('bands'));
+    }
+
+  /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index3()
     {
         $bands = Band::where('UserId', '=', Auth::user()->id)->get();
         return view('viewBanduser', compact('bands'));

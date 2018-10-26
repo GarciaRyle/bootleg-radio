@@ -73,4 +73,3 @@
         <div style="height:30px; background: transparent;"></div>
 
         @endsection
->>>>>>> 20ae95e325ae2615db7c2f7dc8b9b693b11e5d8b
