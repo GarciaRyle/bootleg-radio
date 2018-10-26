@@ -2,64 +2,69 @@ body, html {
         height: 100%;
     }
 
-    .bg { 
+    .bg {
         /* The image used */
         background-image: url("/images/Image/background.jpg");
 
         /* Full height */
-        height: 100%; 
+        height: 100%;
 
         /* Center and scale the image nicely */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
     }
+
     .userright {
-            display: grid;
-            grid-template-columns: 5% 43% 45%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
+        display: grid;
+        grid-template-columns: 5% 43% 45%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
+
     .kalhati {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
-      .userprofile {
-            display: grid;
-            grid-template-columns: 15% 70% 15%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
 
-        .userprofile>div {
-            background: transparent;
-        }
+    .userprofile {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
 
-        .userprofile>.box3:nth-child(odd) {
-            background: transparent;
-        }
+    .userprofile > div {
+        background: transparent;
+    }
 
-        .box1 {
-            grid-column: 2/3;
-            grid-row: auto;
-            background: #d5d5d5;
-        }
-        .text4 {
-            font-size: 17px;
-            font-family: 'Lato', sans-serif;
-            margin-top: -32px;
-            margin-left: 170px;
-            color: rgb(150, 133, 75);
-        }
-.textedit {
-            font-size: 17px;
-            font-family: 'Lato', sans-serif;
-            margin-top: -32px;
-            margin-left: 170px;
-            color: rgb(150, 133, 75);
-        }
+    .userprofile > .box3:nth-child(odd) {
+        background: transparent;
+    }
+
+    .box1 {
+        grid-column: 2/3;
+        grid-row: auto;
+        background: #d5d5d5;
+    }
+
+    .text4 {
+        font-size: 17px;
+        font-family: 'Lato', sans-serif;
+        margin-top: -32px;
+        margin-left: 170px;
+        color: rgb(150, 133, 75);
+    }
+
+    .textedit {
+        font-size: 17px;
+        font-family: 'Lato', sans-serif;
+        margin-top: -32px;
+        margin-left: 170px;
+        color: rgb(150, 133, 75);
+    }

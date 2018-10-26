@@ -102,7 +102,7 @@ width: 100%;
                 <!-- Left Side Of Navbar -->
                 <div class="linenav">
                     <ul class="nav navbar-nav" style="float:right; color: #c2b396;">
-                        <li><a href="#" style="color: #c2b396; ">Home</a></li>
+                        <li><a href="/" style="color: #c2b396; ">Home</a></li>
                         <li><a href="{{ url('/home') }}" style="color: #c2b396;">Bands</a></li>
                         <li><a href="#" style="color: #c2b396;">Web Jocks</a></li>
                         <li><a href="#" style="color: #c2b396;">Chat</a></li>
