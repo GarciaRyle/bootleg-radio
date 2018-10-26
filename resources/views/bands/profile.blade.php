@@ -74,7 +74,7 @@
                     </div>
                 </div><br>
             <center>
-            <a href="{{ 'AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
+            <a href="{{ 'AddBandMember' }}" class="btn btn-success"> +Add Member</a>
                 </center><br>
 
             </div>

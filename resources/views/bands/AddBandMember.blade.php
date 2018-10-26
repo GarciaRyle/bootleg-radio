@@ -22,8 +22,8 @@
             <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
                 <div class="userright">
                     <div></div>
-                    <div><br>
-                        <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 320px; height: 390px;" /><br>
+                    <div><br><br><br>
+                        <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 300px; height: 390px; " /><br>
                     </div>
                     <div>
                          <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive; margin-left:100px;">
@@ -42,6 +42,8 @@
                         <br><br>
 
                         <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 250px; height: 80px; margin-left:100px; margin-top: -48px;; required autofocus "></textarea>
+                        <br>
+                         <div><a href="" type="submit" class="btn btn-warning" style="margin-left:135px; ">+Add Member</a></div>
                         <br>
 
 
