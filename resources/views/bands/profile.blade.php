@@ -24,7 +24,7 @@
 
                 <div class="text3">&nbsp {{$row['genre']}}</div><br>
                 <hr color: #c2b396>
-                <div class="desc" >{{$row['bandDescription']}}</div> <br><br>
+                <div class="desc" >{{$row['bandDescription']}}</div> <br>
                
                 @endforeach
                 <center>
@@ -72,8 +72,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-
+                </div><br>
+            <center>
+            <a href="{{ 'AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
+                </center><br>
 
             </div>
 
