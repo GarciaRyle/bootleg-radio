@@ -1,97 +1,69 @@
 @extends('layouts.app')
 
-@section('content')<!DOCTYPE html>
+@section('content')
+<!DOCTYPE html>
 <html lang=eng>
 
 <head>
+    <title>Bootleg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
-<style>/*registration form*/
-.registerform {
-    display: grid;
-    grid-template-columns: 50% 5% 2fr 7%;
-    grid-auto-rows: 90px 410px;
-    align-items: stretch;
-    align-items: stretch;
-}
-
-.registerform > div {
-    background: transparent;
-}
-
-.registerform > .box3:nth-child(odd) {
-    background: transparent;
-}
-
-.box1 {
-    grid-column: 1/3;
-    grid-row: 1/5;
-}
-
-.box2 {
-    grid-row: 3/5;
-}
-
-.box3 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
-
-.containerko {
-    margin-left: 190px;
-    text-align: center;
-    color: white;
-}
-
-.centered {
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/profile.css">
 </head>
 
-<body style="background-image: url(images/Image/background.jpg); background-size: cover;" />
-   
-<!-- register -->
-<div>
-
-                        <form method='post' action="{{'/update/' . $user->id }}" >
+<body>
+    <div class="bg">
+      <div style="height: 110px;"></div>
+        <div class="userprofile">
+            <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
+                <div class="userright">
+                    <div></div>
+                    <div> <br>
+                    <form method='post' action="{{'/update/' . $user->id }}" >
         @csrf
-                        <div class="box1"> <img src="images/Image/reg.png"></div>
-                      
-                      
-                      
-                        <div class="containerko">
-                    
-                        <div class="centered">
-                        <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
-                        <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                            <span>E</span><span>D</span><span>I</span><span>T</span><span></span>&nbsp<span>U</span><span>S</span><span>E</span><span>R</span></div>
-                    </div>
-                      
-                                <input id="name" type="text" placeholder="Name" style="width: 105%; height: 40px; padding: 15px; margin-left: 50px 0 22px 0;" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus> <br>
-
-                               
-                           
-
-                 
-                                <input id="email" type="email" placeholder="E-mail" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required> <br>
-
-                               
-
-                    
-                                <input id="password" placeholder="Enter Password" type="password" style="width: 105%; height: 40px; padding: 15px; margin: 5px 0 22px 0;" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" hidden="true" value="{{$user->password}}" required> <br>
-
-
-
-                           
-                            <button type="submit" class="signupbtn" style="background-color: #4cb433;">UPDATE PROFILE</button>
-                </div>
+                        <h2 style="font-size: 18px; color: #a2321a"> User Information</h2><br>
                        
-         </div>     </div>
+                        <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
+                        <br>
+                           <input maxlength="20" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;"  class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus />
+<br></br>
+                        <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Email : </h2>
+                        <br>
+                        <input maxlength="20"  style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required />
 
-    @endsection
+
+                        <br>
+                    </div>
+                    <div><br>
+                        <h2 style="font-size: 18px; color: #a2321a"> Band you've created</h2><br>
+                        <div class="kalhati">
+                            <div>
+                                <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 190px; height: 190px;" />
+                            </div>
+                            <div><br>
+                                <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> Band Name</h2>
+                                <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, metus quis congue finibus, tellus massa aliquet diam</h2>
+                                <br><br><br>
+                                <div class="kalhati">
+                                    <center>
+                                        <div></div>
+                                    </center>
+                                    <center>
+                                        <div><button type="submit" class="btn btn-warning">Update Profile</button></div>
+                                    </center>
+                                        <br>
+                                        </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="height:30px; background: transparent;"></div>
+
+        @endsection

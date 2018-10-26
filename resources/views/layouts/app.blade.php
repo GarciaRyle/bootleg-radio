@@ -59,7 +59,7 @@ width: 100%;
                 </button>
 
                 <!-- Branding Image -->
-                <a href="{{ url('/') }}">
+                <a href="/">
                     <img src="/images/Image/logo.png" style="width: 185px; height: 43px; padding-left: 40px; margin-top: 4px; ">
                 </a>
             </div>
@@ -70,8 +70,8 @@ width: 100%;
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                    <li><a href="{{ url('/login') }}">Login</a></li>
-                    <li><a href="{{ url('/register') }}">Register</a></li>
+                    <li><a href="{{ url('/login') }}" style="color: #c2b396;">Login</a></li>
+                    <li><a href="{{ url('/register') }}" style="color: #c2b396;">Register</a></li>
                     @else
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px; color: #c2b396;">
