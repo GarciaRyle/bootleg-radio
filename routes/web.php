@@ -37,12 +37,9 @@ Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegCont
 Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
 
 
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/featuredartist', 'HomeController@view2')->name('featuredartist');
 Route::get('/featuredartist', array('as' => 'featuredartist', 'uses' => 'BandRegController@index3'))->middleware('auth');
 
 
-=======
->>>>>>> fc39749de4b65fcf289faf097f39167e891b08cc

@@ -39,7 +39,7 @@ class BandRegController extends Controller
      */
     public function index3()
     {
-        $bands = Band::where('UserId', '=', Auth::user()->id)->get();
+        $bands = Band::where('UserId', '2', Auth::user()->id)->get();
         return view('viewBanduser', compact('bands'));
     }
 
