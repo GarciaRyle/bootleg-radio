@@ -37,7 +37,10 @@ Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegCont
 Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
 
 
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/featuredartist', 'HomeController@view2')->name('featuredartist');
+Route::get('/featuredartist', array('as' => 'featuredartist', 'uses' => 'BandRegController@index3'))->middleware('auth');
+
+
 Route::get('/AddBandMember', 'BandRegController@addBandMem')->name('AddBandMember');
-
-
-?>
