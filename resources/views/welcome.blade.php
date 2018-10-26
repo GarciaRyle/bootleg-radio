@@ -1,3 +1,6 @@
+@extends('layouts.app')
+
+@section('content')
 <!DOCTYPE html>
 <html lang=eng>
 
@@ -13,25 +16,7 @@
 </head>
 
 <body style="background-color: #141312">
-    <nav class="stroke">
-        <div class="nav">
-            <div class="nav-header">
-                <ul>
-                    <li><img src="images/Image/logo.png" s style="width: 190px; height: 53px; padding-left: 40px; bottom: 10%;">
-                    </li>
-                    <li><a href="#home">HOME</a></li>
-                    <li><a href="#bands">BANDS</a></li>
-                    <li><a href="#webjocks">WEB JOCKS</a></li>
-                    <li><a href="#chat">CHAT</a></li>
-                    <li><a href="#buzz">BUZZ</a></li>
-                    <li><a href="#more">MORE</a></li>
 
-                </ul>
-
-            </div>
-        </div>
-
-    </nav>
 
     <!--top-->
     <div id="slider">
@@ -44,63 +29,7 @@
         </figure>
     </div>
 
-    <!--sidebar code -->
-    <div id="sidebar">
-        <br><br><br><br><br>
-        <img src="images/Image/logo.png" alt="Avatar" style="  border-radius: 50%; width: 150px; height: 120px;">
 
-        <div class="flex-wrap"> <br> <br>
-            <form method="POST" action="{{ route('login') }}">
-                @csrf
-
-
-
-                <input id="email" type="email" placeholder="Username" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }} signup " name="email" value="{{ old('email') }}" required autofocus style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a;">
-
-                @if ($errors->has('email'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('email') }}</strong>
-                </span>
-                @endif
-
-                <br><br>
-
-
-                <input id="password" type="password" placeholder="Password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }} signup" name="password" required style="background-color: #c2b396; border-radius: 10px; width: 180px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color:#a2321a; ">
-
-                @if ($errors->has('password'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $errors->first('password') }}</strong>
-                </span>
-                @endif
-
-                <br><br>
-
-                <button style="background-color: #c2b396; border-radius: 10px; width: 140px; height: 40px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">
-                    {{ __('Login') }}</button>
-
-
-            </form>
-<br>
- <p style="background-color: transparent; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Not a member yet?</p>
-           <li> <a href="{{ route('register') }}" style="border-radius: 10px; width: 170px; height: 70px; font-family: 'Lato', sans-serif; font-size: 14px; color: #a2321a ">Sign up now!</a></li>
-        </div>
-    </div>
-
-
-  
-
-    <div id="toggle-btn" onclick="toggleSidebar(this)">
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    <!--javascript -->
-    <script>
-        function toggleSidebar(ref) {
-          ref.classList.toggle('active');
-          document.getElementById('sidebar').classList.toggle('active');
-        } </script>
 
     <div class="parallax" id="home"> </div>
     <div style="height: 435px;background-color:#141312;font-size:36px">
@@ -196,7 +125,7 @@
     </div>
 
     <div style="height: 270px;background-color:#d5d5d5;font-size:36px">
-        <br><br>
+        <br>
         <h2 style="font-family: 'Cinzel Decorative', cursive; color: #a2321a; font-size: 28px; text-align: center; "> THANK YOU FOR
             LISTENING. NOW JOIN US.</h2>
         <h2 style="font-family: 'Lato', sans-serif;  color: #a2321a; font-size: 20px; text-align: center"> We would like to
@@ -214,7 +143,7 @@
             <div>
                 <div class="lalagyan" style="font-family: 'Yanone Kaffeesatz', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
                     Who's Your Daddy?</div>
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #c2b396; font-size: 25px; padding-left: 65px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-left: 65px;">
                     Bootleg Radio</div>
 
                 <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
@@ -227,7 +156,7 @@
             <div>
                 <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
                     To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
-                <div class="lalagyan" style="font-family: 'Archivo Narrow'; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
+                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
                     Phone: +63 (2) 772-3152 / 5859670
                     <br>Fax: +63 (2) 771-0143
                     <br>E-mail address: sales@bootleg-radio.com</div>
@@ -241,7 +170,6 @@
         </div>
     </div>
     <br>
-    <br>
     <div class="footer" style="font-family: 'Lato', sans-serif; position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px;">
         Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
 
@@ -251,3 +179,4 @@
 </body>
 
 </html>
+@endsection

@@ -1,72 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+<!DOCTYPE html>
+<html lang=eng>
 
 <head>
+    <title>Bootleg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/profile.css">
 </head>
-<style>
-    body, html {
-        height: 100%;
-    }
-
-    .bg { 
-        /* The image used */
-        background-image: url("images/Image/background.jpg");
-
-        /* Full height */
-        height: 100%; 
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    .userright {
-            display: grid;
-            grid-template-columns: 5% 43% 45%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
-    .kalhati {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
-      .userprofile {
-            display: grid;
-            grid-template-columns: 15% 70% 15%;
-            grid-auto-columns: auto;
-            align-items: stretch;
-            align-items: stretch;
-        }
-
-        .userprofile>div {
-            background: transparent;
-        }
-
-        .userprofile>.box3:nth-child(odd) {
-            background: transparent;
-        }
-
-        .box1 {
-            grid-column: 2/3;
-            grid-row: auto;
-            background: #d5d5d5;
-        }
-        .text4 {
-            font-size: 17px;
-            font-family: 'Lato', sans-serif;
-            margin-top: -32px;
-            margin-left: 170px;
-            color: rgb(150, 133, 75);
-        }
-  
-</style>
 
 <body>
     <div class="bg">

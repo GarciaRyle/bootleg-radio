@@ -1,0 +1,200 @@
+body, html {
+height: 100%;
+}
+
+.bg {
+/* The image used */
+background-image: url("/images/Image/background.jpg");
+
+/* Full height */
+height: 100%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.album {
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.album > div {
+    background: #d5d5d5;
+}
+
+.bandmem > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
+
+
+.bandmem {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandmem > div {
+    background: #d5d5d5;
+}
+
+.bandmem > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
+
+.bandprofile1 {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 40% 5%;
+    grid-auto-rows: 50px 80% 50px;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandprofile1 > div {
+    background: transparent;
+}
+
+.bandprofile1 > .box3:nth-child(odd) {
+    background: transparent;
+}
+
+.box1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box2 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+.bandprofile {
+    display: grid;
+    grid-template-columns: 5% 45% 5% 40% 5%;
+    grid-auto-rows: 50px 80% 50px;
+    align-items: stretch;
+    align-items: stretch;
+}
+
+.bandprofile > div {
+    background: #f1f1f1;
+}
+
+.bandprofile > .box3:nth-child(odd) {
+    background: #d5d5d6;
+}
+
+.box1 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.box2 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+
+.img-valign {
+    vertical-align: middle;
+    margin-bottom: 0.5em;
+}
+
+.text2 {
+    font-size: 26px;
+    font-family: 'Cinzel Decorative', cursive;
+    word-wrap: break-word;
+     border: 3px;
+    border-style: double;
+    border-color: transparent;
+    color: #c2b396;
+}
+
+.text3 {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    margin-top: -43px;
+    margin-left: 153px;
+   
+}
+
+.desc {
+    margin-left: 70px;
+    margin-right: 70px;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border: 3px;
+    border-style: double;
+    border-color: #a2321a;
+    color: #141312;
+    padding: 1em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.containerreg {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    
+}
+
+.containerreg:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.text {
+    color: white;
+    font-size: 17px;
+    font-family: 'Lato', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+hr {
+    display: block;
+    border: 0;
+    border-top: solid #c2b396;
+    padding: 0;
+    }
+    .gridcol {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.gridcol > div {
+    background: transparent;
+    padding: 1em;
+}
+
+.gridcol > div:nth-child(odd) {
+    background: transparent;
+}

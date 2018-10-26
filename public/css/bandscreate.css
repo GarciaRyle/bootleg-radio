@@ -1,0 +1,169 @@
+     body, html {
+height: 100%;
+}
+
+.bg {
+/* The image used */
+background-image: url("/images/bandregbk.jpg");
+
+/* Full height */
+height: 103%;
+
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+        .bandregister {
+    display: grid;
+    grid-template-columns: 50% 35% 22%;
+    grid-auto-columns: 
+          
+}
+
+ .userprofile {
+            display: grid;
+            grid-template-columns: 15% 70% 15%;
+            grid-auto-columns: auto;
+            align-items: stretch;
+            align-items: stretch;
+        }
+
+        .userprofile>div {
+            background: transparent;
+        }
+
+        .userprofile>.box3:nth-child(odd) {
+            background: transparent;
+        }
+
+        .box1 {
+            grid-column: 2/3;
+            grid-row: auto;
+            background: #d5d5d5;
+        }
+        
+.containerr {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #c2b396;
+
+}
+
+.userright {
+            display: grid;
+            grid-template-columns: 45% 55%;
+            grid-auto-columns: auto;
+            align-items: stretch;
+            align-items: stretch;
+        }
+.animate {
+font-size: 50px;
+
+
+}
+
+.animate span {
+display: inline-block;
+}
+
+
+
+.animate span:nth-of-type(2) {
+animation-delay: .05s;
+}
+
+.animate span:nth-of-type(3) {
+animation-delay: .1s;
+}
+
+.animate span:nth-of-type(4) {
+animation-delay: .15s;
+}
+
+.animate span:nth-of-type(5) {
+animation-delay: .2s;
+}
+
+.animate span:nth-of-type(6) {
+animation-delay: .25s;
+}
+
+.animate span:nth-of-type(7) {
+animation-delay: .3s;
+}
+
+.animate span:nth-of-type(8) {
+animation-delay: .35s;
+}
+
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+
+.animate span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+
+.animate span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+
+.animate span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+
+.animate span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+
+.animate span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+
+.animate span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+
+.animate span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+
+.animate span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+
+.animate span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+
+.animate span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+.six span {
+    color: rgba(234, 40, 3, 0.8);
+    opacity: 0;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 26px;
+    transform: rotate(-180deg) translate(150px, 0);
+    animation: twister .5s forwards;
+
+}
+
+
+@keyframes twister {
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0);
+        opacity: 1;
+    }
+}
