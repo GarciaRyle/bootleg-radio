@@ -1,76 +1,256 @@
 @extends('layouts.app')
 
 @section('content')
+
 <head>
+    <title>Bootleg</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
+
 </head>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+<style>
+    body,
+    html {
+        height: 100%;
+    }
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+    .bg {
+        /* The image used */
+        background-image: url("/images/Image/background.jpg");
 
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+        /* Full height */
+        height: 100%;
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
+    .userright {
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+    .kalhati {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
+
+    .userprofile {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-auto-columns: auto;
+        align-items: stretch;
+        align-items: stretch;
+    }
+
+    .userprofile>div {
+        background: transparent;
+    }
+
+    .userprofile>.box3:nth-child(odd) {
+        background: transparent;
+    }
+
+    .box1 {
+        grid-column: 2/3;
+        grid-row: auto;
+        background: #d5d5d5;
+    }
 
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+    .textedit {
+        font-size: 17px;
+        font-family: 'Lato', sans-serif;
+        margin-top: -32px;
+        margin-left: 170px;
+        color: rgb(150, 133, 75);
+    }
+    .animate {
+font-size: 50px;
 
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+}
 
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
+.animate span {
+display: inline-block;
+}
+
+
+
+.animate span:nth-of-type(2) {
+animation-delay: .05s;
+}
+
+.animate span:nth-of-type(3) {
+animation-delay: .1s;
+}
+
+.animate span:nth-of-type(4) {
+animation-delay: .15s;
+}
+
+.animate span:nth-of-type(5) {
+animation-delay: .2s;
+}
+
+.animate span:nth-of-type(6) {
+animation-delay: .25s;
+}
+
+.animate span:nth-of-type(7) {
+animation-delay: .3s;
+}
+
+.animate span:nth-of-type(8) {
+animation-delay: .35s;
+}
+
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+
+.animate span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+
+.animate span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+
+.animate span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+
+.animate span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+
+.animate span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+
+.animate span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+
+.animate span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+
+.animate span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+
+.animate span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+
+.animate span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+.six span {
+    color: rgba(234, 40, 3, 0.8);
+    opacity: 0;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 26px;
+    transform: rotate(-180deg) translate(150px, 0);
+    animation: twister .5s forwards;
+
+}
+
+
+@keyframes twister {
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(0deg) translate(0);
+        opacity: 1;
+    }
+}
+
+
+</style>
+
+<body>
+    <div class="bg">
+        <div style="height: 110px;"></div>
+        <div class="userprofile">
+            <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
+                <div class="userright">
+                    <div></div>
+                    <div> <br>
+
+
+                        <div class="card-body">
+                             <center><div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
+                                 <span>L</span><span>O</span><span>G</span>&nbsp;<span>I</span><span>N</span></div></center><br>
+                            <form method="POST" action="{{ route('login') }}">
+                                @csrf
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-sm-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+
+                                    <div class="col-md-6">
+                                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus style="width: 300px; font-family: 'Lato', sans-serif;">
+
+                                        @if ($errors->has('email'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                                <br>
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
-                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                    {{ __('Forgot Your Password?') }}
-                                </a>
-                            </div>
+                                    <div class="col-md-6">
+                                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required style="width: 300px; font-family: 'Lato', sans-serif;">
+
+                                        @if ($errors->has('password'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                        @endif
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+
+                                </div>
+                                <center><br>
+                                    <button type="submit" class="btn btn-success">
+                                        {{ __('Login') }}
+                                    </button>
+                                </center><br>
+                            </form>
                         </div>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+</body>
+<div style="height:30px; background: transparent;"></div>
+
 @endsection
