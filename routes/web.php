@@ -35,7 +35,6 @@ Route:: post('/update/{id}', 'UserController@update');
 
 Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegController@index2'))->middleware('auth');
 Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
-<<<<<<< HEAD
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -44,11 +43,4 @@ Route::get('/featuredartist', 'HomeController@view2')->name('featuredartist');
 Route::get('/featuredartist', array('as' => 'featuredartist', 'uses' => 'BandRegController@index3'))->middleware('auth');
 
 
-=======
-
-
 Route::get('/AddBandMember', 'BandRegController@addBandMem')->name('AddBandMember');
-
-
-?>
->>>>>>> 8a8cd6f7439e9b0d3cd54ed885133a842b0f617a

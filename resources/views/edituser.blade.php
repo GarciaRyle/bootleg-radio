@@ -17,58 +17,6 @@
 
 <body>
     <div class="bg">
-<<<<<<< HEAD
-      <div style="height: 110px;"></div>
-        <div class="userprofile">
-            <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
-                <div class="userright">
-                    <div></div>
-                    <div> <br>
-                    <form method='post' action="{{'/update/' . $user->id }}" >
-        @csrf
-                        <h2 style="font-size: 18px; color: #a2321a"> User Information</h2><br>
-                       
-                        <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
-                        <br>
-                           <input maxlength="20" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;"  class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus />
-<br></br>
-                        <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Email : </h2>
-                        <br>
-                        <input maxlength="20"  style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required />
-
-
-                        <br>
-                    </div>
-                    <div><br>
-                        <h2 style="font-size: 18px; color: #a2321a"> Band you've created</h2><br>
-                        <div class="kalhati">
-                            <div>
-                                <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 190px; height: 190px;" />
-                            </div>
-                            <div><br>
-                                <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> Band Name</h2>
-                                <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, metus quis congue finibus, tellus massa aliquet diam</h2>
-                                <br><br><br>
-                                <div class="kalhati">
-                                    <center>
-                                        <div></div>
-                                    </center>
-                                    <center>
-                                        <div><button type="submit" class="btn btn-warning">Update Profile</button></div>
-                                    </center>
-                                        <br>
-                                        </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="height:30px; background: transparent;"></div>
-
-        @endsection
-=======
         <div style="height: 110px;"></div>
         <div class="userprofile">
             <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
@@ -121,4 +69,3 @@
     <div style="height:30px; background: transparent;"></div>
 
     @endsection
->>>>>>> 8a8cd6f7439e9b0d3cd54ed885133a842b0f617a
