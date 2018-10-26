@@ -26,9 +26,15 @@ Route::get('bands/edit/{id}', 'BandRegController@edit')->middleware('auth');
 Route::post('/bands/update/{id}', 'BandRegController@update');
 Route::get('profile', 'UserController@profile');
 Route::post('profile', 'UserController@update_avatar');
-Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegController@index2'))->middleware('auth');
-Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
+
 Route::get('/viewBanduser', 'HomeController@view')->name('viewBanduser');
+
 Route:: get('/show/{id}', 'UserController@show'); 
 Route:: post('/update/{id}', 'UserController@update'); 
 
+
+Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegController@index2'))->middleware('auth');
+Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
+
+
+?>
