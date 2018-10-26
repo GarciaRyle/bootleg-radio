@@ -32,7 +32,8 @@ background-size: cover;
 
 .bandmem {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 100%;
+    grid-auto-rows: 5% 90% 5%;
     align-items: stretch;
     align-items: stretch;
 }
