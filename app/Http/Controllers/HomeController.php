@@ -26,6 +26,12 @@ class HomeController extends Controller
     {
         return view('viewBanduser');
     }
+
+    public function view2()
+    {
+        return view('featuredartist');
+    }
+    
      public function lovelyeditusers()
     {
         return view('editUsers');
