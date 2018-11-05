@@ -12,75 +12,49 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/bandprofile.css">
+    <style>.owl-item > div {
+  cursor: pointer;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
+}
+.owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+}
+.owl-item:not(.center) > div:hover {
+  opacity: .75;
+}</style>
 </head>
 <div class="bg">
     <div class="bandprofile">
-        
+
         <div class="box1">
             <div>
                 <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
                 @foreach($bands as $row)
                 <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
 
-                <div class="text3">&nbsp {{$row['genre']}}</div><br>
+                <div class="text3">&nbsp; {{$row['genre']}}</div><br>
                 <hr color: #c2b396>
-                <div class="desc" >{{$row['bandDescription']}}</div> <br>
-               
+                <div class="desc">{{$row['bandDescription']}}</div> <br>
+
                 @endforeach
                 <center>
                     <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> BAND MEMBERS</p>
                 </center>
 
                 <div class="bandmem">
-                    <div>
-                        <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                            <div class="overlay">
-                                <div class="text">Vocalist</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
-                            <div class="overlay">
-                                <div class="text">Drummer</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
-                            <div class="overlay">
-                                <div class="text">Electric Guitarist</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                            <div class="overlay">
-                                <div class="text">Bass Guitarist</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="containerreg">
-                            <img src="/images/Image/unknownPerson.png"alt="Avatar" class="image">
-                            <div class="overlay">
-                                <div class="text">Lead Singer</div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div><br>
-            <center>
-            <a href="{{ 'AddBandMember' }}" class="btn btn-success"> +Add Member</a>
+                <center>
+                    <a href="{{ 'AddBandMember' }}" class="btn btn-success"> +Add Member</a>
                 </center><br>
 
             </div>
 
         </div>
-    <div class="box2">
+        <div class="box2">
+
             <div class="album">
                 <div>
                     <div class="containerreg">
@@ -113,6 +87,7 @@
             </div>
 
             <!--album-->
+            <br><br>
             <div class="gridcol">
                 <div>
                     <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Name:</label><br><br>
@@ -144,55 +119,35 @@
                             <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
                         </div>
                     </div>
-                    
-                    <div class="gridcol"> 
-                         
-                       
-            <div> @foreach($bands as $row)        
-                            
-                                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
-                           
-                             @endforeach</div>
+                    <br>
+                    <div class="gridcol">
+
+
+                        <div> @foreach($bands as $row)
+
+                            <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-warning">Edit</a>
+
+                            @endforeach</div>
                         <div>
-                            @foreach($bands as $row)        
+                            @foreach($bands as $row)
                             <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
                                 {{csrf_field()}}
                                 <input type="hidden" name="_method" value="DELETE" />
                                 <button type="submit" class="btn btn-danger">Delete</button>
                             </form>
-                             @endforeach
+                            @endforeach
                             
                         </div>
                     </div>
-                        <script>
-$(document).ready(function(){
- $('.delete_form').on('submit', function(){
-  if(confirm("Are you sure you want to delete it?"))
-  {
-   return true;
-  }
-  else
-  {
-   return false;
-  }
- });
-});
-</script>
-        </div>
+                 
                 </div>
-
-
-
             </div>
 
-        </div>
-   
-<!--javascript -->
-    <script>
-        function toggleSidebar(ref) {
-            ref.classList.toggle('active');
-            document.getElementById('sidebar').classList.toggle('active');
-        }
 
-    </script>
-@endsection
+
+        </div>
+
+    </div>
+
+
+    @endsection

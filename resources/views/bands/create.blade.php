@@ -60,10 +60,17 @@
 
 
                                 <select class="selectpicker" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; width: 300px; border-radius: 20px; height: 30px; font-size: 16px; ">
-                                    <option value="Indie">Indie</option>
-                                    <option value="Pop">Pop</option>
-                                    <option value="Rock">Rock</option>
-
+                                       <option value="Indie">Indie</option>
+                                <option value="Pop">Pop</option>
+                                <option value="Rock">Rock</option>
+                                <option value="Dance">Dance</option>
+                                <option value="Blues">Blues</option>
+                                <option value="Classical">Classical</option>
+                                <option value="Country">Country</option>
+                                <option value="Jazz">Jazz</option>
+                                <option value="R&B">R&B</option>
+                                <option value="Reggae">Reggae</option>
+                                <option value="Rock">Rock</option>
                                 </select>
                                 <center>
                                     <div class="form-group"><br>

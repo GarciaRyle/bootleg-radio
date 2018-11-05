@@ -22,14 +22,13 @@
             <div class="box1" style="background: #f4f4f4; border-radius: 10px;">
                 <div class="userright">
                     <div></div>
-                    <div><br><br><br>
-                        <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 300px; height: 390px; " /><br>
+                    <div>
+                        <img class="img-valign" src="images/Image/unknownPerson.png" alt="" style=" width: 300px; height: 350px; margin-top: 100px; " /><br>
                     </div>
                     <div>
-                         <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive; margin-left:100px;">
+                         <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive; margin-left:110px;">
                                 <span>A</span><span>D</span><span>D</span> &nbsp;<span>M</span><span>E</span><span>M</span><span> B</span><span>E</span><span>R</span></div>
 
-                        <br>
                         <input type="file" name="avatar" style="margin-left:110px;">
                         <br>
                         <h2 style="font-size: 16px; margin-left: 50px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
@@ -56,6 +55,5 @@
         </div>
     </div>
 
-    <div style="height:30px; background: transparent;"></div>
 
     @endsection
