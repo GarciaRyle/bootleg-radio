@@ -47,39 +47,20 @@
 
                             </select></div>
 
-
                     </div>
                     <hr color: #c2b396>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </div>
-            <hr color: #c2b396>
 
-           
-            <br>
-            <div class="desc">
-                <textarea rows="3" cols="5" type="text" name="bandDescription"  placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
-=======
-                    <br>
+
+
                     <div class="desc">
                         <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
->>>>>>> 20ae95e325ae2615db7c2f7dc8b9b693b11e5d8b
-=======
 
-                    <br>
-                    <div class="desc">
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
->>>>>>> 8a8cd6f7439e9b0d3cd54ed885133a842b0f617a
 
                     </div>
-                    <hr color: #c2b396>
-
 
                     <br>
-
-
                     <center>
                         <p style=" color: #141311; font-size: 20px; font-family: 'Lato' , sans-serif;"> BAND MEMBERS</p>
                     </center>
@@ -210,9 +191,9 @@
                     </div>
                 </div>
             </div>
-        </form>
 
 
 
 
-        @endsection
+
+            @endsection

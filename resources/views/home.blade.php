@@ -74,7 +74,7 @@
             <div>
                 <h1 style="padding-top: 20px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 20px;"> FEATURED
                     ARTIST</h1>
-                <a href="{{ url('/featuredartist') }}" h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</a></h2>
+                <a href="{{ url('/featuredartist') }}" h2 style="font-family: 'Cinzel Decorative', cursive; color: #c2b396; font-size: 32px;"> UNIQUE SALONGA</a>
                 <h2 style="padding-top: 20px; font-family: 'Lato', sans-serif; color: #c2b396; font-size: 17px;"> Unique's
                     solo debut album Grandma is the only thing <br> Filipino music fans and musicians can talk about
                     since <br> it dropped earlier this week of 13th of August, which <br> everyone giving their own
@@ -82,86 +82,86 @@
                 <input type="image" src="images/Image/playbutton.png" alt="Submit" width="58" height="78" style="padding-top: 20px;">
             </div>
         </div>
-    
-    <!--incoming events-->
-    <div class="parallax"></div>
-    <div style="background-color: #d5d5d5; height: 350px;">
-        <br>
-        <div style="height:30px;background-color: transparent; font-size:36px" id="portfolio">
-            <center>
 
-                <div style="font-size:28px; text-align: center; font-family: 'Lato', sans-serif; color: #c3b396 "> INCOMING EVENTS</div>
-                <figure class="snip1543">
-                    <img src="images/event3.jpg" alt="sample108" />
-                    <figcaption>
-                        <h3>URBANDUB</h3>
-                        <p>Catch Them @</p>
-                        <p>The Belle & Dragon – Legazpi Village.</p>
-                        <p>Starts at 7PM</p>
-                    </figcaption>
-                    <a href="#"></a>
-                </figure>
-                <figure class="snip1543">
-                    <img src="images/event2.jpg" alt="sample108" />
-                    <figcaption>
-                        <h3>FRANCO</h3>
-                        <p>Catch Them @</p>
-                        <p>12 Monkeys Music Hall & Pub – Ortigas Center.</p>
-                        <p>Starts at 7PM</p>
-                    </figcaption>
-                    <a href="#"></a>
-                </figure>
-                <figure class="snip1543">
-                    <img src="images/event3.jpg" alt="sample101" />
-                    <figcaption>
-                        <h3>UPDHARMA DOWN</h3>
-                        <p>Catch Them @</p>
-                        <p>SaGuijo Cafe & Bar – San Antonio Village. </p>
-                        <p>Starts at 7PM</p>
-                    </figcaption>
-                    <a href="#"></a>
-                </figure>
-            </center>
+        <!--incoming events-->
+        <div class="parallax"></div>
+        <div style="background-color: #d5d5d5; height: 350px;">
+            <br>
+            <div style="height:30px;background-color: transparent; font-size:36px" id="portfolio">
+                <center>
+
+                    <div style="font-size:28px; text-align: center; font-family: 'Lato', sans-serif; color: #c3b396 "> INCOMING EVENTS</div>
+                    <figure class="snip1543">
+                        <img src="images/event3.jpg" alt="sample108" />
+                        <figcaption>
+                            <h3>URBANDUB</h3>
+                            <p>Catch Them @</p>
+                            <p>The Belle & Dragon – Legazpi Village.</p>
+                            <p>Starts at 7PM</p>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1543">
+                        <img src="images/event2.jpg" alt="sample108" />
+                        <figcaption>
+                            <h3>FRANCO</h3>
+                            <p>Catch Them @</p>
+                            <p>12 Monkeys Music Hall & Pub – Ortigas Center.</p>
+                            <p>Starts at 7PM</p>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                    <figure class="snip1543">
+                        <img src="images/event3.jpg" alt="sample101" />
+                        <figcaption>
+                            <h3>UPDHARMA DOWN</h3>
+                            <p>Catch Them @</p>
+                            <p>SaGuijo Cafe & Bar – San Antonio Village. </p>
+                            <p>Starts at 7PM</p>
+                        </figcaption>
+                        <a href="#"></a>
+                    </figure>
+                </center>
+
+            </div>
+
 
         </div>
 
+        <!--footer-->
 
-    </div>
+        <div style="height: 300px;background-color:#141312;font-size:36px">
+            <div class="wrapper">
+                <div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
+                        Who's Your Daddy?</div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-left: 65px;">
+                        Bootleg Radio</div>
 
-    <!--footer-->
-
-    <div style="height: 300px;background-color:#141312;font-size:36px">
-        <div class="wrapper">
-            <div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 65px;">
-                    Who's Your Daddy?</div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-left: 65px;">
-                    Bootleg Radio</div>
-
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
-                    11th Flr. Common Goal Tower Bldg.
-                    <br>Madrigal Business Park
-                    <br>Alabang, Muntinlupa City, Philippines
-                    <br>Email us: info@bootleg-radio.com</div>
-            </div>
-            <div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
-                    To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
-                    Phone: +63 (2) 772-3152 / 5859670
-                    <br>Fax: +63 (2) 771-0143
-                    <br>E-mail address: sales@bootleg-radio.com</div>
-            </div>
-            <div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
-                    For event sponsorships: </div>
-                <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
-                    Please send proposals to sales@bootleg-radio.com</div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 65px;">
+                        11th Flr. Common Goal Tower Bldg.
+                        <br>Madrigal Business Park
+                        <br>Alabang, Muntinlupa City, Philippines
+                        <br>Email us: info@bootleg-radio.com</div>
+                </div>
+                <div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
+                        To promote your products in Bootleg-Radio.com's site, please contact our sales group: </div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
+                        Phone: +63 (2) 772-3152 / 5859670
+                        <br>Fax: +63 (2) 771-0143
+                        <br>E-mail address: sales@bootleg-radio.com</div>
+                </div>
+                <div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 25px; padding-top: 35px; padding-left: 35px;">
+                        For event sponsorships: </div>
+                    <div class="lalagyan" style="font-family: 'Lato', sans-serif; color: #d5d5d5; font-size: 19px; padding-left: 35px;">
+                        Please send proposals to sales@bootleg-radio.com</div>
+                </div>
             </div>
         </div>
-    </div>
-  
-    <div class="footer" style="font-family: 'Lato', sans-serif; position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px;">
-        Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
 
-    @endsection
+        <div class="footer" style="font-family: 'Lato', sans-serif; position: relative; left: 0;  bottom: 0;  height: 40px;  width: 100%; background-color: #1b1b1c; color: white; text-align: center; padding-top: 10px; font-size: 16px">
+            Copyright © 2018 Bootleg-Radio.com | About Us | Terms of Use | Email Us | FAQs </div>
+
+        @endsection
