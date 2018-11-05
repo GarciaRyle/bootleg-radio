@@ -43,8 +43,7 @@
                     <hr color: #c2b396>
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
             </div>
             <hr color: #c2b396>
 
