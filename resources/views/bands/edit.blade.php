@@ -28,7 +28,7 @@
                         <div>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="  border-radius: 50%; width: 130px; height: 90px; margin-top: -16px;" /></div>
                         <div>
                             <div class="text2">
-                                <input name="bandName" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px" ; />
+                                <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px" ; />
 
                             </div>
                         </div>
@@ -51,12 +51,6 @@
                     <hr color: #c2b396>
 
 
-<<<<<<< HEAD
-
-            </div>
-            <hr color: #c2b396>
-=======
->>>>>>> af9fe6b480ac5e0495f760833b194ee9aea120e8
 
 
 
