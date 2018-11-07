@@ -52,6 +52,27 @@
 
 
 
+<<<<<<< HEAD
+=======
+           
+            <br>
+            <div class="desc">
+                <textarea rows="3" cols="5" type="text" name="bandDescription"  placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
+=======
+                    <br>
+                    <div class="desc">
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
+>>>>>>> 20ae95e325ae2615db7c2f7dc8b9b693b11e5d8b
+=======
+<<<<<<< HEAD
+
+                    <br>
+                    <div class="desc">
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
+>>>>>>> b9e0b304f7a2f124d1a82c6cb5988cb79e87c94b
+=======
+>>>>>>> 9a33440bdcd88d4e8af6a9744248a5e44c204f59
+>>>>>>> 849c3f6d5e39cf5389abf65d7d37fa9579e72682
 
 
                     <div class="desc">

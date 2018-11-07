@@ -25,7 +25,7 @@ Route::get('bands.create', array('as' => 'bands.create', 'uses' => 'BandRegContr
 Route::get('bands/edit/{id}', 'BandRegController@edit')->middleware('auth');
 Route::post('/bands/update/{id}', 'BandRegController@update');
 Route::get('profile', 'UserController@profile');
-Route::post('profile', 'UserController@update_avatar');
+ 
 
 Route::get('/viewBanduser', 'HomeController@view')->name('viewBanduser');
 
@@ -37,6 +37,7 @@ Route::get('/viewBanduser', array('as' => 'viewBanduser', 'uses' => 'BandRegCont
 Route::get('/editUsers', 'HomeController@lovelyeditusers')->name('edituserlove');
 
 
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/featuredartist', 'HomeController@view2')->name('featuredartist');
@@ -44,3 +45,4 @@ Route::get('/featuredartist', array('as' => 'featuredartist', 'uses' => 'BandReg
 
 
 Route::get('/AddBandMember', 'BandRegController@addBandMem')->name('AddBandMember');
+
