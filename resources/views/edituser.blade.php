@@ -30,8 +30,8 @@
 
                             <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
                             <br>
-                            <input maxlength="20" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus />
-                            <br></br>
+                            <input maxlength="20" type="text" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus />
+                            <br><br>
                             <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Email : </h2>
                             <br>
                             <input maxlength="20" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required />

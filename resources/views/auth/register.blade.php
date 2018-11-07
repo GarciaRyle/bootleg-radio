@@ -70,7 +70,7 @@
             <div class="centered">
                 <div class="containerr" style=" font-family: 'Cinzel Decorative', cursive;">
                     <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                        <span>R</span><span>E</span><span>G</span><span>I</span><span>S</span><span>T</span><span>E</span><span>R</span>&nbsp<span>N</span><span>O</span><span>W</span></div>
+                        <span>R</span><span>E</span><span>G</span><span>I</span><span>S</span><span>T</span><span>E</span><span>R</span>&nbsp;<span>N</span><span>O</span><span>W</span></div>
                 </div>
 
                 <input id="name" type="text" placeholder="Name" style="width: 105%; height: 40px; padding: 15px; margin-left: 50px 0 22px 0;" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus> <br>
