@@ -52,7 +52,7 @@
                                 <center>
                                     <div class="form-group">
                                         <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Band Name:</label> <br><br>
-                                        <input type="text" name="bandName" placeholder="Band Name" class="form-control required" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
+                                        <input type="text" name="bandName" placeholder="Band Name" pattern="[a-zA-Z\s,0-9]{1,30}" class="form-control required" value="{{ old('bandName') }}" style="font-family: 'Lato', sans-serif;width: 300px; border-radius: 20px;" maxlength="50">
                             
                                     </div>
                                 </center>
@@ -71,6 +71,7 @@
                                 <option value="R&B">R&B</option>
                                 <option value="Reggae">Reggae</option>
                                 <option value="Rock">Rock</option>
+                                <option value="Others">Others</option>
                                 </select>
                                 <center>
                                     <div class="form-group"><br>

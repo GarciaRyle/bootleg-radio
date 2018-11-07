@@ -21,7 +21,7 @@
 
         <div class="box1">
             <div>
-                <br>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="  border-radius: 50%; width: 130px; height: 90px;" />
+                <br><img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="margin-left: 20px; margin-top: 10px;border-radius: 50%; width: 120px; height: 110px;" />
                 @foreach($bands as $row)
                 <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
 
@@ -37,7 +37,7 @@
 
                     </div>
                 </div>
-                <hr color: #c2b396>
+                <hr color: #c2b396 style="margin-top: -10px;" >
                 <div class="desc">{{$row['bandDescription']}}</div> <br>
 
                 @endforeach
@@ -49,21 +49,15 @@
                 <script src="https://tympanus.net/Development/Elastislide/js/modernizr.custom.17475.js"></script>
                 <!-- Elastislide Carousel -->
                 <ul id="carousel" class="elastislide-list">
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
-                    <li><a href="#"><img src="" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
 
                 </ul>
                 <!-- End Elastislide Carousel -->
@@ -82,17 +76,16 @@
                 <br>
                 <center>
                     <a href="{{ 'AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
-                </center><br>
-
+                </center> 
             </div>
-
+<br><br>
         </div>
         <div class="box2">
 
             <div class="album">
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <img src="/images/albumicon.jpg" alt="Album" class="image">
                         <div class="overlay">
                             <div class="text">Album 1</div>
                         </div>
@@ -100,22 +93,21 @@
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image" style="height: 50%;">
+                        <img src="/images/albumicon.jpg" alt="Album" class="image" style="height: 50%;">
                         <div class="overlay">
                             <div class="text">Album 2</div>
                         </div>
                     </div>
-                    <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
+                 
                 </div>
                 <div>
                     <div class="containerreg">
-                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <img src="/images/albumicon.jpg" alt="Album" class="image">
                         <div class="overlay">
                             <div class="text">Album 3</div>
                         </div>
                     </div>
 
-                    <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
                 </div>
 
             </div>
@@ -130,7 +122,7 @@
                     </center>
 
                     <div class="form-group">
-                        <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Name:</label><br><br>
+                        <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif;"></label><br><br>
                         <center>
                             <h1></h1>
                         </center>
@@ -139,17 +131,17 @@
                 <div>
                     <div class="form-group">
                         <div class="form-group">
-                            <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Photo: </label><br>
-                            <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
+                            <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Name: </label><br>
+                             <h1></h1><br>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-group">
-                            <br><label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Photo: </label> <br>
-                            <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
+                            <br><label style="color: #a2321a; font-family: 'Lato', sans-serif;"> </label> <br>
+                          <h1></h1><br>
                         </div>
                     </div>
-                    <br>
+                    <br><br><br><br>
                     <div style="margin-left: 30px;">
                         @foreach($bands as $row)
                         <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
@@ -158,7 +150,7 @@
                             <button type="submit" class="btn btn-danger">Delete this band</button>
                         </form>
                         @endforeach
-                    </div><br><br>
+                    </div><br><br><br>
                     <br><br>
                 </div>
             </div>

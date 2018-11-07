@@ -49,11 +49,11 @@
                         <h2 style="font-size: 18px; color: #a2321a"> Band you've created</h2><br>
                         <div class="kalhati">
                             <div>
-                                <img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style=" width: 190px; height: 190px;" />
+                                <a ref="{{ action('BandRegController@create') }}"><img class="img-valign" src="/images/Image/addicon.png" alt="" style=" width: 190px; height: 190px;" /></a>
                             </div>
                             <div><br>
                                 <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> Band Name</h2>
-                                <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut gravida, metus quis congue finibus, tellus massa aliquet diam</h2>
+                                <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> </h2>
                                 <br><br><br>
                                 <div class="kalhati">
                                     <center>
