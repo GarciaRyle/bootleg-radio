@@ -76,9 +76,12 @@
                     <div></div>
                     <div>
                         <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
+                        <form enctype="multipart/form-data" action="/bands.AddBandMember" method="post">
                         <button class="file-upload" style= "margin-left: 65px; font-size: 14px;">
                             <input type="file" class="file-input" id="files" style="font-size: 15px;">Upload Photo
                         </button>
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                            </form>
                     </div>
 
                     <div>

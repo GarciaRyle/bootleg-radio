@@ -72,7 +72,6 @@
 
                 </script>
 
-                <script type="text/javascript" src="https://tympanus.net/codrops/adpacks/demoad.js"></script>
                 <br>
                 <center>
                     <a href="{{ 'AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
