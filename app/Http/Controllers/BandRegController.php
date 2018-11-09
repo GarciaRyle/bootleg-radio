@@ -98,10 +98,12 @@ class BandRegController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id) //show
     {
         $bands = Band::find($id);
         return view('bands.edit', compact('bands', 'id'));
+        $members = Member::with('bands')->get();
+        return view('bands.profile',compact('members'));    
     }
 
     /**
@@ -111,7 +113,7 @@ class BandRegController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) //edit
     {
         $this->validate($request, [
             'bandName'    =>  'required',
@@ -139,8 +141,5 @@ class BandRegController extends Controller
         $bands->delete();
         return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
-      public function addBandMem()
-    {
-        return view('bands.AddBandMember');
-    }
+
 }
