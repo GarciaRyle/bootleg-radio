@@ -14,194 +14,154 @@
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/bandscreate.css">
 </head>
-<style>
-    .file-upload {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-}
 
-.file-upload {
-  position: relative;
-  overflow: hidden;
-  margin: 10px;
-    height: 50px;
-  width: 110%;
-  max-width: 190px;
-  text-align: center;
-  color: #141312;
-  font-size: 1.2em;
-  background: transparent;
-  border: 2px solid #141312;
-  padding: .85em 1em;
-  display: inline;
-  -ms-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.file-upload:hover {
-  background: #c2b396;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
-}
+<body style="background: #bfa872;">
 
-.file-upload input.file-input {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  font-size:16px;
-  cursor: pointer;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  height: 100%;
-}
-    </style>
-
-<body>
-    <div class="bg">
-        <br><br><br>
+    <br><br><br>
 
 
-        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-wizard">
+    <div class="form-wizard" style="width: 1000px; margin-left: 180px;">
+        <!-- Form Wizard -->
+        <form role="form" action="" method="post">
 
-            <!-- Form Wizard -->
-            <form role="form" action="" method="post">
-
-                <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                    <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp;<span>A</span>&nbsp;<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
-                <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
-
-                <!-- Form progress -->
-                <div class="form-wizard-steps form-wizard-tolal-steps-4">
-                    <div class="form-wizard-progress">
-                        <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
-                    </div>
-                    <!-- Step 1 -->
-                    <div class="form-wizard-step active">
-                        <div class="form-wizard-step-icon"><i class="fas fa-info" aria-hidden="true"></i></div>
-                        <p>Band Details</p>
-                    </div>
-                    <!-- Step 1 -->
-
-                    <!-- Step 2 -->
-                    <div class="form-wizard-step">
-                        <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-                        <p>Members</p>
-                    </div>
-                    <!-- Step 2 -->
-
-                    <!-- Step 3 -->
-                    <div class="form-wizard-step">
-                        <div class="form-wizard-step-icon"><i class="fas fa-image" aria-hidden="true"></i></div>
-                        <p>Albums</p>
-                    </div>
-                    <!-- Step 3 -->
-
-                    <!-- Step 4 -->
-                    <div class="form-wizard-step">
-                        <div class="form-wizard-step-icon"><i class="fas fa-music" aria-hidden="true"></i></div>
-                        <p> Songs</p>
-                    </div>
-                    <!-- Step 4 -->
+            <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
+                <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp;<span>A</span>&nbsp;<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
+            <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
+            <!-- Form progress -->
+            <div class="form-wizard-steps form-wizard-tolal-steps-4">
+                <div class="form-wizard-progress">
+                    <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
                 </div>
-                <!-- Form progress -->
+                <!-- Step 1 -->
+                <div class="form-wizard-step active">
+                    <div class="form-wizard-step-icon"><i class="fas fa-info" aria-hidden="true"></i></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive;">Band Details</p>
+                </div>
+                <!-- Step 1 -->
+                <!-- Step 2 -->
+                <div class="form-wizard-step">
+                    <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive;">Members</p>
+                </div>
+                <!-- Step 2 -->
+                <!-- Step 3 -->
+                <div class="form-wizard-step">
+                    <div class="form-wizard-step-icon"><i class="fas fa-image" aria-hidden="true"></i></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive;">Albums</p>
+                </div>
+                <!-- Step 3 -->
+
+                <!-- Step 4 -->
+                <div class="form-wizard-step">
+                    <div class="form-wizard-step-icon"><i class="fas fa-music" aria-hidden="true"></i></div>
+                    <p style="font-family: 'Cinzel Decorative', cursive;"> Songs</p>
+                </div>
+                <!-- Step 4 -->
+            </div>
+            <!-- Form progress -->
 
 
-                <!-- Form Step 1 -->
-                <fieldset>
-
-                    <h4>Band Information: <span>Step 1 - 4</span></h4>
-                    <div class="form-group">
-                        <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
-                        <input type="text" name="First Name" placeholder="" class="form-control required">
-                    </div>
-                    <div class="form-group">
-                        <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Information: <span>*</span></label>
-                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 530px; height: 80px;"></textarea>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="row form-inline">
-                            <div class="form-group col-md-3 col-xs-3">
-                                <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Genre: </label>
-                            </div>
-                            <div class="form-group col-md-3 col-xs-3">
-
-                                <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 250px; margin-left: -15px">
-                                    <option value="Indie">Indie</option>
-                                    <option value="Pop">Pop</option>
-                                    <option value="Rock">Rock</option>
-                                    <option value="Dance">Dance</option>
-                                    <option value="Blues">Blues</option>
-                                    <option value="Classical">Classical</option>
-                                    <option value="Country">Country</option>
-                                    <option value="Jazz">Jazz</option>
-                                    <option value="R&B">R&B</option>
-                                    <option value="Reggae">Reggae</option>
-                                    <option value="Rock">Rock</option>
-                                    <option value="Others">Others</option>
-                                </select>
+            <!-- Form Step 1 -->
+            <fieldset>
+                <div class="userright">
+                    <div>
+                        <h4 style="font-family: 'Cinzel Decorative', cursive;">Band Information: <span>Step 1 - 4</span></h4>
+                        <div class="form-group">
+                            <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
+                            <input type="text" name="" placeholder="What's your band name?" class="form-control required">
+                        </div>
+                        <div class="form-group">
+                            <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Information: <span>*</span></label>
+                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your band description?" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 570px; height: 80px;"></textarea>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row form-inline">
+                                <div class="form-group col-md-3 col-xs-3">
+                                    <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Genre: </label>
+                                </div>
+                                <div class="form-group col-md-3 col-xs-3">
+                                    <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 350px; margin-left: -50px">
+                                        <option value="Indie">Indie</option>
+                                        <option value="Pop">Pop</option>
+                                        <option value="Rock">Rock</option>
+                                        <option value="Dance">Dance</option>
+                                        <option value="Blues">Blues</option>
+                                        <option value="Classical">Classical</option>
+                                        <option value="Country">Country</option>
+                                        <option value="Jazz">Jazz</option>
+                                        <option value="R&B">R&B</option>
+                                        <option value="Reggae">Reggae</option>
+                                        <option value="Rock">Rock</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
+
                     </div>
+                    <div style="margin-left: 35px;">
 
-                    <div class="form-wizard-buttons">
-                        <button type="button" class="btn btn-next">Next</button>
-                    </div>
-                </fieldset>
-                <!-- Form Step 1 -->
-
-                <!-- Form Step 2 -->
-                <fieldset>
-
-                    <h4>Member Information : <span>Step 2 - 4</span></h4>
-
-
-                    <script src="https://code.jquery.com/jquery-latest.js"></script>
-                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-                    <p>&nbsp;</p>
-                    <h5 class="text-center"></h5>
-                    <section class="container" style="width: 650px; margin-left: -20px;">
-                        <div class="table table-responsive">
-                            <table class="table table-responsive table-striped table-bordered">
-                                <thead>
-                                    <tr>
-                                        <td>Member Name</td>
-                                        <td>Postion</td>
-                                        <td>Description</td>
-                                        <td>Upload Image</td>
-                                    </tr>
-                                </thead>
-                                <tbody id="TextBoxContainer">
-                                </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td><input name="DynamicTextBox" type="text" value="" class="form-control" /></td>
-                                        <td><select name="" class="form-control">
-                                                <option> Select</option>
-                                                <option> Lead Vocalist</option>
-                                                <option> Guitarist</option>
-                                                <option>Bass</option>
-                                                <option>Drummer</option>
-                                            </select></td>
-                                        <td><input name="DynamicTextBox" type="text" value="" class="form-control" /></td>
-                                        <td><input type="file" class="file-input" id="files" style="width: 60px;" /></td>
-                                        
-                                        
-                                        <td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>
-                                    </tr>
-                                    <th colspan="5">
-                                            <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Add more controls"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp; Add&nbsp;</button></th>
-                                </tfoot>
-                            </table>
+                        <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
+                        <button class="file-upload" style="margin-left: 25px; font-size: 14px; ">
+                            <center> <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo</center>
+                        </button>
+                        <div class="form-wizard-buttons">
+                            <button type="button" class="btn btn-next">Next</button>
                         </div>
-                    </section>
-                    <script>
 
-                        $(function () {
+                    </div>
+
+                </div>
+            </fieldset>
+            <!-- Form Step 1 -->
+
+            <!-- Form Step 2 -->
+            <fieldset>
+
+                <h4 style="font-family: 'Cinzel Decorative', cursive;">Member Information : <span>Step 2 - 4</span></h4>
+                <script src="https://code.jquery.com/jquery-latest.js"></script>
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+                <p>&nbsp;</p>
+                <h5 class="text-center"></h5>
+                <section class="container" style="width: 1000px; margin-left: -20px;">
+                    <div class="table table-responsive">
+                        <table class="table table-responsive table-striped table-bordered">
+                            <thead>
+                                <tr>
+                                    <td style="font-family: 'Cinzel Decorative', cursive;">Member Name</td>
+                                    <td style="font-family: 'Cinzel Decorative', cursive;">Postion</td>
+                                    <td style="font-family: 'Cinzel Decorative', cursive;">Description</td>
+                                    <td style="font-family: 'Cinzel Decorative', cursive;">Upload</td>
+                                    <td style="font-family: 'Cinzel Decorative', cursive;">Remove</td>
+                                </tr>
+                            </thead>
+                            <tbody id="TextBoxContainer">
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
+                                    <td><select name="" class="form-control" style="font-family: 'Lato', sans-serif;">
+                                            <option> Select</option>
+                                            <option> Lead Vocalist</option>
+                                            <option> Guitarist</option>
+                                            <option>Bass</option>
+                                            <option>Drummer</option>
+                                        </select></td>
+                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
+                                    <td><input type="file" class="file-input" id="files" style="width: 102px;" /></td>
+
+
+                                    <td><button type="button" class="btn btn-danger remove" style="width: 20px;"><i class="glyphicon glyphicon-remove-sign" style=" width: 10px;"></i></button></td>
+                                </tr>
+                                <th colspan="5">
+                                    <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="tooltip" data-original-title="Add more controls"><i class="glyphicon glyphicon-plus-sign"></i>&nbsp; Add&nbsp;</button></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </section>
+                <script>
+
+                    $(function () {
                                     $("#btnAdd").bind("click", function () {
                                         var div = $("<tr />");
                                         div.html(GetDynamicTextBox(""));
@@ -212,86 +172,99 @@
                                     });
                                 });
                                 function GetDynamicTextBox(value) {
-                                    return '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" class="file-input" id="files" style="width: 60px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
+                                    return '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" class="file-input" id="files" style="width: 105px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
                                 }
                                 </script>
-                    <div class="form-wizard-buttons">
-                        <button type="button" class="btn btn-previous">Previous</button>
-                        <button type="button" class="btn btn-next">Next</button>
-                    </div>
-                </fieldset>
-                <!-- Form Step 2 -->
+                <div class="form-wizard-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="button" class="btn btn-next">Next</button>
+                </div>
+            </fieldset>
+            <!-- Form Step 2 -->
 
-                <!-- Form Step 3 -->
-                <fieldset>
-
-                    <h4>Album Information: <span>Step 3 - 4</span></h4>
-                    <div class="form-group">
-                        <div class="container-fluid">
-                            <div class="row form-inline">
-                                <div class="form-group col-md-3 col-xs-3">
-                                    <label>Album Type: <span>*</span> </label>
-                                </div>
-                                <div class="form-group col-md-3 col-xs-3">
-
-                                    <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 250px; margin-left: -25px">
-                                        <option>Album</option>
-                                        <option>Single </option>
-                                    </select>
-                                </div>
-
+            <!-- Form Step 3 -->
+            <fieldset>
+                <div class="userright">
+                    <div>
+                        <h4 style="font-family: 'Cinzel Decorative', cursive;">Album Information: <span>Step 3 - 4</span></h4>
+                        <div class="row form-inline">
+                            <div class="form-group col-md-3 col-xs-3">
+                                <label>Album Type: <span>*</span> </label>
                             </div>
+                            <div class="form-group col-md-3 col-xs-3">
+
+                                <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width:390px; margin-left: -15px">
+                                    <option>Album</option>
+                                    <option>Single </option>
+                                </select>
+                            </div>
+
                         </div>
-                        <label>Album Name: <span>*</span></label><br>
-                        <input type="text" name="Name your album " placeholder="Employee ID" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px;">
-                        <label>Album Photo: <span>*</span></label>
-                        <button class="file-upload" style="margin-left: 65px; font-size: 14px; margin-left:5px">
-                            <input type="file" class="file-input" id="files" style="font-size: 15px;">Album Photo
+                        <br> <label>Album Name: <span>*</span></label><br>
+                        <input type="text" name="Name your album " placeholder="What's your album name?" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
+                        <br>
+
+
+                        <div class="form-group">
+                            <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Description: <span>*</span></label>
+                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 570px; height: 80px;"></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-left: 35px;">
+                        <br>
+                        <img id="blah" alt="your image" src="/images/Image/unknownPerson.png" style="height: 240px;
+                        width: 240px;" />
+                        <button class="file-upload" style="margin-left: 25px; font-size: 14px; ">
+                            <input type='file' class="file-input" onchange="readURL(this);" /> Upload Photo
+
                         </button>
+                        <div class="form-wizard-buttons">
+                            <button type="button" class="btn btn-previous">Previous</button>
+                            <button type="button" class="btn btn-next">Next</button>
+                        </div>
+
                     </div>
 
+                </div>
+            </fieldset>
 
-                    <br />
-                    <div class="form-wizard-buttons">
-                        <button type="button" class="btn btn-previous">Previous</button>
-                        <button type="button" class="btn btn-next">Next</button>
-                    </div>
-                </fieldset>
-                <!-- Form Step 3 -->
+            <!-- Form Step 3 -->
 
-                <!-- Form Step 4 -->
-                <fieldset>
+            <!-- Form Step 4 -->
+            <fieldset>
 
-                    <h4>Song Information: <span>Step 4 - 4</span></h4>
-                    <div style="clear:both;"></div>
-                    <div class="form-group">
-                        <label>Song title: <span>*</span></label><br>
-                        <input type="text" name="Member Position" placeholder="Title" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px;">
-                    </div>
-                    <div class="form-group">
-                        <label>Song Ltrics: <span>*</span></label><br>
-                        <input type="text" name="Member Position" placeholder="Lyrics" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px;">
-                    </div>
-                    <label>Upload music: <span>*</span></label>
-                    <button class="file-upload" style="margin-left: 65px; font-size: 14px; margin-left:5px">
-                        <input type="file" class="file-input" id="files" style="font-size: 15px;">Album Photo
-                    </button>
+                <h4 style="font-family: 'Cinzel Decorative', cursive;">Song Information: <span>Step 4 - 4</span></h4>
+                <div style="clear:both;"></div>
+                <div class="form-group">
+                    <label>Song title: <span>*</span></label><br>
+                    <input type="text" name="Member Position" placeholder="Title" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
+                </div>
+                <div class="form-group">
+                    <label>Song Ltrics: <span>*</span></label><br>
+                    <input type="text" name="Member Position" placeholder="Lyrics" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
+                </div>
+                <label>Upload music: <span>*</span></label>
+                <button class="file-upload" style="margin-left: 65px; font-size: 14px; margin-left:5px">
+                    <input type="file" class="file-input" id="files" style="font-size: 15px;">Album Song
+                </button>
 
 
-                    <br />
+                <br />
 
-                    <br />
-                    <div class="form-wizard-buttons">
-                        <button type="button" class="btn btn-previous">Previous</button>
-                        <button type="submit" class="btn btn-submit">Submit</button>
-                    </div>
-                </fieldset>
-                <!-- Form Step 4 -->
+                <br />
+                <div class="form-wizard-buttons">
+                    <button type="button" class="btn btn-previous">Previous</button>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </div>
+            </fieldset>
+            <!-- Form Step 4 -->
 
-            </form>
-            <!-- Form Wizard -->
-        </div>
+        </form>
+
+        <!-- Form Wizard -->
     </div>
+    <br><br><br>
+
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
@@ -476,13 +449,44 @@
         // image uploader scripts
 
     </script>
+    <script>
+        document.getElementById("files").onchange = function() {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("image").src = e.target.result;
+            };
+
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        };
+
+    </script>
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(240)
+                        .height(240);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+    </script>
 
 
-    </div>
+
+
 
 </body>
 
 </html>
-
 
 @endsection

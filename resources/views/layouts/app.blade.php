@@ -74,7 +74,7 @@ width: 100%;
                     <li><a href="{{ url('/register') }}" style="color: #c2b396;">Register</a></li>
                     @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px; color: #c2b396;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" style="position:relative; padding-left:50px; color: #c2b396; font-family: 'Cinzel Decorative', cursive;">
                             <img src="/uploads/avatars/{{ Auth::user()->avatar }}" style="width:32px; height:32px; position:absolute; top:10px; left:10px; border-radius:50%">
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
@@ -102,11 +102,11 @@ width: 100%;
                 <!-- Left Side Of Navbar -->
                 <div class="linenav">
                     <ul class="nav navbar-nav" style="float:right; color: #c2b396;">
-                        <li><a href="/" style="color: #c2b396; ">Home</a></li>
-                        <li><a href="{{ url('/home') }}" style="color: #c2b396;">Bands</a></li>
-                        <li><a href="#" style="color: #c2b396;">Web Jocks</a></li>
-                        <li><a href="#" style="color: #c2b396;">Chat</a></li>
-                        <li><a href="#" style="color: #c2b396;">More</a></li>
+                        <li><a href="/" style="color: #c2b396; font-family: 'Cinzel Decorative', cursive; ">Home</a></li>
+                        <li><a href="{{ url('/home') }}" style="color: #c2b396; font-family: 'Cinzel Decorative', cursive;">Bands</a></li>
+                        <li><a href="#" style="color: #c2b396; font-family: 'Cinzel Decorative', cursive;">Web Jocks</a></li>
+                        <li><a href="#" style="color: #c2b396; font-family: 'Cinzel Decorative', cursive;">Chat</a></li>
+                        <li><a href="#" style="color: #c2b396; font-family: 'Cinzel Decorative', cursive;">More</a></li>
                     </ul>
                 </div>
             </div>

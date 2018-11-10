@@ -13,6 +13,7 @@
      <link rel="stylesheet" type="text/css" href="/css/login.css">
 
 </head>
+
 <body>
     <div class="bg">
         <div style="height: 110px;"></div>
@@ -74,6 +75,6 @@
         </div>
     </div>
 </body>
-
+<div style="height:30px; background: transparent;"></div>
 
 @endsection

@@ -1,24 +1,5 @@
-     body, html {
-height: 100%;
-}
-
-.bg {
-/* The image used */
-background-image: url("/images/bandregbk.jpg");
-
-/* Full height */
-height: 111%;
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-        .bandregister {
-    display: grid;
-    grid-template-columns: 50% 35% 22%;
-    grid-auto-columns: 
-          
+* {
+    font-family: 'Lato', sans-serif;
 }
 
  .userprofile {
@@ -53,7 +34,7 @@ background-size: cover;
 
 .userright {
             display: grid;
-            grid-template-columns: 45% 55%;
+            grid-template-columns: 60% 40%;
             grid-auto-columns: auto;
             align-items: stretch;
             align-items: stretch;
@@ -72,7 +53,6 @@ background-size: cover;
 	-webkit-border-radius: 4px; 
 	border-radius: 4px; 
 	box-shadow: 0px 0px 6px 3px #777;
-	font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     color: #888;
@@ -138,7 +118,6 @@ background-size: cover;
     vertical-align: middle;
     background: #fff;
     border: 1px solid #ddd;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 44px;
@@ -179,7 +158,6 @@ background-size: cover;
     padding: 0 20px;
     vertical-align: middle;
     border: 0;
-    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 40px;
@@ -550,11 +528,54 @@ animation-delay: .35s;
     }
 }
 
-* { font-family:Arial; }
-h2 { padding:0 0 5px 5px; }
-h2 a { color: #224f99; }
-a { color:#999; text-decoration: none; }
-a:hover { color:#802727; }
-p { padding:0 0 5px 0; }
+ .memberphoto {
+        margin-top: 30px;
+        margin-left: 20px; 
+        height: 240px;
+        width: 240px;
+        }
+        .file-upload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+}
 
-input { padding:5px; border:1px solid #999; border-radius:4px; -moz-border-radius:4px; -web-kit-border-radius:4px; -khtml-border-radius:4px; }
+.file-upload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+    height: 50px;
+  width: 232%;
+  max-width: 232px;
+  text-align: center;
+  color: #141312;
+  font-size: 1.2em;
+  background: transparent;
+  border: 2px solid #141312;
+  padding: .85em 1em;
+  display: inline;
+    text-align: center;
+  -ms-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.file-upload:hover {
+  background: #f34727;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75);
+}
+
+.file-upload input.file-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size:16px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  height: 100%;
+}
+   
