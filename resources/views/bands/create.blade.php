@@ -80,7 +80,7 @@
                                     <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Genre: </label>
                                 </div>
                                 <div class="form-group col-md-3 col-xs-3">
-                                    <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 350px; margin-left: -50px">
+                                    <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 462px; margin-left: -50px">
                                         <option value="Indie">Indie</option>
                                         <option value="Pop">Pop</option>
                                         <option value="Rock">Rock</option>
@@ -102,8 +102,8 @@
                     <div style="margin-left: 35px;">
 
                         <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
-                        <button class="file-upload" style="margin-left: 25px; font-size: 14px; ">
-                            <center> <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo</center>
+                        <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; ">
+                            <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
                         </button>
                         <div class="form-wizard-buttons">
                             <button type="button" class="btn btn-next">Next</button>
@@ -189,7 +189,7 @@
                         <h4 style="font-family: 'Cinzel Decorative', cursive;">Album Information: <span>Step 3 - 4</span></h4>
                         <div class="row form-inline">
                             <div class="form-group col-md-3 col-xs-3">
-                                <label>Album Type: <span>*</span> </label>
+                                <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Type: <span>*</span> </label>
                             </div>
                             <div class="form-group col-md-3 col-xs-3">
 
@@ -200,22 +200,22 @@
                             </div>
 
                         </div>
-                        <br> <label>Album Name: <span>*</span></label><br>
+                        <br> <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Name: <span>*</span></label><br>
                         <input type="text" name="Name your album " placeholder="What's your album name?" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
                         <br>
 
 
-                        <div class="form-group">
+                        <div class="form-group"><br>
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Description: <span>*</span></label>
-                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 570px; height: 80px;"></textarea>
+                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 527px; height: 80px;"></textarea>
                         </div>
                     </div>
                     <div style="margin-left: 35px;">
                         <br>
                         <img id="blah" alt="your image" src="/images/Image/unknownPerson.png" style="height: 240px;
                         width: 240px;" />
-                        <button class="file-upload" style="margin-left: 25px; font-size: 14px; ">
-                            <input type='file' class="file-input" onchange="readURL(this);" /> Upload Photo
+                        <button class="file-upload" style="margin-left: 5px; font-size: 14px;  font-family: 'Cinzel Decorative', cursive;">
+                            <input type='file' class="file-input" onchange="readURL(this);"  /> Upload Photo
 
                         </button>
                         <div class="form-wizard-buttons">
@@ -236,14 +236,14 @@
                 <h4 style="font-family: 'Cinzel Decorative', cursive;">Song Information: <span>Step 4 - 4</span></h4>
                 <div style="clear:both;"></div>
                 <div class="form-group">
-                    <label>Song title: <span>*</span></label><br>
+                    <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Song title: <span>*</span></label><br>
                     <input type="text" name="Member Position" placeholder="Title" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
                 </div>
                 <div class="form-group">
-                    <label>Song Ltrics: <span>*</span></label><br>
+                    <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Song Lyrics: <span>*</span></label><br>
                     <input type="text" name="Member Position" placeholder="Lyrics" style="width: 530px; height: 40px; border-color: #f2f2f2; border-radius: 5px; font-family: 'Lato', sans-serif;">
                 </div>
-                <label>Upload music: <span>*</span></label>
+                <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Upload music: <span>*</span></label>
                 <button class="file-upload" style="margin-left: 65px; font-size: 14px; margin-left:5px">
                     <input type="file" class="file-input" id="files" style="font-size: 15px;">Album Song
                 </button>
