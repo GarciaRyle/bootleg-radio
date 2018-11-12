@@ -68,11 +68,11 @@
                         <h4 style="font-family: 'Cinzel Decorative', cursive;">Band Information: <span>Step 1 - 4</span></h4>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
-                            <input type="text" name="" placeholder="What's your band name?" class="form-control required">
+                            <input type="text" name="" placeholder="What's your band name?" class="form-control required" >
                         </div>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Information: <span>*</span></label>
-                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your band description?" maxlength="255" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 570px; height: 80px;"></textarea>
+                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your band description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 570px; height: 80px; border-radius: 5px;"  required="required"></textarea>
                         </div>
                         <div class="container-fluid">
                             <div class="row form-inline">
@@ -102,7 +102,7 @@
                     <div style="margin-left: 35px;">
 
                         <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
-                        <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; ">
+                        <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; border-radius: 10px; ">
                             <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
                         </button>
                         <div class="form-wizard-buttons">
