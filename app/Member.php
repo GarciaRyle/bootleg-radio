@@ -12,7 +12,7 @@ class Member extends Model
     //
    
 
-  public function band(){
-      return $this.belongsTo('App\Band');
+  public function bands(){
+      return $this->belongsTo('App\Band');
   }
 }

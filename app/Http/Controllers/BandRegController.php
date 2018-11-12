@@ -18,7 +18,8 @@ class BandRegController extends Controller
     public function index()
     {
         $bands = Band::where('UserId', '=', Auth::user()->id)->get();
-        return view('bands.profile', compact('bands'));
+        $members = Member::with('bands')->get();
+        return view('bands.profile', compact('bands', 'members'));
     }
 
     /**
@@ -77,7 +78,23 @@ class BandRegController extends Controller
      
         ]);
 
+      
         $bands->save();
+
+        $membersName = $request->memberName; //array 
+        $membersPosition = $request->position; //array
+        $memberBio = $request->bio; //array
+        $membersCount = count($membersName);
+
+        
+for($x = 0; $x < $membersCount; $x++){
+    $members = new Member;
+    $members->memberName = $membersName[$x];
+    $members->position = $membersPosition[$x];
+    $members->bio = $memberBio[$x];
+    $members->bandId = $bands->id;
+    $members->save();
+}
         return redirect()->route('bands.profile')->with('success', 'Data Added');
     }
 
