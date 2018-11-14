@@ -77,6 +77,12 @@ class BandRegController extends Controller
             'bandDescription'     =>  $request->get('bandDescription'),
      
         ]);
+        if($request->hasFile('fileUpload')){
+    		$fileUpload = $request->file('fileUpload');
+    		$filename = time() . '.' . $fileUpload->getClientOriginalExtension();
+    		Image::make($fileUpload)->resize(300, 300)->save( public_path('/uploads/bands/' . $filename ) );
+    		$bands->fileUpload = $filename;
+		} 
 
       
         $bands->save();
@@ -84,15 +90,25 @@ class BandRegController extends Controller
         $membersName = $request->memberName; //array 
         $membersPosition = $request->position; //array
         $memberBio = $request->bio; //array
+        $membersPhoto = $request->file('photoUpload');
         $membersCount = count($membersName);
+        
 
         
 for($x = 0; $x < $membersCount; $x++){
     $members = new Member;
+
     $members->memberName = $membersName[$x];
     $members->position = $membersPosition[$x];
     $members->bio = $memberBio[$x];
     $members->bandId = $bands->id;
+    
+     if($request->hasFile('photoUpload')){
+         $photoUpload = $membersPhoto[$x];
+         $filename[$x] = time() . '.' . $photoUpload-> getClientOriginalExtension();
+         Image::make($photoUpload)->resize(300, 300)->save( public_path('/uploads/members/' . $filename[$x] ) );
+         $members->photoUpload = $filename[$x];
+     }
     $members->save();
 }
         return redirect()->route('bands.profile')->with('success', 'Data Added');
