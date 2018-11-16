@@ -23,7 +23,7 @@
                     <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
 
                     <span class="text2" style="margin-left: 270px; font-size: 26px;">
-                        <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" />
+                        <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" oninvalid="setCustomValidity('Invalid Name. Allowed characters include A-z and 0-9. ')" onchange="try{setCustomValidity('')}catch(e){}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" />
                     </span>
                     <div class="text3" style="margin-top: -35px; margin-left: 970px;">
                         <input type="submit" class="btn btn-primary" value="Update" style="font-family: 'Cinzel Decorative', cursive;">

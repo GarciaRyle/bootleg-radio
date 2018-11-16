@@ -21,7 +21,6 @@
 
     <br><br><br>
 
-<<<<<<< HEAD
 
     <div class="form-wizard" style="width: 1000px; margin-left: 180px;">
         <!-- Form Wizard -->
@@ -71,7 +70,7 @@
                         <h4 style="font-family: 'Cinzel Decorative', cursive;">Band Information: <span>Step 1 - 4</span></h4>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
-                            <input type="text" name="" placeholder="What's your band name?" class="form-control required" >
+                            <input type="text" name="bandName" placeholder="What's your band name?" class="form-control required" >
                         </div>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Information: <span>*</span></label>
@@ -107,108 +106,6 @@
                         <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
                         <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; border-radius: 10px; ">
                             <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
-=======
-
-    <div class="form-wizard" style="width: 1000px; margin-left: 180px;">
-
-      @if(count($errors) > 0)
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                <li>{{$error}}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        @endif
-                        @if(\Session::has('success'))
-                        <div class="alert alert-success">
-                            <p>{{ \Session::get('success') }}</p>
-                        </div>
-                        @endif
-
-        <!-- Form Wizard -->
-        <form method="post" role="form"  action="{{action('BandRegController@store')}}" enctype="multipart/form-data">
-                    {{csrf_field()}}
-
-            <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
-                <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp;<span>A</span>&nbsp;<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
-            <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> Make your voice be heard</p>
-            <!-- Form progress -->
-            <div class="form-wizard-steps form-wizard-tolal-steps-4">
-                <div class="form-wizard-progress">
-                    <div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4" style="width: 12.25%;"></div>
-                </div>
-                <!-- Step 1 -->
-                <div class="form-wizard-step active">
-                    <div class="form-wizard-step-icon"><i class="fas fa-info" aria-hidden="true"></i></div>
-                    <p style="font-family: 'Cinzel Decorative', cursive;">Band Details</p>
-                </div>
-                <!-- Step 1 -->
-                <!-- Step 2 -->
-                <div class="form-wizard-step">
-                    <div class="form-wizard-step-icon"><i class="fa fa-user" aria-hidden="true"></i></div>
-                    <p style="font-family: 'Cinzel Decorative', cursive;">Members</p>
-                </div>
-                <!-- Step 2 -->
-                <!-- Step 3 -->
-                <div class="form-wizard-step">
-                    <div class="form-wizard-step-icon"><i class="fas fa-image" aria-hidden="true"></i></div>
-                    <p style="font-family: 'Cinzel Decorative', cursive;">Albums</p>
-                </div>
-                <!-- Step 3 -->
-
-                <!-- Step 4 -->
-                <div class="form-wizard-step">
-                    <div class="form-wizard-step-icon"><i class="fas fa-music" aria-hidden="true"></i></div>
-                    <p style="font-family: 'Cinzel Decorative', cursive;"> Songs</p>
-                </div>
-                <!-- Step 4 -->
-            </div>
-            <!-- Form progress -->
-
-
-            <!-- Form Step 1 -->
-            <fieldset>
-                <div class="userright">
-                    <div>
-                        <h4 style="font-family: 'Cinzel Decorative', cursive;">Band Information: <span>Step 1 - 4</span></h4>
-                        <div class="form-group">
-                            <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
-                            <input type="text" name="bandName" placeholder="What's your band name?"  pattern="[a-zA-Z,0-9]{1,20}" class="form-control required" >
-                        </div>
-                        <div class="form-group"> <label style="font-family: 'Lato', sans-serif; color: #141312; font-size: 18px;">Band Information: <span>*</span></label> 
-                        <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="" maxlength="255" class="form-control" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 530px; height: 80px;"></textarea> </div>
-                        <div class="container-fluid">
-                            <div class="row form-inline">
-                                <div class="form-group col-md-3 col-xs-3">
-                                    <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Genre: </label>
-                                </div>
-                                <div class="form-group col-md-3 col-xs-3">
-                                    <select class="form-control" name="genre" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 462px; margin-left: -50px">
-                                        <option value="Indie">Indie</option>
-                                        <option value="Pop">Pop</option>
-                                        <option value="Rock">Rock</option>
-                                        <option value="Dance">Dance</option>
-                                        <option value="Blues">Blues</option>
-                                        <option value="Classical">Classical</option>
-                                        <option value="Country">Country</option>
-                                        <option value="Jazz">Jazz</option>
-                                        <option value="R&B">R&B</option>
-                                        <option value="Reggae">Reggae</option>
-                                        <option value="Rock">Rock</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div style="margin-left: 35px;">
-
-                        <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
-                        <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; border-radius: 10px; ">
-                            <input type="file"  name="fileUpload" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
                         </button>
                         <div class="form-wizard-buttons">
                             <button type="button" class="btn btn-next">Next</button>
@@ -244,26 +141,16 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-<<<<<<< HEAD
-                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
-                                    <td><select name="" class="form-control" style="font-family: 'Lato', sans-serif;">
-=======
                                     <td><input name="memberName[]" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
                                     <td><select name="position[]" class="form-control" style="font-family: 'Lato', sans-serif;">
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
                                             <option> Select</option>
                                             <option> Lead Vocalist</option>
                                             <option> Guitarist</option>
                                             <option>Bass</option>
                                             <option>Drummer</option>
                                         </select></td>
-<<<<<<< HEAD
-                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
-                                    <td><input type="file" class="file-input" id="files" style="width: 102px;" /></td>
-=======
                                     <td><input name="bio[]" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
                                     <td><input type="file" name="photoUpload[]" class="file-input" id="files" style="width: 102px;" /></td>
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
 
 
                                     <td><button type="button" class="btn btn-danger remove" style="width: 20px;"><i class="glyphicon glyphicon-remove-sign" style=" width: 10px;"></i></button></td>
@@ -287,11 +174,7 @@
                                     });
                                 });
                                 function GetDynamicTextBox(value) {
-<<<<<<< HEAD
-                                    return '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" class="file-input" id="files" style="width: 105px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
-=======
                                     return '<td><input name = "memberName[]" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="position[]" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "bio[]" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" name="photoUpload[]" class="file-input" id="files" style="width: 105px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
                                 }
                                 </script>
                 <div class="form-wizard-buttons">
@@ -326,11 +209,7 @@
 
                         <div class="form-group"><br>
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Description: <span>*</span></label>
-<<<<<<< HEAD
-                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 527px; height: 80px;"></textarea>
-=======
                             <textarea rows="3" cols="50" type="text" name="albumDesc" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 527px; height: 80px;"></textarea>
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
                         </div>
                     </div>
                     <div style="margin-left: 35px;">
@@ -377,11 +256,7 @@
                 <br />
                 <div class="form-wizard-buttons">
                     <button type="button" class="btn btn-previous">Previous</button>
-<<<<<<< HEAD
-                    <button type="submit" class="btn btn-submit">Submit</button>
-=======
                     <button type="submit" class="form-group">Submit</button>
->>>>>>> 06b25eb724fbf07445d9f4838bfde59565e60aab
                 </div>
             </fieldset>
             <!-- Form Step 4 -->
