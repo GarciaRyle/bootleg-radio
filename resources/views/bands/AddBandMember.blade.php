@@ -85,24 +85,43 @@
                     </div>
 
                     <div>
-                        
-                        <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive; margin-left:110px;">
-                            <span>A</span><span>D</span><span>D</span> &nbsp;<span>M</span><span>E</span><span>M</span><span> B</span><span>E</span><span>R</span></div>
-                        <center><h2 style="font-size: 16px; margin-left: 100px; margin-top: 15px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name</h2>
-                        <br><br>
-                        <input maxlength="20" style="margin-left:100px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" required autofocus />
-                        <h2 style="font-size: 16px; margin-left: 100px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Position</h2>
-                        <br><br>
-                        <input maxlength="20" style="margin-left:100px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('position') ? ' is-invalid' : '' }}" name="Position" required autofocus />
-                        <h2 style="font-size: 16px; margin-left: 100px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Bio</h2>
-                        <br><br>
+                    <form enctype="multipart/form-data" method='post' action="{{ route('AddBandMemberstore') }}">
+                    @csrf
+                  
+                         <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive; margin-left:110px;">
+                                <span>A</span><span>D</span><span>D</span> &nbsp;<span>M</span><span>E</span><span>M</span><span> B</span><span>E</span><span>R</span></div>
 
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 250px; height: 80px; margin-left:100px; margin-top: -48px;; required autofocus "></textarea>
+   <input type="file" name="photoUpload" style="margin-left:110px;">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                     
                         <br>
-                        <div><a href="" type="submit" class="btn btn-warning" style="margin-left:135px; ">+Add Member</a></div>
+                        <label>Band Name</label>
+                        <select  name="bandId" style="width: 200px; ">
+                        @foreach($bands as $band)
+                    <option value="{{ $band->id }}">{{ $band->bandName }}</option>
+                        @endforeach
+                        </select>
+                        <h2 style="font-size: 16px; margin-left: 50px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Name :</h2>
+                        <br><br>
+                        <input maxlength="20" style="margin-left:100px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('memberName') ? ' is-invalid' : '' }}" name="memberName" required autofocus>
+                        <h2 style="font-size: 16px; margin-left: 50px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Position:</h2>
+                        <br><br><br>
+                        <input maxlength="20" style="margin-left:100px; margin-top: -48px; width: 250px ; height: 30px;" class="textedit form-control{{ $errors->has('position') ? ' is-invalid' : '' }}" name="position" required>
+                        <h2 style="font-size: 16px; margin-left: 52px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Bio:</h2>
+                <br><br>
+
+                        <textarea rows="3" cols="5" type="text" name="bio" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 250px; height: 80px; margin-left:100px; margin-top: -48px;; required autofocus "></textarea>
                         <br>
-                            </center>
-                    </div>
+
+                         <div><button type="submit" class="btn btn-warning" style="margin-left:135px; ">+Add Member</button></div>
+                        <br>
+
+</form>
+
+
+
+
+          </div>
                 </div>
             </div>
         </div>
@@ -123,4 +142,6 @@
         </script>
 
 
-        @endsection
+
+    @endsection
+
