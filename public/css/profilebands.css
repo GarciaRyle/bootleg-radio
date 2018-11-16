@@ -1,4 +1,4 @@
-  .albumphoto {
+   .albumphoto {
             display: grid;
             grid-template-columns: 5% 15% 15% 15% 15% 15%;
             grid-auto-columns: auto;
@@ -48,7 +48,7 @@
 
         .userprofile {
             display: grid;
-            grid-template-columns: 8% 84.5% 10%;
+            grid-template-columns:  8% 84.5% 10%;
             grid-auto-columns: auto;
             align-items: stretch;
             align-items: stretch;
