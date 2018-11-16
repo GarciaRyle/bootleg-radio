@@ -18,7 +18,8 @@ class BandRegController extends Controller
     public function index()
     {
         $bands = Band::where('UserId', '=', Auth::user()->id)->get();
-        return view('bands.profile', compact('bands'));
+        $members = Member::with('bands')->get();
+        return view('bands.profile', compact('bands', 'members'));
     }
 
     /**
@@ -76,8 +77,40 @@ class BandRegController extends Controller
             'bandDescription'     =>  $request->get('bandDescription'),
      
         ]);
+        if($request->hasFile('fileUpload')){
+    		$fileUpload = $request->file('fileUpload');
+    		$filename = time() . '.' . $fileUpload->getClientOriginalExtension();
+    		Image::make($fileUpload)->resize(300, 300)->save( public_path('/uploads/bands/' . $filename ) );
+    		$bands->fileUpload = $filename;
+		} 
 
+      
         $bands->save();
+
+        $membersName = $request->memberName; //array 
+        $membersPosition = $request->position; //array
+        $memberBio = $request->bio; //array
+        $membersPhoto = $request->file('photoUpload');
+        $membersCount = count($membersName);
+        
+
+        
+for($x = 0; $x < $membersCount; $x++){
+    $members = new Member;
+
+    $members->memberName = $membersName[$x];
+    $members->position = $membersPosition[$x];
+    $members->bio = $memberBio[$x];
+    $members->bandId = $bands->id;
+    
+     if($request->hasFile('photoUpload')){
+         $photoUpload = $membersPhoto[$x];
+         $filename[$x] = time() . '.' . $photoUpload-> getClientOriginalExtension();
+         Image::make($photoUpload)->resize(300, 300)->save( public_path('/uploads/members/' . $filename[$x] ) );
+         $members->photoUpload = $filename[$x];
+     }
+    $members->save();
+}
         return redirect()->route('bands.profile')->with('success', 'Data Added');
     }
 
@@ -98,10 +131,12 @@ class BandRegController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id) //show
     {
         $bands = Band::find($id);
         return view('bands.edit', compact('bands', 'id'));
+        $members = Member::with('bands')->get();
+        return view('bands.profile',compact('members'));    
     }
 
     /**
@@ -111,7 +146,7 @@ class BandRegController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id) //edit
     {
         $this->validate($request, [
             'bandName'    =>  'required',
@@ -139,8 +174,5 @@ class BandRegController extends Controller
         $bands->delete();
         return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
-      public function addBandMem()
-    {
-        return view('bands.AddBandMember');
-    }
+
 }

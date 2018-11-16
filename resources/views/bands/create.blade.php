@@ -68,7 +68,7 @@
                         <h4 style="font-family: 'Cinzel Decorative', cursive;">Band Information: <span>Step 1 - 4</span></h4>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; ">Band Name: <span>*</span></label>
-                            <input type="text" name="" placeholder="What's your band name?" class="form-control required" >
+                            <input type="text" name="bandName" placeholder="What's your band name?" class="form-control required" >
                         </div>
                         <div class="form-group">
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Band Information: <span>*</span></label>
@@ -139,16 +139,16 @@
                             </tbody>
                             <tfoot>
                                 <tr>
-                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
-                                    <td><select name="" class="form-control" style="font-family: 'Lato', sans-serif;">
+                                    <td><input name="memberName[]" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
+                                    <td><select name="position[]" class="form-control" style="font-family: 'Lato', sans-serif;">
                                             <option> Select</option>
                                             <option> Lead Vocalist</option>
                                             <option> Guitarist</option>
                                             <option>Bass</option>
                                             <option>Drummer</option>
                                         </select></td>
-                                    <td><input name="DynamicTextBox" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
-                                    <td><input type="file" class="file-input" id="files" style="width: 102px;" /></td>
+                                    <td><input name="bio[]" type="text" value="" class="form-control" style="font-family: 'Lato', sans-serif;" /></td>
+                                    <td><input type="file" name="photoUpload[]" class="file-input" id="files" style="width: 102px;" /></td>
 
 
                                     <td><button type="button" class="btn btn-danger remove" style="width: 20px;"><i class="glyphicon glyphicon-remove-sign" style=" width: 10px;"></i></button></td>
@@ -172,7 +172,7 @@
                                     });
                                 });
                                 function GetDynamicTextBox(value) {
-                                    return '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "DynamicTextBox" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" class="file-input" id="files" style="width: 105px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
+                                    return '<td><input name = "memberName[]" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><select name="position[]" class="form-control"><option> Select</option><option> Lead Vocalist</option><option> Guitarist</option> <option>Bass</option> <option>Drummer</option></select></td>' + '<td><input name = "bio[]" type="text" value = "' + value + '" class="form-control" /></td>' + '<td><input type="file" name="photoUpload[]" class="file-input" id="files" style="width: 105px;" /></td>' + '<td><button type="button" class="btn btn-danger remove"  style="width: 20px;"><i class="glyphicon glyphicon-remove-sign"  style=" width: 20px;"></i></button></td>'
                                 }
                                 </script>
                 <div class="form-wizard-buttons">
@@ -207,7 +207,7 @@
 
                         <div class="form-group"><br>
                             <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Album Description: <span>*</span></label>
-                            <textarea rows="3" cols="50" type="text" name="bandDescription" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 527px; height: 80px;"></textarea>
+                            <textarea rows="3" cols="50" type="text" name="albumDesc" placeholder="What's your album description?" maxlength="255" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 527px; height: 80px;"></textarea>
                         </div>
                     </div>
                     <div style="margin-left: 35px;">
@@ -254,7 +254,7 @@
                 <br />
                 <div class="form-wizard-buttons">
                     <button type="button" class="btn btn-previous">Previous</button>
-                    <button type="submit" class="btn btn-submit">Submit</button>
+                    <button type="submit" class="form-group">Submit</button>
                 </div>
             </fieldset>
             <!-- Form Step 4 -->
