@@ -18,19 +18,25 @@
         <div class="box1" style="background: #f1f1f1;">
             <div class="parent">
                 <img class="image1" src="/images/defaultcbackcolor.jpg" />
-                <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
                 @foreach($bands as $row)
+
+                <img src="/uploads/bands/{{ $row['fileUpload'] }}" class="image2" style=" border-radius: 50%; width: 200px; height: 150px;">
+              
                 <span style="margin-left: 270px; font-size: 26px; ">&nbsp {{$row['bandName']}}</span>
                 <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-success" style="margin-left:600px; margin-top: 7px;">Edit</a>
+                @foreach($members as $mem)
+                @if($row->id == $mem->bandId)
+                <li><a href=""><img src="/uploads/members/{{ $mem['photoUpload'] }}" style="height: 210px; width: 210px;">
+                @endif
+                @endforeach
                 <div class="text3">&nbsp {{$row['genre']}}</div>
                 
-                <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
+                <!-- <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div> -->
                 <div class="desc">{{$row['bandDescription']}}</div>
                 @endforeach
-                <div> @foreach($bands as $row)
-                          
+                <div> 
 
-                            @endforeach</div>\
+                           </div>\
 
             </div><br><br>
 
@@ -38,25 +44,12 @@
             <!-- Elastislide Carousel -->
             <ul id="carousel" class="elastislide-list">
                 <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                
+          
+                
+                <li><a href=""><img src="/uploads/members/{{ $mem['photoUpload'] }}" style="height: 210px; width: 210px;">
+              </a></li>
+        
         
 
             </ul>

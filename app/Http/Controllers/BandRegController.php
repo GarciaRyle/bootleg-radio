@@ -160,6 +160,16 @@ for($x = 0; $x < $membersCount; $x++){
         $bands->save();
         return redirect()->to('bands')->with('success', 'Data Updated');
     }
+    public function memupdate(Request $request, $id){ //member update
+        $member = Member::find($id);
+        $member->bandId = $request->bandid;
+        $member->memberName = $request->memberName;
+        $member->bio = $request->bio;
+        $member->position = $request->position;
+        $member->save();
+ 
+        return redirect()->back();
+     }
    
 
     /**
@@ -174,5 +184,11 @@ for($x = 0; $x < $membersCount; $x++){
         $bands->delete();
         return redirect()->route('bands.index')->with('success', 'Data Deleted');
     }
+    public function delete(Request $request){
+        //dd($request->all());
+        $id = $request->id;
+        Member::destroy($id);
+          return redirect()->to('bands.profile');
+      }
 
 }
