@@ -1,199 +1,187 @@
 @extends('layouts.app')
 
 @section('content')
-<!DOCTYPE html>
-<html lang=eng>
 
 <head>
-    <title>Bootleg</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/bandprofileedit.css">
+    <link rel="stylesheet" type="text/css" href="/css/profilebands.css">
 </head>
 
-<body>
-    <div class="bg">
-        <form method="post" action="{{ '/bands/update/'. $bands->id }}">
-            {{csrf_field()}}
-            <div class="bandprofile">
+<body style="background: #c2b396">
+    <div style="background: transparent; height: 50px;"></div>
+    <div class="userprofile">
+        <div>
+            <!--wagalisin-->
+        </div>
 
-                <div class="box1">
+        <div class="box1" style="background: #f1f1f1;">
+            <div class="parent">
+                <form method="post" action="{{ '/bands/update/'. $bands->id }}">
+                    {{csrf_field()}}
+                    <img class="image1" src="/images/defaultcbackcolor.jpg" />
+                    <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
 
-                    <div class="banddes">
-
-                        <div>&nbsp;&nbsp;&nbsp;<img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="  border-radius: 50%; width: 130px; height: 90px; margin-top: -16px;" /></div>
-                        <div>
-                            <div class="text2">
-                                <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" style="margin-left:122px; margin-top: 28px; width: 300px ; height: 30px" ; />
-
-                            </div>
-                        </div>
-                        <div><select class="text3" name="genre" placeholder="Genre" data-style="form-control btn-secondary" style="font-family: 'Lato', sans-serif; margin-left:-12px; margin-top: 60px;">
-                                <option value="Indie">Indie</option>
-                                <option value="Pop">Pop</option>
-                                <option value="Rock">Rock</option>
-                                <option value="Dance">Dance</option>
-                                <option value="Blues">Blues</option>
-                                <option value="Classical">Classical</option>
-                                <option value="Country">Country</option>
-                                <option value="Jazz">Jazz</option>
-                                <option value="R&B">R&B</option>
-                                <option value="Reggae">Reggae</option>
-                                <option value="Rock">Rock</option>
-
-                            </select></div>
-
+                    <span class="text2" style="margin-left: 270px; font-size: 26px;">
+                        <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" />
+                    </span>
+                    <div class="text3" style="margin-top: -35px; margin-left: 970px;">
+                        <input type="submit" class="btn btn-primary" value="Update" style="font-family: 'Cinzel Decorative', cursive;">
                     </div>
-                    <hr color: #c2b396>
-
-
-
-
-
-                    <div class="desc">
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 440px;">{{$bands->bandDescription}}</textarea>
-
-
+                    <div class="text3"><select style="margin-top: 10px; margin-left: -10px;" name="genre" placeholder="Genre" data-style="form-control btn-secondary">
+                            <option value="Indie">Indie</option>
+                            <option value="Pop">Pop</option>
+                            <option value="Rock">Rock</option>
+                            <option value="Dance">Dance</option>
+                            <option value="Blues">Blues</option>
+                            <option value="Classical">Classical</option>
+                            <option value="Country">Country</option>
+                            <option value="Jazz">Jazz</option>
+                            <option value="R&B">R&B</option>
+                            <option value="Reggae">Reggae</option>
+                            <option value="Rock">Rock</option>
+                        </select></div>
+                        <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
+                        <div class="desc">
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 600px; height: 100px;">{{$bands->bandDescription}}</textarea>
                     </div>
+                </form>
+            </div>
+            <br><br>
 
-                    <br>
-                    <center>
-                        <p style=" color: #141311; font-size: 20px; font-family: 'Lato' , sans-serif;"> BAND MEMBERS</p>
-                    </center>
+            <script src="https://tympanus.net/Development/Elastislide/js/modernizr.custom.17475.js"></script>
+            <!-- Elastislide Carousel -->
+            <ul id="carousel" class="elastislide-list">
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+            </ul>
+            <br><br>
+            <center>
+                <a href="{{ '../../AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
+            </center>
+            <!-- End Elastislide Carousel -->
 
-                    <div class="bandmem">
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <div class="text">Vocalist</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
-                                <div class="overlay">
-                                    <div class="text">Drummer</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Guirtarist" class="image">
-                                <div class="overlay">
-                                    <div class="text">Electric Guitarist</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <div class="text">Bass Guitarist</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <div class="text">Lead Singer</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquerypp.custom.js"></script>
+            <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquery.elastislide.js"></script>
+            <script type="text/javascript">
+                $('#carousel').elastislide({
+                    minItems: 2
+                });
+
+            </script>
+            <div style="background: transparent; height: 120px;"></div>
 
 
+            <!--end-->
+            <div class="musicplayer">
+                <div>
+                    <!--wagalisin-->
                 </div>
-
-
-
-
-
-                <div class="box2">
-                    <div class="album">
+                <div>
+                    <img src="/images/Image/unknownPerson.png" style="width: 100%; height:350px" />
+                </div>
+                <div>
+                    <div class="lyrics">
+                        <div style="margin-top: 20px; text-align: center; font-size: 20px; color: #a2321a;">Album Name</div>
+                        <div class="block2">
+                            <div class="inner">Year</div>
+                            <div class="inner">Tracks</div>
+                            <div class="inner">Minutes</div>
+                        </div><br>
                         <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <div class="text">Album 1</div>
-                                </div>
+                            <div style="margin-top: 20px; text-align: center; font-size: 20px;">Song Title</div>
+                            <div style="height:210px;width:280px;border:1px solid #ccc;font-family: 'Lato', sans-serif;Serif;overflow:auto; padding: 20px; text-align: center;">
+                                Mauris ultricies ante ut lectus accumsan sagittis. Maecenas feugiat efficitur turpis, vel dignissim nunc malesuada in. Vestibulum fermentum, elit eu interdum posuere, ex odio maximus ipsum, vitae fermentum sem erat ac massa. Morbi eleifend ut odio id aliquet. Praesent auctor viverra magna, at convallis lacus. Etiam orci diam, tincidunt eu interdum ac, varius ut nunc. Fusce ullamcorper eleifend dui nec porta.
+
+                                Praesent lacinia nec eros at pulvinar. Praesent purus nunc, fringilla sit amet rhoncus eu, mattis et elit. Praesent tempor nunc ut consectetur venenatis. Donec fermentum diam nec dolor consequat ultrices. Proin quis dictum augue. Maecenas rhoncus mi nec rhoncus congue. Nullam at massa et urna auctor accumsan ut at ligula. Duis sit amet nisi quis dui mattis sodales ut nec tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut dignissim mi, tempus ullamcorper sem.
+
+                                Morbi non est consectetur, commodo elit eu, commodo ex. Nullam eu orci varius, pharetra enim quis, pretium tortor. Proin tincidunt ac arcu ac condimentum. Donec in justo sit amet dui rutrum luctus eget vitae lacus. Suspendisse euismod neque dolor. Quisque tempor leo non eleifend ultricies. Sed tristique tristique fermentum. Etiam elit nulla, pulvinar quis suscipit vitae, molestie dignissim nulla. Donec sagittis ultrices mi. Pellentesque et bibendum ex, in aliquam enim
                             </div>
                         </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image" style="height: 50%;">
-                                <div class="overlay">
-                                    <div class="text">Album 2</div>
-                                </div>
-                            </div>
-                            <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
-                        </div>
-                        <div>
-                            <div class="containerreg">
-                                <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
-                                <div class="overlay">
-                                    <div class="text">Album 3</div>
-                                </div>
-                            </div>
-
-                            <h2 style="font-size: 17px; text-align: center; font-family: 'Lato', sans-serif;">ARTIST ALBUM</h2>
-                        </div>
-
                     </div>
-
-                    <!--album-->
-                    <div class="gridcol">
-                        <div>
-                            <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Name:</label><br><br>
-                            <center>
-                                <div contenteditable="true" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 19px; background-color: #ffffff; width: 250px; ">
-                                    I BELONG TO THE ZOO
-                                </div>
-                            </center>
-
-                            <div class="form-group">
-                                <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Name:</label><br><br>
-                                <center>
-                                    <div contenteditable="true" style="font-family: 'Lato', sans-serif; color: #c2b396; font-size: 19px; background-color: #ffffff; width: 250px; height: 30px; ">
-                                        I BELONG TO THE ZOO
-                                    </div>
-                                </center>
-                            </div>
+                </div>
+                <div>
+                    <div class="song_list"><br><br><br>
+                        <div class="title">Title</div>
+                        <div class="title">Minutes</div>
+                        <div class="title dark">Title</div>
+                        <div class="title dark">Minutes</div>
+                        <div class="title">Title</div>
+                        <div class="title">Minutes</div>
+                        <div class="title dark">Title</div>
+                        <div class="title dark">Minutes</div>
+                    </div>
+                </div>
+            </div>
+            <h1 style="font-family: 'Lato', sans-serif; font-size: 18px; margin-left: 60px;"> ALBUMS</h1>
+            <div class="albumphoto">
+                <div>
+                    <!--wagtangalindiv-->
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
                         </div>
-                        <div>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Photo: </label><br>
-                                    <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <br><label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Photo: </label> <br>
-                                    <center> <br><input type="file" name="pic" accept="image/*" style="font-family: 'Lato', sans-serif;"></center>
-                                </div>
-                            </div>
-
-
-                            <div class="gridcol">
-                                <div></div>
-                                <div class="form-group">
-                                    <input type="submit" class="btn btn-primary" value="Update">
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div style="background: #c2b396; height: 70px;"></div>
+        </div>
 
+    </div>
 
-
-
-
-            @endsection
+</body>
+@endsection
