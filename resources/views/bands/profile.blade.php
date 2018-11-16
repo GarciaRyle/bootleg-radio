@@ -1,160 +1,170 @@
 @extends('layouts.app')
+
 @section('content')
-<!DOCTYPE html>
-<html lang=eng>
 
 <head>
-    <title>Bootleg</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie-edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/bandprofile.css">
-    <style>
-       
-    </style>
+   <link rel="stylesheet" type="text/css" href="/css/profilebands.css">
 </head>
-<div class="bg">
-    <div class="bandprofile">
 
-        <div class="box1">
-            <div>
-                <br><img class="img-valign" src="/images/Image/unknownPerson.png" alt="" style="margin-left: 20px; margin-top: 10px;border-radius: 50%; width: 120px; height: 110px;" />
+<body style="background: #c2b396">
+    <div style="background: transparent; height: 50px;"></div>
+    <div class="userprofile">
+        <div>
+            <!--wagalisin-->
+        </div>
+
+        <div class="box1" style="background: #f1f1f1;">
+            <div class="parent">
+                <img class="image1" src="/images/defaultcbackcolor.jpg" />
+                <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
                 @foreach($bands as $row)
-                <a href="{{ url('/viewBanduser') }}" span class="text2">&nbsp {{$row['bandName']}}</a></span>
-
-                <div class="text3">&nbsp; {{$row['genre']}}</div><br>
-                <div class="gridcol">
-                    <div></div>
-                    <div class="gridcol" style="margin-top: -70px; margin-left: 50px;">
-                        <div></div>
-                        <div> @foreach($bands as $row)
-                            <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-success">Edit</a>
-
-                            @endforeach</div>
-
-                    </div>
-                </div>
-                <hr color: #c2b396 style="margin-top: -10px;" >
-                <div class="desc">{{$row['bandDescription']}}</div> <br>
-
+                <span style="margin-left: 270px; font-size: 26px; ">&nbsp {{$row['bandName']}}</span>
+                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-success" style="margin-left:600px; margin-top: 7px;">Edit</a>
+                <div class="text3">&nbsp {{$row['genre']}}</div>
+                
+                <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
+                <div class="desc">{{$row['bandDescription']}}</div>
                 @endforeach
-                <center>
-                    <p style="color: #141311; font-size: 20px; font-family: 'Lato', sans-serif;"> BAND MEMBERS</p>
-                </center>
+                <div> @foreach($bands as $row)
+                          
+
+                            @endforeach</div>\
+
+            </div><br><br>
+
+            <script src="https://tympanus.net/Development/Elastislide/js/modernizr.custom.17475.js"></script>
+            <!-- Elastislide Carousel -->
+            <ul id="carousel" class="elastislide-list">
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
+        
+
+            </ul>
+            <!-- End Elastislide Carousel -->
+
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+            <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquerypp.custom.js"></script>
+            <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquery.elastislide.js"></script>
+            <script type="text/javascript">
+                $('#carousel').elastislide({
+                    minItems: 2
+                });
+
+            </script>
+            <div style="background: transparent; height: 120px;"></div>
 
 
-                <script src="https://tympanus.net/Development/Elastislide/js/modernizr.custom.17475.js"></script>
-                <!-- Elastislide Carousel -->
-                <ul id="carousel" class="elastislide-list">
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
-                     <li><a href=""><img src="/images/Image/addmember.png" style="height: 110px; width: 110px;" alt="" /></a></li>
+            <!--end-->
+            <div class="musicplayer">
+                <div>
+                    <!--wagalisin-->
+                </div>
+                <div>
+                    <img src="/images/Image/unknownPerson.png" style="width: 100%; height:350px" />
+                </div>
+                <div>
+                    <div class="lyrics">
+                        <div style="margin-top: 20px; text-align: center; font-size: 20px; color: #a2321a;">Album Name</div>
+                        <div class="block2">
+                            <div class="inner">Year</div>
+                            <div class="inner">Tracks</div>
+                            <div class="inner">Minutes</div>
+                        </div><br>
+                        <div>
+                            <div style="margin-top: 20px; text-align: center; font-size: 20px;">Song Title</div>
+                            <div style="height:210px;width:280px;border:1px solid #ccc;font-family: 'Lato', sans-serif;Serif;overflow:auto; padding: 20px; text-align: center;">
+                                Mauris ultricies ante ut lectus accumsan sagittis. Maecenas feugiat efficitur turpis, vel dignissim nunc malesuada in. Vestibulum fermentum, elit eu interdum posuere, ex odio maximus ipsum, vitae fermentum sem erat ac massa. Morbi eleifend ut odio id aliquet. Praesent auctor viverra magna, at convallis lacus. Etiam orci diam, tincidunt eu interdum ac, varius ut nunc. Fusce ullamcorper eleifend dui nec porta.
 
-                </ul>
-                <!-- End Elastislide Carousel -->
+                                Praesent lacinia nec eros at pulvinar. Praesent purus nunc, fringilla sit amet rhoncus eu, mattis et elit. Praesent tempor nunc ut consectetur venenatis. Donec fermentum diam nec dolor consequat ultrices. Proin quis dictum augue. Maecenas rhoncus mi nec rhoncus congue. Nullam at massa et urna auctor accumsan ut at ligula. Duis sit amet nisi quis dui mattis sodales ut nec tortor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc ut dignissim mi, tempus ullamcorper sem.
 
-                <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-                <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquerypp.custom.js"></script>
-                <script type="text/javascript" src="https://tympanus.net/Development/Elastislide/js/jquery.elastislide.js"></script>
-                <script type="text/javascript">
-                    $('#carousel').elastislide({
-                        minItems: 2
-                    });
-
-                </script>
-
-                <br>
-                <center>
-                    <a href="{{ 'AddBandMember' }}" class="btn btn-warning"> +Add Member</a>
-                </center> 
+                                Morbi non est consectetur, commodo elit eu, commodo ex. Nullam eu orci varius, pharetra enim quis, pretium tortor. Proin tincidunt ac arcu ac condimentum. Donec in justo sit amet dui rutrum luctus eget vitae lacus. Suspendisse euismod neque dolor. Quisque tempor leo non eleifend ultricies. Sed tristique tristique fermentum. Etiam elit nulla, pulvinar quis suscipit vitae, molestie dignissim nulla. Donec sagittis ultrices mi. Pellentesque et bibendum ex, in aliquam enim
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="song_list"><br><br><br>
+                        <div class="title">Title</div>
+                        <div class="title">Minutes</div>
+                        <div class="title dark">Title</div>
+                        <div class="title dark">Minutes</div>
+                        <div class="title">Title</div>
+                        <div class="title">Minutes</div>
+                        <div class="title dark">Title</div>
+                        <div class="title dark">Minutes</div>
+                    </div>
+                </div>
             </div>
-<br><br>
+            <h1 style="font-family: 'Lato', sans-serif; font-size: 18px; margin-left: 60px;"> ALBUMS</h1>
+            <div class="albumphoto">
+                <div>
+                    <!--wagtangalindiv-->
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="containerreg">
+                        <img src="/images/Image/unknownPerson.png" alt="Avatar" class="image">
+                        <div class="overlay">
+                            <div class="text">ALBUM NAME</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="background: #c2b396; height: 70px;"></div>
         </div>
-        <div class="box2">
 
-            <div class="album">
-                <div>
-                    <div class="containerreg">
-                        <img src="/images/albumicon.jpg" alt="Album" class="image">
-                        <div class="overlay">
-                            <div class="text">Album 1</div>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="containerreg">
-                        <img src="/images/albumicon.jpg" alt="Album" class="image" style="height: 50%;">
-                        <div class="overlay">
-                            <div class="text">Album 2</div>
-                        </div>
-                    </div>
-                 
-                </div>
-                <div>
-                    <div class="containerreg">
-                        <img src="/images/albumicon.jpg" alt="Album" class="image">
-                        <div class="overlay">
-                            <div class="text">Album 3</div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-            <!--album-->
-            <br><br>
-            <div class="gridcol">
-                <div>
-                    <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Album Name:</label><br><br>
-                    <center>
-                       <h1></h1>
-                    </center>
-
-                    <div class="form-group">
-                        <br> <label style="color: #a2321a; font-family: 'Lato', sans-serif;"></label><br><br>
-                        <center>
-                            <h1></h1>
-                        </center>
-                    </div>
-                </div>
-                <div>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <label style="color: #a2321a; font-family: 'Lato', sans-serif;">Single Name: </label><br>
-                             <h1></h1><br>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-group">
-                            <br><label style="color: #a2321a; font-family: 'Lato', sans-serif;"> </label> <br>
-                          <h1></h1><br>
-                        </div>
-                    </div>
-                    <br><br><br><br>
-                    <div style="margin-left: 30px;">
-                        @foreach($bands as $row)
-                        <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
-                            {{csrf_field()}}
-                            <input type="hidden" name="_method" value="DELETE" />
-                            <button type="submit" class="btn btn-danger">Delete this band</button>
-                        </form>
-                        @endforeach
-                    </div><br><br><br>
-                    <br><br>
-                </div>
-            </div>
-        </div>
     </div>
 
-
-    @endsection
+</body>
+@endsection

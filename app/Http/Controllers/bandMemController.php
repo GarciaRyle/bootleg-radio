@@ -40,13 +40,13 @@ class bandMemController extends Controller
     
 
         if($request->hasFile('photoUpload')){
-    		$photoUpload = $request->file('photoUpload');
-    		$filename = time() . '.' . $photoUpload->getClientOriginalExtension();
-    		Image::make($photoUpload)->resize(300, 300)->save( public_path('/uploads/members/' . $filename ) );
-    		$newMember->photoUpload = $filename;
-		}
-		
-		
+      $photoUpload = $request->file('photoUpload');
+      $filename = time() . '.' . $photoUpload->getClientOriginalExtension();
+      Image::make($photoUpload)->resize(300, 300)->save( public_path('/uploads/members/' . $filename ) );
+      $newMember->photoUpload = $filename;
+  }
+  
+  
         $newMember->save();
   
         return redirect()->back();
