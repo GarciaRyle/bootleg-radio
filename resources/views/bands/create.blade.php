@@ -20,11 +20,25 @@
 <body style="background: #bfa872;">
 
     <br><br><br>
-
+     @if(count($errors) > 0)
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                        @endif
+                        @if(\Session::has('success'))
+                        <div class="alert alert-success">
+                            <p>{{ \Session::get('success') }}</p>
+                        </div>
+                        @endif
 
     <div class="form-wizard" style="width: 1000px; margin-left: 180px;">
         <!-- Form Wizard -->
-        <form role="form" action="" method="post">
+        <form role="form" action="{{action('BandRegController@store')}}" method="post" enctype="multipart/form-data">
+            {{csrf_field()}}
 
             <div class="animate six" style=" font-family: 'Cinzel Decorative', cursive;">
                 <span>C</span><span>R</span><span>E</span><span>A</span><span>T</span><span>E</span>&nbsp;<span>A</span>&nbsp;<span> </span><span>B</span><span>A</span><span>N</span><span>D</span></div>
@@ -82,7 +96,7 @@
                                     <label style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px;">Genre: </label>
                                 </div>
                                 <div class="form-group col-md-3 col-xs-3">
-                                    <select class="form-control" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 462px; margin-left: -50px">
+                                    <select class="form-control" name="genre" style="font-family: 'Lato', sans-serif;   color: #141312; font-size: 18px; width: 462px; margin-left: -50px">
                                         <option value="Indie">Indie</option>
                                         <option value="Pop">Pop</option>
                                         <option value="Rock">Rock</option>

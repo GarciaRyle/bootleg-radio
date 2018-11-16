@@ -37,25 +37,16 @@
                             <br>
                             <input maxlength="35" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email address.. ')" onchange="try{setCustomValidity('')}catch(e){}" class="textedit form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required />
 
- <img src="/uploads/avatars/{{ $user->avatar }}" style="width: 150px; height: 150px; float:left; border-radius: 50% ; margin-right: 25px;">
-                <br>
-             
-              
-                    <label style="color: #141312">Update Profile Image</label><br>
-                    <input type="file" name="avatar">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-       
-
                             <br>
                         </div>
                         <div><br>
                             <h2 style="font-size: 18px; color: #a2321a"> Band you've created</h2><br>
                             <div class="kalhati">
                                 <div>
-                                    <img class="img-valign" src="/images/Image/addicon.png" alt="" style=" width: 190px; height: 190px;" />
+                                    <img class="img-valign" src="" alt="" style=" width: 190px; height: 190px;" />
                                 </div>
                                 <div><br>
-                                    <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> Band Name</h2>
+                                    <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"></h2>
                                     <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> </h2>
                                     <br><br><br>
                                     <div class="kalhati">

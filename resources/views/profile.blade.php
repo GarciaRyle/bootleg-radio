@@ -27,7 +27,7 @@
                     <label style="color: #141312">Update Profile Image</label><br>
                     <input type="file" name="avatar">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="submit" class="pull-right btn btn-sm btn-danger">
+                    <input type="submit" class="btn-sm btn-danger" style="margin-left: 90px;">
                     <a href="{{ '/show/' . $user->id }}" class="btn btn-success" style="margin-left: 540px; font-size: 12px;" >EDIT PROFILE</a>
                 </form>
             </div>
@@ -49,10 +49,10 @@
                         <h2 style="font-size: 18px; color: #a2321a"> Band you've created</h2><br>
                         <div class="kalhati">
                             <div>
-                                <a href="{{ action('BandRegController@create') }}"><img class="img-valign" src="/images/Image/addicon.png" alt="" style=" width: 190px; height: 190px;" /></a>
+                                <a href="{{ action('BandRegController@create') }}"><img class="img-valign" src="" alt="" style=" width: 190px; height: 190px;" /></a>
                             </div>
                             <div><br>
-                                <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> Band Name</h2>
+                                <h2 style="font-size: 16px;  font-family: 'Cinzel Decorative', cursive; color: rgb(150, 133, 75)"> </h2>
                                 <h2 style="font-size: 14px; font-family: 'Lato', sans-serif; padding: 5px; color: #141312"> </h2>
                                 <br><br><br>
                                 <div class="kalhati">

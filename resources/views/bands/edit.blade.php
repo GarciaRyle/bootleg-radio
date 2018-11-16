@@ -27,6 +27,7 @@
                     </span>
                     <div class="text3" style="margin-top: -35px; margin-left: 970px;">
                         <input type="submit" class="btn btn-primary" value="Update" style="font-family: 'Cinzel Decorative', cursive;">
+                        
                     </div>
                     <div class="text3"><select style="margin-top: 10px; margin-left: -10px;" name="genre" placeholder="Genre" data-style="form-control btn-secondary">
                             <option value="Indie">Indie</option>
@@ -177,6 +178,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
             <div style="background: #c2b396; height: 70px;"></div>
         </div>
