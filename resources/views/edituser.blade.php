@@ -32,7 +32,7 @@
                             <br>
 
                             <input maxlength="35" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" pattern="[a-zA-Z]{3,15}" oninvalid="setCustomValidity('Invalid Name. Allowed characters include A-z. ')" onchange="try{setCustomValidity('')}catch(e){}" class="textedit form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{$user->name}}" required autofocus />
-                            <br></br>
+                            <br>
                             <h2 style="font-size: 16px; margin-left: 60px; font-family: 'Cinzel Decorative', cursive; color: #141312"> Email : </h2>
                             <br>
                             <input maxlength="35" style="margin-left:122px; margin-top: -48px; width: 250px ; height: 30px;" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" oninvalid="setCustomValidity('Please enter a valid email address.. ')" onchange="try{setCustomValidity('')}catch(e){}" class="textedit form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{$user->email}}" required />

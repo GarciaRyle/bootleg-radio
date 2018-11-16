@@ -119,7 +119,7 @@
 
                         <img class="memberphoto" id="image" src="/images/Image/unknownPerson.png" />
                         <button class="file-upload" style="margin-left: 25px; font-size: 15px; font-family: 'Cinzel Decorative', cursive; border-radius: 10px; ">
-                            <input type="file" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
+                            <input type="file" name="fileUpload" class="file-input" id="files" style="font-size: 15px; ">Upload Photo
                         </button>
                         <div class="form-wizard-buttons">
                             <button type="button" class="btn btn-next">Next</button>

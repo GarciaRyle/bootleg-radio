@@ -27,8 +27,8 @@
                     <label style="color: #141312">Update Profile Image</label><br>
                     <input type="file" name="avatar">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <input type="submit" class="btn-sm btn-danger" style="margin-left: 90px;">
-                    <a href="{{ '/show/' . $user->id }}" class="btn btn-success" style="margin-left: 540px; font-size: 12px;" >EDIT PROFILE</a>
+                    <input type="submit" class="btn-sm btn-danger" style="margin-left: 0px;">
+                    <a href="{{ '/show/' . $user->id }}" class="btn btn-success" style="margin-left: 440px; font-size: 12px;" >EDIT PROFILE</a>
                 </form>
             </div>
         </div><br>

@@ -9,8 +9,7 @@
 </head>
 
 <body style="background: #c2b396">
-    <div style="background: transparent; height: 50px;"></div>
-    <div class="userprofile">
+
         <div>
             <!--wagalisin-->
         </div>
@@ -19,13 +18,13 @@
             <div class="parent">
                 <form method="post" action="{{ '/bands/update/'. $bands->id }}">
                     {{csrf_field()}}
-                    <img class="image1" src="/images/defaultcbackcolor.jpg" />
-                    <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 150px;" />
+                    <img class="image1" src="/images/defaultcbackcolor.jpg" style="width: 100%; height: 310px;" />
+                    <img class="image2" src="/images/Image/unknownPerson.png" style=" border-radius: 50%; width: 200px; height: 200px;" />
 
                     <span class="text2" style="margin-left: 270px; font-size: 26px;">
-                        <input name="bandName" pattern="[a-zA-Z,0-9]{1,20}" oninvalid="setCustomValidity('Invalid Name. Allowed characters include A-z and 0-9. ')" onchange="try{setCustomValidity('')}catch(e){}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" />
+                        <input name="bandName" pattern="[a-zA-Z,0-9_]{1,20}" oninvalid="setCustomValidity('Invalid Name. Allowed characters include A-z and 0-9. ')" onchange="try{setCustomValidity('')}catch(e){}" class="text2" value="{{$bands->bandName}}" maxlength="20" placeholder="Band Name:" />
                     </span>
-                    <div class="text3" style="margin-top: -35px; margin-left: 970px;">
+                    <div class="text3" style="margin-top: -35px; margin-left: 1100px;">
                         <input type="submit" class="btn btn-primary" value="Update" style="font-family: 'Cinzel Decorative', cursive;">
                         
                     </div>
@@ -42,9 +41,9 @@
                             <option value="Reggae">Reggae</option>
                             <option value="Rock">Rock</option>
                         </select></div>
-                        <div class="text4" style="color: #a2321a; font-size: 28px;">About Us</div>
+                        <div class="text4" style="color: #a2321a; font-size: 28px; margin-left: 590px;">About Us</div>
                         <div class="desc">
-                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 600px; height: 100px;">{{$bands->bandDescription}}</textarea>
+                        <textarea rows="3" cols="5" type="text" name="bandDescription" placeholder="Information" maxlength="205" class="form-control required" style="font-family: 'Lato', sans-serif; font-size: 15px; width: 600px; height: 100px; margin-left: 70px;">{{$bands->bandDescription}}</textarea>
                     </div>
                 </form>
             </div>
@@ -180,10 +179,10 @@
                 </div>
                 
             </div>
-            <div style="background: #c2b396; height: 70px;"></div>
+            <div style="background: transparent; height: 70px;"></div>
         </div>
 
-    </div>
+
 
 </body>
 @endsection
