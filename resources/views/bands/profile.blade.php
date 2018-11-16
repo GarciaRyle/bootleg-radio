@@ -18,8 +18,14 @@
                 <img src="/uploads/bands/{{ $row['fileUpload'] }}" class="image2" style=" border-radius: 50%; width: 200px; height: 200px;" alt="">
               
                 <span style="margin-left: 270px; font-size: 26px; ">&nbsp; {{$row['bandName']}}</span>
-                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-success" style="margin-left:700px; margin-top: 7px;">Edit</a>
+                <a href="{{ '/bands/edit/'. $row->id }}" class="btn btn-success" style="margin-left:659px; margin-top: 7px;">Edit</a>
                 <div class="text3">&nbsp; {{$row['genre']}}</div>
+                  <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
+                {{csrf_field()}}
+                <input type="hidden" name="_method" value="DELETE" /><br><br>
+               <center> <button onclick="myFunction()" type="submit" class="btn btn-danger" style="margin-left:1100px; margin-top: -155px;">Delete this band</button></center>
+                  
+            </form>
                 
                     <center><div class="text4" style="color: #a2321a; font-size: 28px; margin-left: 0px;">About Us</div>
             <div class="desc" style="margin-left: 70px;">{{$row['bandDescription']}}</div></center>
@@ -29,14 +35,21 @@
 
                             @endforeach</div>\
         </div><br><br>
+        
+<script>
+function myFunction() {
+    alert("I am an alert box!");
+}
+</script>
 
         <script src="https://tympanus.net/Development/Elastislide/js/modernizr.custom.17475.js"></script>
-      <!-- Elastislide Carousel -->
+     
+<!-- Elastislide Carousel -->
             <ul id="carousel" class="elastislide-list">
-                <li><a href=""><img src="" style="height: 210px; width: 210px;" alt="" /></a></li>
-                
                 @foreach($members as $mem)
-                <li><a href=""><img src="/uploads/members/{{ $mem['photoUpload'] }}" style="height: 210px; width: 210px;">
+                <li><a href=""><img src="/uploads/members/{{ $mem['photoUpload'] }}" style="height: 210px; width: 210px; padding: 10px;; ">
+              </a></li> 
+                <li><a href=""><img src="/uploads/members/{{ $mem['photoUpload'] }}" style="height: 210px; width: 210px; padding: 10px;; ">
               </a></li>
               @endforeach
         
@@ -138,13 +151,7 @@
             </div>
         </div>
         <div style="background: transparent; height: 100px;">
-            @foreach($bands as $row)
-            <form method="post" class="delete_form" action="{{action('BandRegController@destroy', $row['id'])}}">
-                {{csrf_field()}}
-                <input type="hidden" name="_method" value="DELETE" /><br><br>
-               <center> <button type="submit" class="btn btn-danger">Delete this band</button></center>
-            </form>
-            @endforeach
+      
         </div>
 
     </div>
